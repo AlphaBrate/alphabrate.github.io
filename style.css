@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url(/fonts/SFPro.ttf);
+}
+
+body {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f8ff;
+    color: rgb(20, 20, 20);
+    -webkit-user-drag: none;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.first-element {
+    margin-top: 4em;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+::selection {
+    background-color: #7b9cff39;
+}
+
+nav {
+    background-color: #0000008e;
+    color: #fff;
+    padding: 0;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7px);
+    --webkit-backdrop-filter: blur(7px);
+    z-index: 10;
+}
+
+nav svg,
+nav path {
+    fill: rgb(255, 255, 255);
+    height: 2.5rem;
+}
+
+.content {
+    padding: 0;
+    margin: 0;
+}
+
+.fade-to-black {
+    color: white;
+    background: linear-gradient(180deg, #F4F8FF 0%, rgba(79, 79, 78, 0.79) 5.17%, #000 10.34%, #000 84.1%, #737578 93.1%, #F4F8FF 100%);
+    min-height: 200vh;
+    margin-top: 20vh;
+    margin-bottom: 25vh;
+    padding: 10em 5rem 10em 5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 2em;
+    text-align: center;
+}
+
+.item {
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    padding: 0 0 .5em 0;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: all .2s ease-in-out;
+    min-width: 15em;
+    width: 80%;
+    max-width: 25em;
+    min-height: 27em;
+    height: max-content;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item>img {
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+button {
+    background-color: #0db2ff1f;
+    border: 2px solid #0db2ff1f;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: #000;
+    padding: .5rem 1rem .5rem 1rem;
+    margin: .5rem;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+
+.full-length {
+    user-select: none;
+    -webkit-user-select: none;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(49, 49, 49, 0.24) 31.6%, rgba(0, 0, 0, 0.00) 43.6%, rgba(26, 26, 26, 0.00) 57.1%, rgba(56, 56, 56, 0.24) 68.1%, rgba(0, 0, 0, 0.00) 100%);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: #000;
+}
+
+.margin-bottom {
+    margin-bottom: 2em;
+}
+
+.item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.intro {
+    margin: 2rem;
+    max-width: 47em;
+    width: 80%;
+}
+
+.logo-text {
+    cursor: pointer;
+}
+
+tag {
+    background-color: #00000038;
+    color: #000000;
+    padding: .2rem;
+    font-size: .7rem;
+    margin: .5rem;
+    border-radius: 4px;
+    user-select: none;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 1em;
+    margin-top: 0;
+    text-align: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.open_in_new>svg,
+.open_in_new>svg>path {
+    fill: #878787;
+    height: .7rem;
+    width: .7rem;
+    margin-left: .2rem;
+}
+
+copyright {
+    text-align: center;
+    font-size: .8rem;
+    color: #878787;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
