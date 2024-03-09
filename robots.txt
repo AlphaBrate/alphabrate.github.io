@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets
+Disallow: /donate-to-us-thank-you-very-much
+Sitemap: https://alphabrate.github.io
