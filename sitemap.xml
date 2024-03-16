@@ -6,12 +6,7 @@
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/404.html</loc>
-		<priority>0.83</priority>
-		<lastmod>2024-03-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.alphabrate.github.io/about</loc>
+		<loc>https://www.alphabrate.github.io/projects</loc>
 		<priority>0.83</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
@@ -21,22 +16,22 @@
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/projects</loc>
+		<loc>https://www.alphabrate.github.io/about</loc>
 		<priority>0.83</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/about/apel.html</loc>
+		<loc>https://www.alphabrate.github.io/apps/redirect.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-03-06</lastmod>
+		<lastmod>2024-03-16</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/about/contact.html</loc>
+		<loc>https://www.alphabrate.github.io/about/support.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-03-06</lastmod>
+		<lastmod>2024-03-15</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/about/designs.html</loc>
+		<loc>https://www.alphabrate.github.io/about/policies</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
@@ -46,19 +41,19 @@
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/about/policies</loc>
+		<loc>https://www.alphabrate.github.io/about/designs.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/about/support.html</loc>
+		<loc>https://www.alphabrate.github.io/about/contact.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-03-15</lastmod>
+		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.alphabrate.github.io/apps/redirect.html</loc>
+		<loc>https://www.alphabrate.github.io/about/apel.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-03-16</lastmod>
+		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
 		<loc>https://www.alphabrate.github.io/apps/app/music-terms.html</loc>
