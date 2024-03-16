@@ -59,7 +59,8 @@ a>button:hover,
     transform: translateY(-1px);
 }
 
-a>button.more {
+a>button.more,
+.btn.more {
     background: black;
     color: white;
     font-weight: 400;

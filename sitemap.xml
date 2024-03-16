@@ -1,53 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://alphabrate.github.io</loc>
+		<loc>https://www.alphabrate.github.io</loc>
 		<priority>1.00</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/projects</loc>
+		<loc>https://www.alphabrate.github.io/404.html</loc>
+		<priority>0.83</priority>
+		<lastmod>2024-03-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.alphabrate.github.io/about</loc>
+		<priority>0.83</priority>
+		<lastmod>2024-03-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.alphabrate.github.io/donate-to-us-thank-you-very-much</loc>
+		<priority>0.83</priority>
+		<lastmod>2024-03-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.alphabrate.github.io/projects</loc>
+		<priority>0.83</priority>
+		<lastmod>2024-03-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.alphabrate.github.io/about/apel.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/donate-to-us-thank-you-very-much</loc>
+		<loc>https://www.alphabrate.github.io/about/contact.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/about</loc>
+		<loc>https://www.alphabrate.github.io/about/designs.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/about/support.html</loc>
-		<priority>0.33</priority>
+		<loc>https://www.alphabrate.github.io/about/downloads.html</loc>
+		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/about/policies</loc>
-		<priority>0.33</priority>
+		<loc>https://www.alphabrate.github.io/about/policies</loc>
+		<priority>0.67</priority>
 		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/about/downloads.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-03-06</lastmod>
+		<loc>https://www.alphabrate.github.io/about/support.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-03-15</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/about/designs.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-03-06</lastmod>
+		<loc>https://www.alphabrate.github.io/apps/redirect.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-03-16</lastmod>
 	</url>
 	<url>
-		<loc>https://alphabrate.github.io/about/contact.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-03-06</lastmod>
-	</url>
-	<url>
-		<loc>https://alphabrate.github.io/about/apel.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-03-06</lastmod>
+		<loc>https://www.alphabrate.github.io/apps/app/music-terms.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-03-16</lastmod>
 	</url>
 </urlset>
