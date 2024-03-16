@@ -9,7 +9,8 @@
     "Exclude": [
       "google8eda46fb06cd4f04.html",
       "tslib.html",
-      "tslib.es6.html"
+      "tslib.es6.html",
+      "404.html"
     ],
     "TagsToInclude": [
       "priority",
