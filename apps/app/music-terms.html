@@ -158,7 +158,7 @@
                         <span class="star">★</span>
                     </div>
                 </div>
-                <a><button class="more" onclick="sendResult()">Submit</button></a>
+                <button class="more" onclick="sendResult()">Submit</button>
             </div>
         </div>
         <div class="space-break hid_rating" data-height="4"></div>
@@ -246,6 +246,7 @@
         images.forEach(i => {
             var img = document.createElement("img")
             img.src = i
+            img.alt = `A Screenshot of ${app_info.name}.`
             image_loop.appendChild(img)
         })
     </script>
