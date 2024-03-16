@@ -42,6 +42,7 @@ const copyright_info = `
 
 const resize_init = () => {
     try {
+        document.querySelector('.words.lowerright').style.opacity = 1
         document.querySelector('.words.lowerright').style.top = document.querySelector('.words.upperleft').clientHeight + 'px'
 
         let not_desktop = window.innerWidth < 1024

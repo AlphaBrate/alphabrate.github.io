@@ -163,6 +163,7 @@ h2.larger {
         margin-top: 2rem;
         font-size: 2rem;
         font-weight: 500;
+        opacity: 0;
         transition: 1s;
 
         .larger.linear-color {
@@ -501,4 +502,8 @@ font.p100 {
 .half {
     width: calc(50% - 2rem);
     padding: 2rem;
+}
+
+.half-in-col {
+    width: calc(50%);
 }
