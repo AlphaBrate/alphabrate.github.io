@@ -56,7 +56,7 @@
             "app_url": "https://musicterms.github.io"
         }
         var rating, rat_count = 1;
-        const server = "https://alphabrate-server.onrender.com/"
+        const server = "https://alphabrate-server.onrender.com"
         const app = "music-terms"
 
         fetch(`${server}/rating/${app}`, {
@@ -154,7 +154,7 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
-                        <span class="star">★</span>
+                        <span class="star">★</span>    
                         <span class="star">★</span>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
 
         document.getElementById("start_redirect").href = `/apps/redirect.html?app=${app_info.app_id}&url=${app_info.app_url}`
 
-        if (localStorage.getItem(app_info.app_id) === "true" || localStorage.getItem(`${app_info.app_id}+D`) === "true") {
+        if (localStorage.getItem(app_info.app_id) === "true" && localStorage.getItem(`${app_info.app_id}+D`) != "true") {
             document.querySelectorAll(".hid_rating").forEach(e => {
                 e.classList.remove("hid_rating")
             })

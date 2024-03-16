@@ -75,7 +75,6 @@ input[type="range"]#stars {
     overflow-x: scroll;
     padding: 0;
     user-select: none;
-    cursor: pointer;
 
     img {
         max-height: 300px;
@@ -88,6 +87,7 @@ input[type="range"]#stars {
     }
 
     &::-webkit-scrollbar {
+        cursor: pointer;
         display: block;
         width: 7px;
         height: 7px;
