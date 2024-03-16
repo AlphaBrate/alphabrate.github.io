@@ -31,7 +31,8 @@ body {
     text-align: center;
 }
 
-a>button {
+a>button,
+.btn {
     margin-top: 1rem;
     font-size: .9rem;
     padding: .8rem 1.2rem;
@@ -52,7 +53,8 @@ a>button {
     height: 1px;
 }
 
-a>button:hover {
+a>button:hover,
+.btn:hover {
     background: rgb(66, 66, 66);
     transform: translateY(-1px);
 }
@@ -160,6 +162,7 @@ h2.larger {
         margin-top: 2rem;
         font-size: 2rem;
         font-weight: 500;
+        transition: 1s;
 
         .larger.linear-color {
             font-size: 2.5rem;
@@ -273,6 +276,10 @@ h2.larger {
 
 p.larger {
     font-size: 1.3rem !important;
+}
+
+p.smaller {
+    font-size: .75rem !important;
 }
 
 p.color-filled {
