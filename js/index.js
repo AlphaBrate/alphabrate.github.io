@@ -36,7 +36,7 @@ const footer_links = `
 
 const copyright_info = `
 <p class="color-gray">&copy; AlphaBrate 2024 under APEL License.</p>
-<p class="color-lighter-gray f10px">All rights to the designs and photographs displayed on this site are reserved.
+<p class="color-lighter-gray f10px">All rights to the designs and photographs <span class="nowrap">displayed on this site are reserved.</span>
 <br>By using, browsing, sharing, or redistributing our services, products,
     or projects, you agree to our <span class="nowrap"><a href="/about/policies">Privacy Terms</a> and <a href="/about/policies">Terms of Service</a>.</span></p>`
 
@@ -104,20 +104,22 @@ window.onload = () => {
 window.addEventListener('resize', resize_init)
 
 var scroll_function = () => {
-    var scroll = window.scrollY
-    var height_of_top_section = document.querySelector('.top.section').clientHeight
-    if (scroll > height_of_top_section) {
-        document.querySelector('meta[name="theme-color"]').content = 'rgb(255, 255, 255)'
-    } else {
-        var from = [255, 255, 255]
-        var to = [34, 31, 42]
-        var percent = 1 - (scroll / height_of_top_section)
-        var color = []
-        for (var i = 0; i < 3; i++) {
-            color.push(from[i] + (to[i] - from[i]) * percent)
+    try {
+        var scroll = window.scrollY
+        var height_of_top_section = document.querySelector('.top.section').clientHeight
+        if (scroll > height_of_top_section) {
+            document.querySelector('meta[name="theme-color"]').content = 'rgb(255, 255, 255)'
+        } else {
+            var from = [255, 255, 255]
+            var to = [34, 31, 42]
+            var percent = 1 - (scroll / height_of_top_section)
+            var color = []
+            for (var i = 0; i < 3; i++) {
+                color.push(from[i] + (to[i] - from[i]) * percent)
+            }
+            document.querySelector('meta[name="theme-color"]').content = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
         }
-        document.querySelector('meta[name="theme-color"]').content = `rgb(${color[0]}, ${color[1]}, ${color[2]})`        
-    }
+    } catch { }
 }
 
 window.addEventListener('scroll', scroll_function)

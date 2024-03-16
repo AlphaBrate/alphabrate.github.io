@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"">
+    <meta name=" description" content="AlphaBrate, an innovative web development team.">
+    <title>_NAME_ | App Gallery | The AlphaBrate Team</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/apps/app.css">
+    <meta name="theme-color" content="#FFF">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script name="schema:software-application" type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": ["SoftwareApplication", "MobileApplication", "WebApplication"],
+            "name": "_NAME_",
+            "description": "_DESC_",
+            "screenshot": _SCREENSHOTS_,
+            "image": "_ICON_",
+            "applicationCategory": "_APP_CAT_",
+            "datePublished": "_DATEPUBLISHED_",
+            "operatingSystem": "_OPERATING_SYSTEM_",
+            "author": {
+                "@type": "Organization",
+                "name": "AlphaBrate",
+                "url": "https://alphabrate.github.io"
+            },
+            "aggregateRating":
+            {
+                "@type": "AggregateRating",
+                "ratingValue": _RATING_, "reviewCount": _RAT_COUNT_
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "USD",
+                "category": "free"
+            }
+        }
+    </script>
+    <script>
+        var app_info = {
+            "name": "Music Terms",
+            "desc": "Discover musical terms with AlphaBrate. No ads or fees! Enjoy our simple, elegant design. Ideal for music lovers.",
+            "screenshots": '["https://alphabrate.github.io/apps/images/music-terms/mst-0.jpg", "https://alphabrate.github.io/apps/images/music-terms/mst-1.jpg", "https://alphabrate.github.io/apps/images/music-terms/mst-2.jpg", "https://alphabrate.github.io/apps/images/music-terms/mst-3.jpg", "https://alphabrate.github.io/apps/images/music-terms/mst-4.jpg", "https://alphabrate.github.io/apps/images/music-terms/mst-5.jpg"]',
+            "icon": "https://raw.githubusercontent.com/musicterms/MusicTerms.GitHub.io/main/icon-smooth.png",
+            "category": "Music",
+            "app_cat": "ReferenceApplication",
+            "datePublished": "2024-01-01",
+            "operating_system": "Operates on all devices, supported by all morden browsers. Some devices, such as older models, may not support all features.",
+            "rating": 5,
+            "rat_count": 1,
+            "app_id": "music-terms",
+            "app_url": "https://musicterms.github.io"
+        }
+        var rating, rat_count = 1;
+        const server = "https://alphabrate-server.onrender.com/"
+        const app = "music-terms"
+
+        fetch(`${server}/rating/${app}`, {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(data => {
+            data.json().then(d => {
+                addValues(d)
+            })
+        }).catch(e => {
+            addValues({
+                "rating": 5,
+                "count": 1
+            })
+        })
+
+        function addValues(d) {
+            document.getElementById("load").style.display = "none"
+
+            rating = d.rating
+            rat_count = d.count
+
+            app_info.rating = rating
+            app_info.rat_count = rat_count
+
+            function replaceAppInfo() {
+                const all_el = document.querySelectorAll("*")
+                all_el.forEach(e => {
+                    var keys = Object.keys(app_info)
+                    keys.forEach(k => {
+                        if (e.innerHTML.includes("_" + k.toUpperCase() + "_")) {
+                            e.innerHTML = e.innerHTML.replaceAll("_" + k.toUpperCase() + "_", app_info[k])
+                        }
+                    })
+                })
+            }
+
+            replaceAppInfo()
+
+            document.addEventListener("DOMContentLoaded", () => {
+                replaceAppInfo()
+            })
+
+            // Add social media metas and meta tags
+            var metas = `
+                <meta property="og:title" content="${app_info.name} on AlphaBrate App Gallery">
+                <meta property="og:description" content="${app_info.desc}">
+                <meta property="og:image" content="${app_info.icon}">
+                <meta property="og:url" content="https://alphabrate.github.io/apps/app/${app_info.app_id}.html">
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:title" content="${app_info.name} on AlphaBrate App Gallery">
+                <meta name="twitter:description" content="${app_info.desc}">
+                <meta name="twitter:image" content="${app_info.icon}">
+                <meta name="twitter:site" content="@AlphaBrate_Team">
+                <meta name="twitter:creator" content="@AlphaBrate_Team">
+                <meta name="twitter:domain" content="alphabrate.github.io">
+                <meta name="twitter:creator:id" content="AlphaBrate_Team">
+                <meta name="twitter:site:id" content="AlphaBrate_Team">
+                <meta name="twitter:label1" content="Rating">
+                <meta name="twitter:data1" content="${app_info.rating} stars">
+                <meta name="twitter:label2" content="Price">
+                <meta name="twitter:data2" content="Free">
+                <meta name="twitter:label3" content="Category">
+                <meta name="twitter:data3" content="${app_info.category}">
+                <meta name="description" content="${app_info.desc}">
+                `
+            document.head.innerHTML += metas
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="app-up">
+            <div class="app-left">
+                <img src="_ICON_" alt="_NAME_">
+            </div>
+            <div class="app-right">
+                <h1>_NAME_</h1>
+                <p>_DESC_</p>
+                <span class="tag">FREE</span>
+                <span class="tag">No Ads</span>
+                <span class="tag nowrap">Works on this device</span>
+            </div>
+            <div class="rate card flex col pad hid_rating">
+                <h2>Rate this app</h2>
+                <div class="rating-zone">
+                    <input type="range" name="range" id="stars" min="1" max="5" value="0" oninput="active(this.value)">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+                <a><button class="more" onclick="sendResult()">Submit</button></a>
+            </div>
+        </div>
+        <div class="space-break hid_rating" data-height="4"></div>
+        <div class="space-break dots hid_rating" data-height="2"></div>
+        <div class="image-loop">
+        </div>
+        <div class="space-break" data-height="4"></div>
+        <div class="space-break dots" data-height="2"></div>
+        <div class="app-down">
+            <h2>Details</h2>
+            <p><b>Category:</b> _CATEGORY_</p>
+            <p><b>Published:</b> _DATEPUBLISHED_</p>
+            <p><b>Operating System:</b> _OPERATING_SYSTEM_</p>
+            <p><b>Rating:</b> _RATING_ (_RAT_COUNT_) <span class="stars">★</span></p>
+            <p><b>Price:</b> US$0</p>
+            <a href="" id="start_redirect">
+                <button>Start App</button>
+            </a>
+        </div>
+        <p class="smaller color-lighter-gray">The user ratings for this app are sourced directly from its users and are
+            stored on the AlphaBrate’s server. AlphaBrate maintains a strict policy of authenticity and does not create
+            false data or alter any user ratings. However, it’s important to note that these ratings are not verified.
+            Any user who has started using the app can contribute their rating on this page.</p>
+    </div>
+    <div class="space-break hr" data-height="4"></div>
+    <div class="center single" id="footer-links">
+        <!-- Links Added by JS -->
+    </div>
+
+    <div class="center single">
+        <div class="footer" id="copyright">
+        </div>
+    </div>
+
+    <div id="load">
+        <h3>Loading...</h3>
+        <p>Getting app details from server...</p>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script>
+        const session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+        function addRating(r) {
+            if (localStorage.getItem(app_info.app_id) != "true" || localStorage.getItem(`${app_info.app_id}+D`) === "true") {
+                return
+            }
+            fetch(`${server}/rating/${app}/${r}/${session}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                mode: "no-cors"
+            }).then(data => {
+                localStorage.setItem(`${app_info.app_id}+D`, "true")
+                location.reload()
+            })
+        }
+
+        document.getElementById("start_redirect").href = `/apps/redirect.html?app=${app_info.app_id}&url=${app_info.app_url}`
+
+        if (localStorage.getItem(app_info.app_id) === "true" || localStorage.getItem(`${app_info.app_id}+D`) === "true") {
+            document.querySelectorAll(".hid_rating").forEach(e => {
+                e.classList.remove("hid_rating")
+            })
+        }
+
+        function active(n) {
+            for (let i = 0; i < 5; i++) {
+                if (i < n) {
+                    document.querySelectorAll(".star")[i].style.color = "gold"
+                } else {
+                    document.querySelectorAll(".star")[i].style.color = "#dddddd"
+                }
+            }
+        }
+
+        function sendResult() {
+            var stars = document.getElementById("stars").value
+            addRating(stars)
+        }
+    </script>
+    <script>
+        var images = JSON.parse(app_info.screenshots)
+        var image_loop = document.querySelector(".image-loop")
+        images.forEach(i => {
+            var img = document.createElement("img")
+            img.src = i
+            image_loop.appendChild(img)
+        })
+    </script>
+</body>
+
+</html>
