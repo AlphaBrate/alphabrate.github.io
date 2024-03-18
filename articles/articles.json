@@ -1,0 +1,59 @@
+{
+    "user-manuals": {
+        "music-terms": {
+            "index": {
+                "title": "Music Terms",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "",
+                "content": "markdown/index.md"
+            },
+            "getting-started": {
+                "title": "Getting Started",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "",
+                "content": "markdown/getting-started.md"
+            },
+            "basic-navigation": {
+                "title": "Basic Navigation",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "",
+                "content": "markdown/basic-navigation.md"
+            },
+            "features": {
+                "title": "Features",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "",
+                "content": "markdown/features.md"
+            },
+            "adv": {
+                "title": "Advanced Skills",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "",
+                "content": "markdown/adv.md"
+            },
+            "dr": {
+                "title": "Donate and Rate",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "",
+                "content": "markdown/dr.md"
+            }
+        }
+    },
+    "products": {
+        "music-terms": {
+            "index": {
+                "title": "No Ads & Free: Music Terms",
+                "author": "AlphaBrate",
+                "date": "2024-01-12",
+                "description": "Updated: 2024-03-18",
+                "content": "markdown/index.md"
+            }
+        }
+    }
+}
