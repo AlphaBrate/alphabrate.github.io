@@ -74,3 +74,5 @@ if (app_sourced == app_info.app_id) {
     window.history.replaceState({}, document.title, url_without_query)
     location.reload()
 }
+
+document.getElementById('raw_rating').href = `${server}/rating/${app}/raw`
