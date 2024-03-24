@@ -403,6 +403,15 @@ p.color-filled {
     }
 }
 
+.app-right {
+    user-select: none;
+
+    * {
+        user-select: text;
+        -webkit-user-drag: none;
+    }
+}
+
 .tag {
     background: #000000;
     padding: .2rem .5rem;
@@ -414,8 +423,8 @@ p.color-filled {
 }
 
 .tag::selection {
-    background: #ffffff7e;
-    color: #000000;
+    background: #56a5ff64;
+    color: #ffffff;
 }
 
 font.clear {

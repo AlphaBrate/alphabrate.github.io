@@ -11,10 +11,14 @@
     <meta name="theme-color" content="#FFF">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script>
+        console.log("[Server] Waiting for the server to be prepared...")
+    </script>
+    <script src="https://alphabrate-server.onrender.com/wait.js" defer></script>
     <script name="schema:software-application" type="application/ld+json">
         {
             "@context": "http://schema.org",
-            "@type": ["SoftwareApplication", "MobileApplication", "WebApplication"],
+            "@type": "WebApplication",
             "name": "_NAME_",
             "description": "_DESC_",
             "screenshot": _SCREENSHOTS_,
@@ -22,6 +26,8 @@
             "applicationCategory": "_APP_CAT_",
             "datePublished": "_DATEPUBLISHED_",
             "operatingSystem": "_OPERATING_SYSTEM_",
+            "browserRequirements": "Requires JavaScript and a modern web browser",
+            "installable": "True",
             "author": {
                 "@type": "Organization",
                 "name": "AlphaBrate",
@@ -46,8 +52,8 @@
             "desc": "Discover musical terms with AlphaBrate. No ads or fees! Enjoy our simple, elegant design. Ideal for music lovers.",
             "screenshots": '["https://alphabrate.github.io/apps/images/music-terms/mst-0.webp", "https://alphabrate.github.io/apps/images/music-terms/mst-1.webp", "https://alphabrate.github.io/apps/images/music-terms/mst-2.webp", "https://alphabrate.github.io/apps/images/music-terms/mst-3.webp", "https://alphabrate.github.io/apps/images/music-terms/mst-4.webp", "https://alphabrate.github.io/apps/images/music-terms/mst-5.webp"]',
             "icon": "https://raw.githubusercontent.com/musicterms/MusicTerms.GitHub.io/main/icon-smooth.png",
-            "category": "Music",
-            "app_cat": "ReferenceApplication",
+            "category": "[Educational] Music",
+            "app_cat": "EducationalApplication",
             "datePublished": "2024-01-01",
             "operating_system": "Operates on all devices, supported by all morden browsers. Some devices, such as older models, may not support all features.",
             "rating": 5,
@@ -57,6 +63,7 @@
         }
         var rating, rat_count = 1;
         const server = "https://alphabrate-server.onrender.com"
+        // const server = "http://localhost:3000"
         const app = "music-terms"
 
         fetch(`${server}/rating/${app}`, {
@@ -181,7 +188,8 @@
         <p class="smaller color-lighter-gray">The user ratings for this app are sourced directly from its users and are
             stored on the AlphaBrate’s server. AlphaBrate maintains a strict policy of authenticity and does not create
             false data or alter any user ratings. However, it’s important to note that these ratings are not verified.
-            Any user who has started using the app can contribute their rating on this page.</p>
+            Any user who has started using the app can contribute their rating on this page.
+            You can view raw rating data <a id="raw_rating" target="_blank">here</a>, all users' private information is protected and hidden.</p>
     </div>
     <div class="space-break hr" data-height="4"></div>
     <div class="center single" id="footer-links">
@@ -212,7 +220,6 @@
             }
         </style>
     </noscript>
-
     <script src="/js/index.js"></script>
     <script src="/apps/app.js"></script>
 </body>
