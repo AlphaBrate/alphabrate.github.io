@@ -147,18 +147,18 @@
                 <span class="tag nowrap">Works on this device</span>
             </div>
             <div class="rate card flex col pad hid_rating">
-                <h2>Rate this app</h2>
+                <h2 id="rating_intro">Rate this app</h2>
                 <div class="rating-zone">
                     <input type="range" name="range" id="stars" min="1" max="5" value="0" oninput="active(this.value)">
                     <div class="stars">
                         <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
-                        <span class="star">★</span>    
+                        <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
                 </div>
-                <button class="more btn" onclick="sendResult()">Submit</button>
+                <button class="more btn" onclick="sendResult()" id="submit_rating">Submit</button>
             </div>
         </div>
         <div class="space-break hid_rating" data-height="4"></div>
@@ -198,58 +198,23 @@
         <p>Getting app details from server...</p>
     </div>
 
+    <noscript>
+        <p>
+            <span class="sentence">We're sorry, but our website <span class="nowrap">requires JavaScript.</span></span>
+            <br>
+            <span class="sentence">Please enable it <span class="nowrap">in order to experience</span> the <span
+                    class="nowrap">elegance
+                    and simplicity.</span></span>
+        </p>
+        <style>
+            html {
+                overflow: hidden !important;
+            }
+        </style>
+    </noscript>
+
     <script src="/js/index.js"></script>
-    <script>
-        const session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
-        function addRating(r) {
-            if (localStorage.getItem(app_info.app_id) != "true" || localStorage.getItem(`${app_info.app_id}+D`) === "true") {
-                return
-            }
-            fetch(`${server}/rating/${app}/${r}/${session}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                mode: "no-cors"
-            }).then(data => {
-                localStorage.setItem(`${app_info.app_id}+D`, "true")
-                location.reload()
-            })
-        }
-
-        document.getElementById("start_redirect").href = `/apps/redirect.html?app=${app_info.app_id}&url=${app_info.app_url}`
-
-        if (localStorage.getItem(app_info.app_id) === "true" && localStorage.getItem(`${app_info.app_id}+D`) != "true") {
-            document.querySelectorAll(".hid_rating").forEach(e => {
-                e.classList.remove("hid_rating")
-            })
-        }
-
-        function active(n) {
-            for (let i = 0; i < 5; i++) {
-                if (i < n) {
-                    document.querySelectorAll(".star")[i].style.color = "gold"
-                } else {
-                    document.querySelectorAll(".star")[i].style.color = "#dddddd"
-                }
-            }
-        }
-
-        function sendResult() {
-            var stars = document.getElementById("stars").value
-            addRating(stars)
-        }
-    </script>
-    <script>
-        var images = JSON.parse(app_info.screenshots)
-        var image_loop = document.querySelector(".image-loop")
-        images.forEach(i => {
-            var img = document.createElement("img")
-            img.src = i
-            img.alt = `A Screenshot of ${app_info.name}.`
-            image_loop.appendChild(img)
-        })
-    </script>
+    <script src="/apps/app.js"></script>
 </body>
 
 </html>

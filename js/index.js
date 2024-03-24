@@ -26,8 +26,9 @@ const footer_links = `
                 <a href="/about/downloads.html">Downloads</a>
                 <a href="/projects">Projects</a>
                 <a href="/donate-to-us-thank-you-very-much/">Donate</a>
-                <a href="/sitemap.xml">Site Map</a>
+                <a href="/articles">Articles</a>
                 <a href="/about/policies/">Policies & Terms</a>
+                <a href="/apps">App Gallery</a>
             </div>
         </div>
     </div>
