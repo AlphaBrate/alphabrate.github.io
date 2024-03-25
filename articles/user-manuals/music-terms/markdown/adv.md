@@ -21,7 +21,7 @@ The most taken theory exams are <span class="nowrap">![ABRSM](https://musicterms
 
 <h2 class="center">Continue Reading</h2>
 
-<a href="?article=dr" class="center no-margin"><button>Donate and Rate</button></a>
+<a href="?article=solutions" class="center no-margin"><button>Solutions</button></a>
 
 <br>
 

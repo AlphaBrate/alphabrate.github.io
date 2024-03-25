@@ -28,7 +28,7 @@ The Music Terms app comes equipped with a built-in metronome, an indispensable t
 
 To adjust the tempo, first, tap the <span class="nowrap">![Metronome Black & White](assets/bw_mtrn.svg?size=text&bg=transparent&float-vert=center) **Metronome**</span> button located at the bottom left of the metronome interface. Next, tap the colored <span class="nowrap">![Metronome Colored](assets/c_mtrn.svg?size=text&bg=transparent&float-vert=center)</span> **Metronome** button to bring up the tempo input range. Simply slide the circle along this range to set your desired tempo.
 
-![Adjust Tempo](assets/m_ip_adj_tmp.png)
+![Adjust Tempo](assets/m_ip_adj_tmp.png?bg=transparent)
 
 ## Dark Mode
 
