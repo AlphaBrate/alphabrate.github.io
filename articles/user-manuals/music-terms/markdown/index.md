@@ -27,6 +27,7 @@ This user manual is designed to help you get the most out of AlphaBrate Music Te
 - [Basic Navigation](?article=basic-navigation)
 - [Features](?article=features)
 - [Advanced Skills](?article=adv)
+- [Solutions](?article=solutions)
 - [Donate and Rate](?article=dr)
 
 #### Useful Links

@@ -42,6 +42,13 @@
                 "date": "2024-01-01",
                 "description": "",
                 "content": "markdown/dr.md"
+            },
+            "solutions": {
+                "title": "Solutions",
+                "author": "AlphaBrate",
+                "date": "2024-01-01",
+                "description": "Solutions to common problems",
+                "content": "markdown/solutions.md"
             }
         }
     },
