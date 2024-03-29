@@ -144,7 +144,7 @@
     <div class="app">
         <div class="app-up">
             <div class="app-left">
-                <img src="_ICON_" alt="_NAME_">
+                <img src="" alt="_NAME_" id="icon_main">
             </div>
             <div class="app-right">
                 <h1>_NAME_</h1>
@@ -191,6 +191,9 @@
             Any user who has started using the app can contribute their rating on this page.
             You can view raw rating data <a id="raw_rating" target="_blank">here</a>, all users' private information is protected and hidden.</p>
     </div>
+    <script>
+        document.getElementById('icon_main').src = app_info.icon
+    </script>
     <div class="space-break hr" data-height="4"></div>
     <div class="center single" id="footer-links">
         <!-- Links Added by JS -->
