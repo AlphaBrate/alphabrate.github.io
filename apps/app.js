@@ -20,9 +20,9 @@ function addRating(r) {
         },
         mode: 'no-cors'
     }).then(data => {
-        console.log(data);
         localStorage.setItem(`${app_info.app_id}+D`, 'true')
         localStorage.setItem(`${app_info.app_id}+R`, r)
+        location.reload()
     })
 }
 
