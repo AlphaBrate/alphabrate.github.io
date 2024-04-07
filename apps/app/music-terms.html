@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"">
     <meta name=" description" content="AlphaBrate, an innovative web development team.">
-    <title>_NAME_ | App Gallery | The AlphaBrate Team</title>
+    <title>App Gallery | The AlphaBrate Team</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/apps/app.css">
     <meta name="theme-color" content="#FFF">
@@ -47,6 +47,7 @@
         }
     </script>
     <script>
+        document.title = "_NAME_ | App Gallery | The AlphaBrate Team"
         var app_info = {
             "name": "Music Terms",
             "desc": "Discover musical terms with AlphaBrate. No ads or fees! Enjoy our simple, elegant design. Ideal for music lovers.",
@@ -56,8 +57,8 @@
             "app_cat": "EducationalApplication",
             "datePublished": "2024-01-01",
             "operating_system": "Operates on all devices, supported by all morden browsers. Some devices, such as older models, may not support all features.",
-            "rating": 5,
-            "rat_count": 1,
+            "rating": 4.3,
+            "rat_count": 56, // Rating Information Counted on 07 Apr 2024
             "app_id": "music-terms",
             "app_url": "https://musicterms.github.io"
         }
@@ -78,8 +79,8 @@
             })
         }).catch(e => {
             addValues({
-                "rating": 5,
-                "count": 1
+                "rating": app_info.rating,
+                "count": app_info.rat_count
             })
         })
 
@@ -185,11 +186,26 @@
                 <button>Start App</button>
             </a>
         </div>
-        <p class="smaller color-lighter-gray">The user ratings for this app are sourced directly from its users and are
-            stored on the AlphaBrate’s server. AlphaBrate maintains a strict policy of authenticity and does not create
-            false data or alter any user ratings. However, it’s important to note that these ratings are not verified.
-            Any user who has started using the app can contribute their rating on this page.
-            You can view raw rating data <a id="raw_rating" target="_blank">here</a>, all users' private information is protected and hidden.</p>
+        <p class="smaller color-lighter-gray">
+            The user ratings for this app are directly sourced from its users and
+            securely stored on AlphaBrate's server. AlphaBrate adheres to a stringent policy of authenticity, ensuring
+            no creation of false data or alteration of user ratings. However, it's crucial to understand that these
+            ratings are not independently verified. Any user who has begun using the app can contribute their rating on
+            this page.
+
+            You can view the <a id="raw_rating" target="_blank">raw rating data here</a>, with the assurance that
+            all
+            users' private information is safeguarded
+            and concealed. Rating information is randomly rearranged to further protect user privacy. We employ
+            structured data to enable search engines to display rating information during your search, in accordance
+            with <a href="https://developers.google.com/search/docs/appearance/structured-data/software-app">documents
+                provided by Google</a>.
+
+            This page is hosted on GitHub Pages, and the HTML file is static, not dynamically generated. Consequently,
+            some search engines may not display the most current information. Users can view the latest information
+            directly on this page after the loading process completes. Please note that the actual user experience may
+            vary, and we encourage users to try the app for themselves.
+        </p>
     </div>
     <script>
         document.getElementById('icon_main').src = app_info.icon
