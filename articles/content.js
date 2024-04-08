@@ -25,7 +25,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
     fetch(contentUrl).then(res => res.text()).then(content => {
         document.getElementById("text").innerHTML = marked.parse(content);
 
-        var imgs = document.querySelectorAll("img");
+        var imgs = document.querySelectorAll(".content-main img");
         imgs.forEach(img => {
             let src = img.src;
             let query = new URLSearchParams(src.split("?")[1]);
