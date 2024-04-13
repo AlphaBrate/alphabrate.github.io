@@ -1,0 +1,35 @@
+{
+    "short_name": "AlphaBrate Hub",
+    "name": "AlphaBrate Hub",
+    "author": "AlphaBrate",
+    "id": "albhub",
+    "url": "https://alphabrate.github.io/pwa",
+    "icons": [
+        {
+            "src": "/icons/alphabrate.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/icons/pwa/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icons/pwa/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/pwa",
+    "background_color": "#000000",
+    "display_override": [
+        "fullscreen",
+        "minimal-ui"
+    ],
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000",
+    "description": "AlphaBrate Hub App",
+    "screenshots": []
+}

@@ -1,11 +1,138 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --user-preferred-background: #282828;
+        --user-preferred-text: #ffffff;
+        --user-preferred-hr: #ffffff15;
+        --user-preferred-separator: #ffffff35;
+        --user-preferred-gray-highlight: #8c8c8c;
+        --user-preferred-gray-underlay: #696969;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --user-preferred-background: #ffffff;
+        --user-preferred-text: #000000;
+        --user-preferred-hr: #00000015;
+        --user-preferred-separator: #00000035;
+        --user-preferred-gray-highlight: #313131;
+        --user-preferred-gray-underlay: rgb(159, 159, 159);
+    }
+}
+
+:root {
+    --background-color-light: #f2f2f3;
+    --background-color-light-rgb: rgb(242, 242, 243);
+    --background-color-dark: #000000;
+    --background-color-dark-rgb: rgb(0, 0, 0);
+    --background-color-protrude-light: #ffffff;
+    --background-color-protrude-dark: #1b1b1b;
+    --background-color-protrude-hover-light: #fafafa;
+    --background-color-protrude-hover-dark: #2a2a2a;
+    --background-color-popover-light: rgba(247, 247, 247, 0.80);
+    --background-color-popover-dark: rgba(37, 37, 37, 0.8);
+    --background-color-popover-hover-light: rgba(226, 226, 226, 0.679);
+    --background-color-popover-hover-dark: rgba(55, 55, 55, 0.85);
+    --background-accent-color-light: #1a1a1a30;
+    --background-accent-color-dark: #ffffff30;
+    --font-color-light: #010101;
+    --font-color-light-rgb: rgb(1, 1, 1);
+    --font-color-dark: #ffffff;
+    --font-color-dark-rgb: rgb(255, 255, 255);
+    --font-color-gray: #868686;
+    --border-color-light: #1616162c;
+    --border-color-dark: #b0b0b02c;
+    --featured-color-light: #981717;
+    --featured-color-dark: #e45454;
+    --featured-color-hover-light: #e45454;
+    --featured-color-hover-dark: #981717;
+    --featured-color-active-light: #986b17;
+    --featured-color-active-dark: #e45454;
+    --functional-color-light: #007AFF;
+    --functional-color-dark: #0A84FF;
+    --color-grey-light: #808080;
+    --color-grey-dark: #616161;
+    --shadow-color-light: #00000050;
+    --shadow-color-dark: #ffffff50;
+    --shadow-color-light-fewer: #00000015;
+    --shadow-color-dark-fewer: #ffffff15;
+    --color-green: #30d158;
+    --nav-color-dark: var(--background-color-dark);
+    --nav-color-light: var(--background-color-protrude-light);
+    --href-color: rgba(0, 162, 255, 0.5);
+    --highlight-color-light: #ffffff86;
+    --highlight-color-dark: #ffffffed;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: var(--background-color-dark);
+        --background-color-rgb: var(--background-color-dark-rgb);
+        --background-color-protrude: var(--background-color-protrude-dark);
+        --font-color: var(--font-color-dark);
+        --font-color-rgb: var(--font-color-dark-rgb);
+        --border-color: var(--border-color-dark);
+        --featured-color: var(--featured-color-dark);
+        --featured-color-hover: var(--featured-color-hover-dark);
+        --featured-color-active: var(--featured-color-active-dark);
+        --background-color-protrude-hover: var(--background-color-protrude-hover-dark);
+        --color-grey: var(--color-grey-dark);
+        --background-color-popover: var(--background-color-popover-dark);
+        --background-accent-color: var(--background-accent-color-dark);
+        --background-color-popover-hover: var(--background-color-popover-hover-dark);
+        --shadow-color: var(--shadow-color-dark);
+        --shadow-color-fewer: var(--shadow-color-dark-fewer);
+        --nav-color: var(--nav-color-dark);
+        --functional-color: var(--functional-color-dark);
+        --highlight-color: var(--highlight-color-dark);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: var(--background-color-light);
+        --background-color-rgb: var(--background-color-light-rgb);
+        --background-color-protrude: var(--background-color-protrude-light);
+        --font-color: var(--font-color-light);
+        --font-color-rgb: var(--font-color-light-rgb);
+        --border-color: var(--border-color-light);
+        --featured-color: var(--featured-color-light);
+        --featured-color-hover: var(--featured-color-hover-light);
+        --featured-color-active: var(--featured-color-active-light);
+        --background-color-protrude-hover: var(--background-color-protrude-hover-light);
+        --color-grey: var(--color-grey-light);
+        --background-color-popover: var(--background-color-popover-light);
+        --background-accent-color: var(--background-accent-color-light);
+        --background-color-popover-hover: var(--background-color-popover-hover-light);
+        --shadow-color: var(--shadow-color-light);
+        --shadow-color-fewer: var(--shadow-color-light-fewer);
+        --nav-color: var(--nav-color-light);
+        --functional-color: var(--functional-color-light);
+        --highlight-color: var(--highlight-color-light);
+    }
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
     padding: 0;
     margin: 0;
-    max-width: 100vw;
-    overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     min-height: 100%;
     scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    opacity: 0;
+    transition: opacity .3s;
+
+    background-color: var(--user-preferred-background) !important;
+    color: var(--user-preferred-text) !important;
 
     * {
         max-width: 100%;
@@ -19,7 +146,7 @@ img {
 
 *::selection {
     background: #00b3ff3f;
-    color: #000000;
+    color: var(--user-preferred-text);
 }
 
 ::-webkit-scrollbar {
@@ -46,8 +173,8 @@ a>button,
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-    background: black;
-    color: white;
+    background: var(--user-preferred-text) !important;
+    color: var(--user-preferred-background) !important;
     text-decoration: none;
     transition: .3s;
     user-select: none;
@@ -65,10 +192,19 @@ a>button:hover,
     transform: translateY(-1px);
 }
 
+@media (prefers-color-scheme: dark) {
+
+    a>button:hover,
+    .btn:hover {
+        background: rgb(213, 213, 213);
+        transform: translateY(-1px);
+    }
+}
+
 a>button.more,
 .btn.more {
-    background: black;
-    color: white;
+    background: var(--user-preferred-text);
+    color: var(--user-preferred-background);
     font-weight: 400;
     font-size: .9rem;
     padding: .8rem 1.2rem;
@@ -80,10 +216,14 @@ h2.larger {
     font-size: 3rem !important;
 }
 
+h2.bold {
+    font-weight: 700 !important;
+}
+
 .hr {
     width: 70%;
     height: 1px;
-    background: #e0e0e0;
+    background: var(--user-preferred-hr);
     margin: 1rem auto;
 }
 
@@ -96,15 +236,14 @@ h2.larger {
     transform: translateY(-4rem);
     text-align: center;
     margin: 2rem;
-    color: lightgray;
+    color: var(--user-preferred-separator);
 }
 
 .section.top {
-    background-image: url('/img/designs/header.png');
+    background-image: url('/img/designs/light.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     color: #fff;
     padding: 2rem 0;
     text-align: center;
@@ -117,7 +256,7 @@ h2.larger {
     color: #fff;
 }
 
-.section.top.shorter {
+.top.section.shorter {
     height: 15vh;
 }
 
@@ -230,7 +369,7 @@ h2.larger {
     }
 
     a {
-        color: black;
+        color: var(--user-preferred-text);
     }
 }
 
@@ -242,6 +381,14 @@ h2.larger {
 .color-lighter-gray,
 .color-lighter-gray * {
     color: rgb(200, 200, 200) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .color-lighter-gray,
+    .color-lighter-gray * {
+        color: rgb(66, 66, 66) !important;
+    }
 }
 
 .color-more-gray,
@@ -347,10 +494,45 @@ p.color-filled {
     }
 }
 
-.little-gray {
-    background-color: #fafafa;
-    padding-top: 2rem;
+.donation-section {
+    background-image: url('/img/designs/strings/light.full-hd-pc.2x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 4rem;
+
+    &,
+    *:not(.more) {
+        color: white !important;
+    }
 }
+
+@media (prefers-color-scheme: dark) {
+
+    .donation-section {
+        background-image: url('/img/designs/strings/dark.full-hd-pc.2x.png');
+    }
+
+    @media (max-width: 600px) {
+        .donation-section {
+            background-image: url('/img/designs/strings/dark.mobile.2x.png');
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    .donation-section {
+        background-image: url('/img/designs/strings/light.full-hd-pc.2x.png');
+    }
+
+    @media (max-width: 600px) {
+        .donation-section {
+            background-image: url('/img/designs/strings/light.mobile.2x.png');
+        }
+    }
+}
+
 
 .color-black {
     color: black !important;
@@ -374,7 +556,7 @@ p.color-filled {
     overflow: hidden;
     align-items: flex-start;
 
-    color: rgb(49, 49, 49);
+    color: var(--user-preferred-gray-highlight);
 
     .col {
         display: flex;
@@ -384,21 +566,21 @@ p.color-filled {
         align-items: flex-start;
         margin: 0 1rem 0 1rem;
 
+        a {
+            color: var(--user-preferred-gray-underlay) !important;
+            text-decoration: none;
+            margin-bottom: .8em;
+        }
+
         font.footer-heading {
             font-weight: 600;
             margin-bottom: .8em;
             font-size: 16px;
 
             a {
-                color: rgb(49, 49, 49);
+                color: var(--user-preferred-gray-highlight) !important;
                 text-decoration: underline;
             }
-        }
-
-        a {
-            color: rgb(159, 159, 159);
-            text-decoration: none;
-            margin-bottom: .8em;
         }
     }
 }
@@ -418,7 +600,7 @@ p.color-filled {
     border-radius: 27px;
     margin: .5rem;
     font-size: .8rem;
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: 400;
 }
 
@@ -611,11 +793,15 @@ noscript {
     -webkit-user-select: none;
 
     &.color-white {
-        color: white;
+        color: white !important;
+
+        * {
+            color: white !important;
+        }
 
         & a>button {
-            background: rgba(138, 138, 138, 0.474);
-            color: rgb(255, 255, 255);
+            background: rgba(138, 138, 138, 0.474) !important;
+            color: rgb(255, 255, 255) !important;
         }
     }
 
@@ -788,11 +974,127 @@ noscript {
         width: 5rem;
     }
 
+    h2 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .trsl {
+        background: rgba(138, 138, 138, 0.474) !important;
+        color: rgb(255, 255, 255) !important;
+    }
+
     .mid-card-image {
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.fit {
+    height: fit-content !important;
+    width: fit-content !important;
+}
+
+.up-down-sep {
+    margin-bottom: 10rem;
+
+    &.down {
+        transform: translateY(5rem);
+    }
+
+    * {
+        max-width: 250px;
+    }
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-vp {
+    height: 100vh;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-vp {
+    width: 100vw;
+}
+
+.w400 {
+    font-weight: 400 !important;
+}
+
+.w500 {
+    font-weight: 500 !important;
+}
+
+.w600 {
+    font-weight: 600 !important;
+}
+
+.w700 {
+    font-weight: 700 !important;
+}
+
+.w800 {
+    font-weight: 800 !important;
+}
+
+.w900 {
+    font-weight: 900 !important;
+}
+
+.half {
+    width: 50%;
+}
+
+.W40P {
+    width: 40% !important;
+}
+
+.W50P {
+    width: 50% !important;
+}
+
+.W60P {
+    width: 60% !important;
+}
+
+.W70P {
+    width: 70% !important;
+}
+
+.W80P {
+    width: 80% !important;
+}
+
+.dym-size {
+    h2 {
+        font-size: min(8vh, 9vw);
+    }
+
+    p {
+        font-size: min(3vh, 4vw);
+    }
+
+    &.dym-small {
+        h2 {
+            font-size: min(7.5vh, 8.5vw);
+        }
+
+        p {
+            font-size: min(2.5vh, 3.5vw);
+        }
     }
 }
