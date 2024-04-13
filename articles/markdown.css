@@ -1076,7 +1076,7 @@
 
 * {
     -webkit-user-drag: none;
-    color: var(--font-color);
+    color: var(--user-preferred-text) !important;
     font-family: Helvetica, Arial, sans-serif;
     user-select: none;
 }
@@ -1088,8 +1088,15 @@ body {
     overflow-x: hidden;
 }
 
+#text {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
 .nav {
-    background-color: white;
+    background: linear-gradient(180deg, var(--user-preferred-background) 0%, transparent 100%);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     position: fixed;
     top: 0;
@@ -1097,6 +1104,20 @@ body {
     z-index: 1;
     height: 60px;
     display: flex;
+}
+
+.nav.pwa {
+    background: transparent;
+    top: -100px;
+    height: 150px;
+    align-items: flex-end;
+
+    #center-title {
+        position: fixed;
+        top: 105px;
+        opacity: 1;
+
+    }
 }
 
 .nav .logo img {

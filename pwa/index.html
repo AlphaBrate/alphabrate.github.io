@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>AlphaBrate</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pwa/pwa.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <a href="/">
+            <div class="logo">
+                <img src="/icons/alphabrate.svg" alt="Logo AlphaBrate">
+            </div>
+        </a>
+        <div class="center">
+            <div id="center-title">AlphaBrate Hub</div>
+        </div>
+    </div>
+    <div class="space-break" data-height="7"></div>
+    <div class="center">
+        <div class="description">
+            <div class="lar-card color-white" style="--background-l: url(/img/designs/strings/dark.full-hd-pc.2x.png)">
+                <div class="full_under cover"></div>
+                <div class="lar-card-image">
+                    <div class="img">
+                        <img src="/img/designs/strings/dark.full-hd-pc.2x.png" alt="IMAGE">
+                    </div>
+                    <div class="text">
+                        <font>User Manuals</font>
+                    </div>
+                </div>
+                <div class="detail">
+                    <font>Solve Your Problems</font>
+                    <a href="/articles/user-manuals/">
+                        <button class="more">Read</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="description">
+            <div class="mid-card color-white" style="--background-l: url(/img/designs/header.png)">
+                <img src="/articles/user-manuals/img/music-terms-header.svg" alt="hidden">
+                <img src="/assets/texts/product_articles.svg" class="icon" alt="Music Terms Logo">
+                <div class="detail">
+                    <font>Products</font>
+                    <a href="/articles/products/">
+                        <button class="more">Read</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-col flex as" data-as=".center>.description" data-same="width">
+        <div class="description half-in-col">
+            <div class="mid-card color-white half up-down-sep "
+                style="--background-l: url(/img/designs/strings/light.full-hd-pc.2x.png)">
+                <img src="/assets/frames/half.svg" alt="hidden">
+                <h2>App Gallery</h2>
+                <div class="detail">
+                    <a href="/apps" class="no-margin" style="margin-bottom: 3rem !important;">
+                        <button class="more trsl">Get Apps</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="description half-in-col">
+            <div class="mid-card color-white half up-down-sep down"
+                style="--background-l: url(/img/designs/strings/light.full-hd-pc.2x.png);">
+                <img src="/assets/frames/half.svg" alt="hidden">
+                <h2>Seek Support</h2>
+                <div class="detail">
+                    <a href="/about/support.html" class="no-margin" style="margin-bottom: 3rem !important;">
+                        <button class="more trsl">Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-col flex as" data-as=".center>.description" data-same="width" style="transform: translateY(-5rem);">
+        <div class="description half-in-col">
+            <div class="mid-card color-white half"
+                style="--background-l: url(/articles/user-manuals/img/music-terms-header.svg)">
+                <img src="/assets/frames/half.svg" alt="hidden">
+                <h2>Music Terms</h2>
+                <div class="detail">
+                    <a href="" id="openMusTerms">
+                        <button class="more">Open</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="description half-in-col">
+            <div class="mid-card color-white half"
+                style="--background-l: url(/img/designs/community.svg)">
+                <img src="/assets/frames/half.svg" alt="hidden">
+                <div class="detail">
+                    <a href="/community">
+                        <button class="more">Browse</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="smaller ios-only color-gray center W80P">To open Music Terms, you must have added the app to your home screen and
+            downloaded the shortcut.</p>
+    </div>
+
+
+    <font class="center">Testing In Progress</font>
+
+    <div class="center single" id="footer-links">
+        <!-- Links Added by JS -->
+    </div>
+
+    <div class="center single">
+        <div class="footer" id="copyright">
+        </div>
+    </div>
+
+    <div id="alert-fullscreen">
+        <div id="alert">
+            <div class="alert-content">
+                <h1 id="alert-title"></h1>
+                <p id="alert-text"></p>
+            </div>
+            <div class="divider-hoz"></div>
+            <div class="actions">
+                <span id="alert-cancel" class="alert-btn">Cancel</span>
+                <div class="divider-ver"></div>
+                <span id="alert-confirm" class="alert-btn">OK</span>
+            </div>
+        </div>
+    </div>
+
+
+    <noscript>
+        <p>
+            <span class="sentence">We're sorry, but our website <span class="nowrap">requires JavaScript.</span></span>
+            <br>
+            <span class="sentence">Please enable it <span class="nowrap">in order to experience</span> the <span
+                    class="nowrap">elegance
+                    and simplicity.</span></span>
+        </p>
+        <style>
+            html {
+                overflow: hidden !important;
+            }
+        </style>
+    </noscript>
+
+    <script src="/js/index.js"></script>
+    <script>
+
+
+        var imgs = document.querySelectorAll('*');
+        // if is not in dark mode, change the images to light mode
+        var darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (!darkMode) {
+            imgs.forEach(img => {
+                try {
+                    if (img.outerHTML.includes('dark.')) {
+                        img.outerHTML = img.outerHTML.replaceAll('dark.', 'light.');
+                    } else if (img.outerHTML.includes('light.')) {
+                        img.outerHTML = img.outerHTML.replaceAll('light.', 'dark.');
+                    }
+                } catch { }
+            });
+        }
+
+        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+        if (isIOS) {
+            document.getElementById('openMusTerms').setAttribute('href', 'shortcuts://run-shortcut?name=Open Music Terms');
+            if (localStorage.getItem('downloadedShortcut') !== 'true') {
+                Confirm('Download Shortcut?', 'To use AlphaBrate Hub with Siri or other apps, you need to download a shortcut to your Shortcuts app.', {
+                    confirm: () => {
+                        window.open('https://www.icloud.com/shortcuts/483688c3c8344b39915d0af065cab8cf');
+                        localStorage.setItem('downloadedShortcut', 'true');
+
+                        confirmEnd();
+                    }
+                });
+            }
+        } else {
+            document.getElementById('openMusTerms').setAttribute('href', '/apps/app/music-terms.html');
+        }
+    </script>
+</body>
+
+</html>

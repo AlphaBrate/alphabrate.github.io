@@ -12,7 +12,7 @@ Developed specifically for Music Terms by AlphaBrate, Power Search has been deve
 
 The app’s Favorites feature allows you to save terms for quick access. This feature is especially useful for terms you frequently refer to or are currently learning. You have to enable the feature in the app’s settings fist in order to to use it.
 
-After enabling the feature, you can add terms to your favorites by tapping the star icon next to the term in the term details page. To access your favorites, tap the <span class="nowrap">![Favorites](assets/mst_star.svg?size=text&bg=transparent&float-vert=center) **Favorites**</span> button on the home page.
+After enabling the feature, you can add terms to your favorites by tapping the star icon next to the term in the term details page. To access your favorites, tap the <span class="nowrap">![Favorites](assets/mst_star.svg?size=text&bg=transparent&float-vert=center&invert=true) **Favorites**</span> button on the home page.
 
 <font class="color-more-gray">
 
@@ -26,7 +26,7 @@ The Music Terms app comes equipped with a built-in metronome, an indispensable t
 
 > **Simply tap on the circle drum in the middle and start the metronome.**
 
-To adjust the tempo, first, tap the <span class="nowrap">![Metronome Black & White](assets/bw_mtrn.svg?size=text&bg=transparent&float-vert=center) **Metronome**</span> button located at the bottom left of the metronome interface. Next, tap the colored <span class="nowrap">![Metronome Colored](assets/c_mtrn.svg?size=text&bg=transparent&float-vert=center)</span> **Metronome** button to bring up the tempo input range. Simply slide the circle along this range to set your desired tempo.
+To adjust the tempo, first, tap the <span class="nowrap">![Metronome Black & White](assets/bw_mtrn.svg?size=text&bg=transparent&float-vert=center&invert=true) **Metronome**</span> button located at the bottom left of the metronome interface. Next, tap the colored <span class="nowrap">![Metronome Colored](assets/c_mtrn.svg?size=text&bg=transparent&float-vert=center)</span> **Metronome** button to bring up the tempo input range. Simply slide the circle along this range to set your desired tempo.
 
 ![Adjust Tempo](assets/m_ip_adj_tmp.png?bg=transparent)
 

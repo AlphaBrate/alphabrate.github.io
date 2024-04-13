@@ -11,7 +11,18 @@ const ped_full = {
     "products": "Products",
     "product": "Product",
 };
-    
+
+const darkMode = (dark) => {
+    if (dark) {
+        document.querySelector('.logo>img').src = "/icons/light.alphabrate.svg"
+    } else {
+        document.querySelector('.logo>img').src = "/icons/alphabrate.svg"
+    }
+}
+
+darkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => darkMode(e.matches));
 
 fetch("/articles/articles.json").then(res => res.json()).then(articles => {
     var j = articles[ped][Class][articleId];
@@ -24,7 +35,6 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
     var contentUrl = "/articles/" + ped + "/" + Class + "/" + j.content;
     fetch(contentUrl).then(res => res.text()).then(content => {
         document.getElementById("text").innerHTML = marked.parse(content);
-
         var imgs = document.querySelectorAll(".content-main img");
         imgs.forEach(img => {
             let src = img.src;
@@ -41,7 +51,17 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
             img.style.backgroundColor = bg;
             let float_vert = query.get("float-vert") || "default";
             img.classList.add("float-vert-" + float_vert);
+            
+            let invert = query.get("invert") || "false";
+            if (invert === "true") {
+                let isInDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (isInDarkMode) {
+                    img.style.filter = "invert(1)";
+                }
+            }
         });
+
+        document.getElementById("text").style.opacity = 1;
     });
 }).catch(() => {
     document.getElementById("center-title").innerHTML =
@@ -80,3 +100,11 @@ const centerTitle = () => {
 centerTitle();
 
 window.addEventListener("resize", () => centerTitle());
+
+const isInPWA = window.matchMedia('(display-mode: standalone)').matches;
+
+if (isInPWA) {
+    document.querySelector(".nav").classList.add("pwa");
+}
+
+document.head.innerHTML += `<meta name="theme-color" content="${getComputedStyle(document.body).getPropertyValue("--user-preferred-background")}">`;

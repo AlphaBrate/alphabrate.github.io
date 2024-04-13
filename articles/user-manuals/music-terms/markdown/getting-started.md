@@ -24,13 +24,13 @@ To enhance your convenience and streamline access to AlphaBrate Music Terms, con
 >
 >![Or Add to Home Screen Button](assets/or_add_to_home_screen_button.png?size=small&border-radius=7px&center=true)
 
-> If you have consent to our terms, you can find the button in <span class="nowrap">the ![Setting Button](assets/mst_settings.svg?size=text&bg=transparent&float-vert=center) **Settings**</span> menu.
+> If you have consent to our terms, you can find the button in <span class="nowrap">the ![Setting Button](assets/mst_settings.svg?size=text&bg=transparent&float-vert=center&invert=true) **Settings**</span> menu.
 >
 > ![Setting Page](assets/setting_page.png?size=small&border-radius=7px&center=true)
 
 3. Tap the **Share Button** ![Share Button](assets/share.png?size=text&bg=transparent&float-vert=center).
 
-4. Look for and tap <span class="nowrap">**Add to Home Screen**</span> ![Add to Home Screen](assets/add_to_home_screen_apple.svg?size=text&bg=transparent&float-vert=center).
+4. Look for and tap <span class="nowrap">**Add to Home Screen**</span> ![Add to Home Screen](assets/add_to_home_screen_apple.svg?size=text&bg=transparent&float-vert=center&invert=true).
 
 5. Click **Add**. The App will be added to your home screen.
 
@@ -40,9 +40,9 @@ To enhance your convenience and streamline access to AlphaBrate Music Terms, con
 
 2. ** **Same as iOS** **
 
-3. Tap the **Menu Button** , usually located at the top-right corner of the screen and looks like three <span class="nowrap">vertical ![More](assets/more_vert.svg?size=text&bg=transparent&float-vert=center)</span> or <span class="nowrap">horizontal ![More](assets/more_horiz.svg?size=text&bg=transparent&float-vert=center)</span> dots or <span class="nowrap">lines ![More](assets/more_line.svg?size=text&bg=transparent&float-vert=center).</span>
+3. Tap the **Menu Button** , usually located at the top-right corner of the screen and looks like three <span class="nowrap">vertical ![More](assets/more_vert.svg?size=text&bg=transparent&float-vert=center&invert=true)</span> or <span class="nowrap">horizontal ![More](assets/more_horiz.svg?size=text&bg=transparent&float-vert=center&invert=true)</span> dots or <span class="nowrap">lines ![More](assets/more_line.svg?size=text&bg=transparent&float-vert=center&invert=true).</span>
 
-4. Look for and tap <span class="nowrap">**Add to Home Screen**</span> on the menu. With icon usually looks like ![Add to Home Screen](assets/add_to_home_screen_android.svg?size=text&bg=transparent&float-vert=center).
+4. Look for and tap <span class="nowrap">**Add to Home Screen**</span> on the menu. With icon usually looks like ![Add to Home Screen](assets/add_to_home_screen_android.svg?size=text&bg=transparent&float-vert=center&invert=true).
 
 5. ** **Same as iOS** **
 

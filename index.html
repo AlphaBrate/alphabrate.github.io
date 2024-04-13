@@ -28,7 +28,14 @@
     <meta name="theme-color" content="#221F2A">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
     <link rel="canonical" href="https://alphabrate.github.io/">
+    <script>
+        const isInPWA = (window.matchMedia('(display-mode: standalone)').matches);
+        if (isInPWA) {
+            location.href = '/pwa/index.html';
+        }
+    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -116,20 +123,21 @@
     <div class="space-break" data-height="4"></div>
     <div class="space-break dots" data-height="2"></div>
     <div class="two-col flex">
-        <div class="description half-in-col">
-            <h2>Any Must Spend?</h2>
+        <div class="description half-in-col up-down-sep dym-size dym-small">
+            <h2 class="w700">Any Must Spend?</h2>
             <p>No! All our services are free and we never charge you any fees to use our services.</p>
         </div>
-        <div class="description half-in-col">
-            <h2>Disturbing Elements?</h2>
+        <div class="description half-in-col up-down-sep down dym-size dym-small">
+            <h2 class="w700">Disturbing Elements?</h2>
             <p>Never! We guarantee that mandatory advertising will not appear <span class="nowrap">on our
                     services.</span></p>
         </div>
-        <div class="center single flex col">
+        <div class="center single flex col dym-size">
             <div class="description">
-                <h2>Never! It's the APEL.</h2>
-                <p>The AlphaBrate Pure Experience License has no strings attached to your use of our services.
-                    <br>All our projects and services are eligible <span class="nowrap">for this license.</span>
+                <h2 class="w500"><b class="w900">Never!</b><br><span class="nowrap">It's the APEL.</span></h2>
+                <p><span class="nowrap">The AlphaBrate Pure Experience</span> License<span class="nowrap"> has no
+                        strings attached to</span> <span class="nowrap">your use of our services.</span>
+                    <br>All our projects and services <span class="nowrap">are eligible for this license.</span>
                 </p>
             </div>
             <div class="horizontal-break"></div>
@@ -137,9 +145,9 @@
         </div>
     </div>
     <div class="space-break" data-height="1"></div>
-    <div class="center single little-gray">
+    <div class="center single donation-section">
         <div class="description">
-            <h2 class="larger">However,</h2>
+            <h2 class="larger bold">However,</h2>
             <p class="color-filled larger">Everyone loves money, so do we.
                 <br> Although we abide by our principles, we want to be <b>RICH</b>.
                 <br><br> The best way, <a href="/donate-to-us-thank-you-very-much/"><b class="larger">PLEASE

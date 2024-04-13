@@ -28,7 +28,7 @@ To navigate to a term, tap on a category or language. This will take you to the 
 
 ## Searching for a Term
 
-Searching for a term on Music Terms is a breeze. Simply tap ![Search](assets/mst_search.svg?size=text&bg=transparent&float-vert=center)**Search** located at the top of the home page, then enter the term you’re interested in. As you type, the app will dynamically display the results. If you haven’t disabled the Power Search feature, the app will enhance your search experience by providing accurate results, even if there are typos in your search query.
+Searching for a term on Music Terms is a breeze. Simply tap ![Search](assets/mst_search.svg?size=text&bg=transparent&float-vert=center&invert=true)**Search** located at the top of the home page, then enter the term you’re interested in. As you type, the app will dynamically display the results. If you haven’t disabled the Power Search feature, the app will enhance your search experience by providing accurate results, even if there are typos in your search query.
 
 ![Home Page (Section)](assets/search_hp_s.png?size=small&border-radius=17px&center=true)
 

@@ -2,6 +2,9 @@ var prev_session = localStorage.getItem('session')
 const session = prev_session ? prev_session : Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 localStorage.setItem('session', session)
 
+
+document.head.innerHTML += `<style>body::before{background-image: url('${app_info.artwork}');}`
+
 var search = new URLSearchParams(window.location.search)
 let can_rate = search.get('rate')
 
@@ -35,7 +38,7 @@ if (localStorage.getItem(app_info.app_id) === 'true') {
 }
 
 if (localStorage.getItem(`${app_info.app_id}+D`) === 'true') {
-    document.getElementById('rating_intro').innerText = 'You have rated this app.'
+    document.getElementById('rating_intro').innerHTML = 'You have <span class="nowrap">rated this app.</span>'
     active(localStorage.getItem(`${app_info.app_id}+R`))
     document.getElementById('submit_rating').style.display = 'none'
     document.getElementById('stars').disabled = true
