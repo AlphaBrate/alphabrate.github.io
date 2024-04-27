@@ -6,6 +6,16 @@
     height: 100%;
     background-color: #FFF067;
     transition: 1.5s;
+    z-index: 1000;
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 2rem;
+        font-weight: 900;
+    }
 
     .loader.loading {
         position: absolute;
@@ -40,4 +50,47 @@
 .removed {
     opacity: 0;
     pointer-events: none;
+}
+
+body {
+    background: #FFF067 !important;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.login>.logo>img {
+    margin-top: 8rem;
+    height: 15rem;
+}
+
+.login button {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: .8rem 1.2rem;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+    user-select: none;
+    -webkit-user-drag: none;
+    width: 100%;
+}
+
+.login-page1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem;
+    max-width: 80%;
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
