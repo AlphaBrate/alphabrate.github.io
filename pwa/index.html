@@ -7,9 +7,12 @@
     <title>AlphaBrate</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/pwa/pwa.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#000000">
 </head>
@@ -21,11 +24,13 @@
                 <img src="/icons/alphabrate.svg" alt="Logo AlphaBrate">
             </div>
         </a>
-        <div class="center">
-            <div id="center-title">AlphaBrate Hub</div>
-        </div>
+        <div id="center-title">AlphaBrate Hub</div>
     </div>
     <div class="space-break" data-height="7"></div>
+
+    <div class="full">
+
+    </div>
     <div class="center">
         <div class="description">
             <div class="lar-card color-white" style="--background-l: url(/img/designs/strings/dark.full-hd-pc.2x.png)">
@@ -103,8 +108,7 @@
             </div>
         </div>
         <div class="description half-in-col">
-            <div class="mid-card color-white half"
-                style="--background-l: url(/img/designs/community.svg)">
+            <div class="mid-card color-white half" style="--background-l: url(/img/designs/community.svg)">
                 <img src="/assets/frames/half.svg" alt="hidden">
                 <div class="detail">
                     <a href="/community">
@@ -114,7 +118,8 @@
             </div>
         </div>
 
-        <p class="smaller ios-only color-gray center W80P">To open Music Terms, you must have added the app to your home screen and
+        <p class="smaller ios-only color-gray center W80P">To open Music Terms, you must have added the app to your home
+            screen and
             downloaded the shortcut.</p>
     </div>
 
@@ -163,6 +168,9 @@
 
     <script src="/js/index.js"></script>
     <script>
+        if (!window.matchMedia('(display-mode: standalone)').matches) {
+            location.href = '/pwa/intro.html';
+        }
 
 
         var imgs = document.querySelectorAll('*');

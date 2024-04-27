@@ -204,7 +204,7 @@ a>button:hover,
 a>button.more,
 .btn.more {
     background: var(--user-preferred-text);
-    color: var(--user-preferred-background);
+    color: var(--user-preferred-background) !important;
     font-weight: 400;
     font-size: .9rem;
     padding: .8rem 1.2rem;
@@ -373,6 +373,17 @@ h2.bold {
     }
 }
 
+.color-black,
+.color-black * {
+    color: black !important;
+}
+
+.color-white,
+.color-white * {
+    color: white !important;
+}
+
+
 .color-gray,
 .color-gray * {
     color: rgb(173, 173, 173) !important;
@@ -399,6 +410,14 @@ h2.bold {
 .color-darker-gray,
 .color-darker-gray * {
     color: rgb(52, 52, 52) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .color-darker-gray,
+    .color-darker-gray * {
+        color: rgb(200, 200, 200) !important;
+    }
 }
 
 .f10px {
@@ -1097,4 +1116,105 @@ noscript {
             font-size: min(2.5vh, 3.5vw);
         }
     }
+}
+
+.full {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    *:not(img) {
+        z-index: 2;
+        position: relative;
+    }
+
+    .right-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    button {
+        margin-top: 1rem;
+        font-size: .9rem;
+        padding: .8rem 1.2rem;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        background: black !important;
+        color: white !important;
+        text-decoration: none;
+        transition: .3s;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .invert {
+        filter: invert(1);
+        -webkit-filter: invert(1);
+    }
+}
+
+.iOS-bottom-share {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--user-preferred-background);
+    background: var(--user-preferred-text);
+    height: 4rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.pc-top {
+    position: fixed;
+    top: 0;
+    left: 60%;
+    right: 0;
+    height: 4rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+font>a {
+    display: flex;
+    gap: .5rem;
+    margin-left: .5rem;
+    color: white;
+}
+
+img.logo {
+    max-height: 30px;
+    max-width: 30px;
+    transform: translateY(.3rem);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.color-transl-gray,
+.color-transl-gray * {
+    color: rgba(0, 0, 0, 0.1);
 }

@@ -21,7 +21,7 @@ const footer_links = `
         </div>
         <div class="cols">
             <div class="col">
-                <font class="footer-heading"><a href="/about">About</a> AlphaBrate</font>
+                <font class="footer-heading" style="display: flex; gap: .3rem;"><a style="margin:0;" href="/about">About</a> AlphaBrate</font>
                 <a href="/about/support.html">Seek Support</a>
                 <a href="/about/downloads.html">Downloads</a>
                 <a href="/projects">Projects</a>
@@ -105,9 +105,11 @@ const resize_init = () => {
 
 window.onload = () => {
 
-    document.getElementById('footer-links').innerHTML = footer_links
-    document.getElementById('copyright').innerHTML = copyright_info
-    resize_init()
+    try {
+        document.getElementById('footer-links').innerHTML = footer_links
+        document.getElementById('copyright').innerHTML = copyright_info
+        resize_init()
+    } catch { }
 
     try {
         document.querySelector('.top.section.shorter').classList.add('pwa')
@@ -227,4 +229,10 @@ function confirmEnd() {
 
     document.getElementById('alert-fullscreen').style.opacity = 0
     document.getElementById('alert-fullscreen').style.pointerEvents = 'none'
+}
+
+const isOnPC = window.innerWidth > 1024;
+
+if (isOnPC) {
+    document.body.classList.add('pc');
 }

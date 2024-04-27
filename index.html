@@ -31,8 +31,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="canonical" href="https://alphabrate.github.io/">
     <script>
-        const isInPWA = (window.matchMedia('(display-mode: standalone)').matches);
-        if (isInPWA) {
+        if (window.matchMedia('(display-mode: standalone)').matches) {
             location.href = '/pwa/index.html';
         }
     </script>
@@ -60,6 +59,19 @@
             <span class="words lowerright">just for your <span class="larger linear-color">Pure Web
                     Experience.</span></span>
         </div>
+    </div>
+    <div class="full" style="background: #FFF067;color: black !important;">
+
+        <div class="space-break" data-height="4"></div>
+        <div class="description">
+            <h2>AlphaBrate Hub</h2>
+            <p class="color-black">Experience the convenience of AlphaBrate,<br>your one-stop solution for all our services.</p>
+            <a href="/pwa/index.html">
+                <button>Get it NOW.</button>
+            </a>
+            <h3>Community Available ✓</h3>
+        </div>
+        <img src="/img/brands/com.svg" class="right-img">
     </div>
     <div class="space-break" data-height="4"></div>
     <div class="two-col flex">
