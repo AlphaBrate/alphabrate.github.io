@@ -4,7 +4,7 @@
 			https://alphabrate.github.io/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
 			1.00
@@ -12,10 +12,21 @@
 	</url>
 	<url>
 		<loc>
+			https://alphabrate.github.io/pwa/
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.80
+		</priority>
+	</url>
+	<url>
+		<loc>
 			https://alphabrate.github.io/projects/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
 			0.80
@@ -26,7 +37,7 @@
 			https://alphabrate.github.io/about/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:22+00:00
 		</lastmod>
 		<priority>
 			0.80
@@ -37,7 +48,7 @@
 			https://alphabrate.github.io/about/designs.html
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:22+00:00
 		</lastmod>
 		<priority>
 			0.80
@@ -48,7 +59,7 @@
 			https://alphabrate.github.io/about/apel.html
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
 			0.80
@@ -56,54 +67,10 @@
 	</url>
 	<url>
 		<loc>
-			https://alphabrate.github.io/about/support.html
+			https://alphabrate.github.io/articles/user-manuals/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
-		</lastmod>
-		<priority>
-			0.64
-		</priority>
-	</url>
-	<url>
-		<loc>
-			https://alphabrate.github.io/about/downloads.html
-		</loc>
-		<lastmod>
-			2024-03-25T13:29:29+00:00
-		</lastmod>
-		<priority>
-			0.64
-		</priority>
-	</url>
-	<url>
-		<loc>
-			https://alphabrate.github.io/about/policies/
-		</loc>
-		<lastmod>
-			2024-03-25T13:29:29+00:00
-		</lastmod>
-		<priority>
-			0.64
-		</priority>
-	</url>
-	<url>
-		<loc>
-			https://alphabrate.github.io/articles/
-		</loc>
-		<lastmod>
-			2024-03-25T13:29:29+00:00
-		</lastmod>
-		<priority>
-			0.64
-		</priority>
-	</url>
-	<url>
-		<loc>
-			https://alphabrate.github.io/apps/
-		</loc>
-		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
 			0.64
@@ -114,29 +81,84 @@
 			https://alphabrate.github.io/articles/products/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
-			0.51
+			0.64
 		</priority>
 	</url>
 	<url>
 		<loc>
-			https://alphabrate.github.io/articles/user-manuals/
+			https://alphabrate.github.io/apps/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:22+00:00
 		</lastmod>
 		<priority>
-			0.51
+			0.64
 		</priority>
 	</url>
 	<url>
 		<loc>
-			https://alphabrate.github.io/apps/app/
+			https://alphabrate.github.io/about/support.html
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.64
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/community/
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.64
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/about/downloads.html
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:22+00:00
+		</lastmod>
+		<priority>
+			0.64
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/about/policies/
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.64
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/articles/
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.64
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/articles/user-manuals/music-terms/
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
 			0.51
@@ -147,10 +169,32 @@
 			https://alphabrate.github.io/articles/products/music-terms/
 		</loc>
 		<lastmod>
-			2024-03-25T13:29:29+00:00
+			2024-04-27T04:15:23+00:00
 		</lastmod>
 		<priority>
-			0.41
+			0.51
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/apps/app/alphabrate-hub.html
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.51
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://alphabrate.github.io/apps/app/music-terms.html
+		</loc>
+		<lastmod>
+			2024-04-27T04:15:23+00:00
+		</lastmod>
+		<priority>
+			0.51
 		</priority>
 	</url>
 	<url>
