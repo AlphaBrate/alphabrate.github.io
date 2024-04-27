@@ -8,23 +8,30 @@ We respect your privacy and are committed to protecting your personal informatio
 
 ### i. Personal Information
 
-We may collect personal information that you provide to us when you use our services. This includes, but is not limited to, your name, email address, and other contact information. We may also collect information about your usage of our services, such as your browsing history, search queries, and interactions with our website. All data collected is used for User Behavior Analytics (UBA) to improve our services or are necessary for the operation of our services. We do not collect any sensitive personal information, such as your social security number, financial information, or medical history.
+We may gather personal information that you voluntarily provide while using our services. This can include, but is not limited to, your name, email address, and other contact information. We commit to only collecting personal information that is essential for delivering our services and will not disclose it to third parties, except when mandated by law or when necessary for the provision of our services.
+
+Your data is stored with utmost security and is never shared with third parties for marketing purposes, as detailed in the subsequent “Data Protection” section. This is our pledge to maintaining your privacy and data security.
 
 ### ii. Non-Personal Information
 
-We may also collect non-personal information, such as your IP address, browser type, and device information. This information is used to improve our services and provide a better user experience. We may also collect information about your usage of our services, such as your browsing history, search queries, and interactions with our website. All data collected is used for User Behavior Analytics (UBA) to improve our services or are necessary for the operation of our services.
+We may automatically gather non-personal information when you utilize our services. This encompasses, but is not limited to, your IP address, browser type, device type, operating system, and other related technical data. Additionally, we may collect data about your service usage, such as the pages you access, the duration spent on each page, and the links you engage with.
+
+This information is retained for potential legal considerations and will never be utilized as User Behavior Analytics (UBA) data. Rest assured, we do not collect any personally identifiable information through this process. This is our commitment to maintaining your privacy and data security.
 
 ### iii. Your Consent
 
-For personal information, we will ask for your consent before collecting it. For non-personal information, we will collect it automatically when you use our services. You can choose not to provide personal information, which does not affect the functionality of our services.
+We respect your privacy. Before collecting any personal information, we will explicitly seek your consent. However, non-personal information may be automatically collected when you utilize our services.
+
+You have the option to withhold personal information, and this decision will not impact the functionality of our services. However, to access certain features such as “Login” or “Register”, providing specific information may be necessary.
+
+By using our services, you are consenting to the collection and use of your information in accordance with these Terms. This is our commitment to maintaining transparency and trust with our users.
+
 
 ### iv. Data Protection
 
-All data collected are on third-party servers, and we do not have direct access to the source data. We use third-party services to collect and store data, and we are not responsible for the security of these services. For more information on how your data is protected, please refer to the privacy policies of the third-party services we use: 
+We prioritize your data security. All data transmitted to our servers is safeguarded using SSL/TLS encryption along with our proprietary encryption algorithms. This data is stored in secure databases, protected by robust algorithms to prevent unauthorized access. 
 
-- Clarity: [Clarity Privacy Policy](https://clarity.microsoft.com/privacy)
-- Google Analytics: [Google Privacy Policy](https://policies.google.com/privacy)
-- Google Firebase: [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
+To ensure the continuous safety of your information, we conduct regular security audits. Importantly, your sensitive data is never stored as plain text. It is always encrypted, even within our databases, ensuring that no one, not even our employees, can access the original data in its unencrypted form under any circumstances. This is our commitment to maintaining the highest level of data security.
 
 ## 2. Use of Information
 
@@ -38,20 +45,26 @@ We do not share your information with third parties, except as required by law, 
 
 We implement security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. These measures include data encryption, secure databases, and firewalls. We also conduct regular security audits to ensure the ongoing safety of your information. While we take reasonable precautions to protect your information, no security system is impenetrable. We cannot guarantee the security of your information and are not responsible for unauthorized access to it.
 
-## 5. Use of Cookies
+## 5. Data For Your AlphaBrate Account
 
-We may use cookies to collect information about your usage of our services. Cookies are small text files that are stored on your device when you visit a website. They are used to remember your preferences and provide a better user experience. You can disable cookies in your browser settings, but doing so may affect the functionality of our services. Cookies are not used to collect personal information about you but are used for User Behavior Analytics (UBA) to improve our services.
+When you create an AlphaBrate account, we collect and store information that is necessary for the operation of your account. This includes, but is not limited to, your username, email address, and password. Your password is stored securely using encryption and cannot be accessed by anyone, including our staff.
 
-Our website uses Clarity and Google Analytics, both of which set cookies on your browser to obtain user session data. These cookies send non-personally identifiable information, such as session data, to Clarity and Google Analytics. If your browser settings disable cookies, Clarity and Google Analytics will not set cookies.
+We may also collect additional optional information to enhance your user experience. This could include preferences, interests, and other details that help us tailor our services to you.
 
-If you are located in an area that requires user consent before setting cookies or collecting personal information, such as the EU, you can choose whether to accept our cookies. If you choose not to accept cookies, we will not collect the aforementioned UBA information.
+Please note that you have the right to access, modify, and delete your personal data at any time. To do so, simply navigate to your account settings or contact our support team.
+
+Remember, the security of your AlphaBrate account data is our top priority. We implement stringent measures to protect it from unauthorized access or disclosure. However, it’s also important for you to safeguard your account details and ensure that your password is strong and unique.
 
 ## 6. Changes to This Privacy Policy
 
-We may update our Privacy Policy from time to time. We will notify you of any large changes by posting the new Privacy Policy on the home page of our Web App. We encourage you to review this Privacy Policy periodically for any changes.
+We may update our Privacy Policy from time to time. We will notify you of any large changes by posting the new Privacy Policy to your AlphaBrate Account. We encourage you to review this Privacy Policy periodically for any changes.
 
-## 7. Contact Us
+## 7. Translations of This Privacy Policy
+
+This Privacy Policy is written in English. If there are any discrepancies between the English version and a translated version, the English version will prevail.
+
+## 8. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us. We are committed to resolving any concerns or complaints you may have about our use of your information.
 
-This document was updated on 6 Mar 2024.
+This document was updated on 23 Apr 2024.

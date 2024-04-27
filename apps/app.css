@@ -91,6 +91,7 @@ input[type="range"]#stars {
 
 .card.rate {
     margin-top: 4rem;
+    background: var(--background-color-protrude-hover);
     padding-bottom: 2rem;
 }
 
@@ -107,7 +108,7 @@ input[type="range"]#stars {
         -webkit-user-drag: none;
         margin: .5rem;
         border-radius: 17px;
-        border: 1px solid #e0e0e0;
+        border: 1px solid var(--border-color);
     }
 
     &::-webkit-scrollbar {

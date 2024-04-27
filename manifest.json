@@ -19,17 +19,24 @@
             "src": "/icons/pwa/512.png",
             "type": "image/png",
             "sizes": "512x512"
+        },
+        {
+            "src": "/icons/pwa/512-rounded.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
         }
     ],
     "start_url": "/pwa",
     "background_color": "#000000",
     "display_override": [
         "fullscreen",
-        "minimal-ui"
+        "minimal-ui",
+        "window-controls-overlay"
     ],
     "display": "standalone",
     "scope": "/",
     "theme_color": "#000000",
-    "description": "AlphaBrate Hub App",
+    "description": "AlphaBrate, all in your hands.",
     "screenshots": []
 }

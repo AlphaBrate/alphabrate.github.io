@@ -64,16 +64,70 @@
     <div class="space-break" data-height="4"></div>
     <div class="center flex">
         <p class="larger far">
-            <a href="#pt"><button>Privacy Terms</button></a>
-            <a href="#st"><button>Terms of Service</button></a>
+            <a onclick="pt()"><button>Privacy Terms</button></a>
+            <a onclick="st()"><button>Terms of Service</button></a>
         </p>
     </div>
-    <div class="two-col flex">
+    <div class="two-row flex">
+        <style>
+            #pta,
+            #sta {
+                padding: 1rem;
+                border-radius: 17px;
+                overflow: hidden;
+                position: absolute;
+                transition: 2s;
+                width: calc(100% - 3rem);
+                max-width: 800px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @keyframes leave {
+                0% {
+                    background: transparent;
+                    transform: scale(1) translateX(-50%);
+                    opacity: 1;
+                }
+
+                50% {
+                    background: rgba(255, 255, 0, 0.12);
+                    transform: scale(1.005) translateX(-50%);
+                }
+
+                100% {
+                    background: transparent;
+                    opacity: 0;
+                    transform: scale(1) translateX(-50%);
+                }
+            }
+
+            #pt,
+            #st {
+                opacity: 0;
+                pointer-events: none;
+                width: calc(100% - 2rem);
+                max-width: 800px;
+            }
+
+            .hide {
+                animation: leave 1s;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .show {
+                opacity: 1;
+                pointer-events: all;
+            }
+        </style>
         <div>
-            <div id="pt"></div>
-            <div class="space-break dots"></div>
+            <div id="pta" class="hide"></div>
+            <div id="sta"></div>
+            <div id="pt" style="display: none;"></div>
             <div id="st"></div>
         </div>
+        <a onclick="Top()" id="top"><button>BACK TO TOP</button></a>
     </div>
 
     <div class="space-break" data-height="4"></div>
@@ -92,16 +146,72 @@
     <script>
         const privacy_url = '/about/policies/privacy.md';
         const terms_url = '/about/policies/conditions.md';
+
+        Resize = () => {
+            document.getElementById('pt').style.height = document.getElementById('pta').offsetHeight + 'px';
+            document.getElementById('st').style.height = document.getElementById('sta').offsetHeight + 'px';
+        }
+
         fetch(privacy_url)
             .then(response => response.text())
             .then(text => {
-                document.getElementById('pt').innerHTML = marked.parse(text);
+                document.getElementById('pta').innerHTML = marked.parse(text);
+                Resize();
             });
         fetch(terms_url)
             .then(response => response.text())
             .then(text => {
-                document.getElementById('st').innerHTML = marked.parse(text);
+                document.getElementById('sta').innerHTML = marked.parse(text);
+                Resize();
             });
+
+        window.addEventListener('resize', Resize);
+
+        var to;
+
+        function pt() {
+            document.getElementById('pta').classList.add('show');
+            document.getElementById('sta').classList.add('hide');
+            document.getElementById('pta').classList.remove('hide');
+            document.getElementById('sta').classList.remove('show');
+            document.getElementById('pt').style.display = 'block';
+            document.getElementById('st').style.display = 'none';
+            document.getElementById('pta').style.display = 'block';
+
+            // clear to
+            clearTimeout(to);
+
+            to = setTimeout(() => {
+                document.getElementById('sta').style.display = 'none';
+            }, 1000);
+        }
+
+        function st() {
+            document.getElementById('sta').classList.add('show');
+            document.getElementById('pta').classList.add('hide');
+            document.getElementById('sta').classList.remove('hide');
+            document.getElementById('pta').classList.remove('show');
+            document.getElementById('st').style.display = 'block';
+            document.getElementById('pt').style.display = 'none';
+            document.getElementById('sta').style.display = 'block';
+
+            // clear to
+            clearTimeout(to);
+
+            to = setTimeout(() => {
+                document.getElementById('pta').style.display = 'none';
+            }, 1000);
+        }
+
+        function Top() {
+            window.scrollTo(0, 0);
+        }
+
+        var isonios = navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad');
+
+        if (isonios) {
+            document.getElementById('top').style.display = 'none';
+        }
     </script>
 </body>
 

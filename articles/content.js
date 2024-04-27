@@ -103,7 +103,7 @@ window.addEventListener("resize", () => centerTitle());
 
 const isInPWA = window.matchMedia('(display-mode: standalone)').matches;
 
-if (isInPWA) {
+if (isInPWA && !isOnPC) {
     document.querySelector(".nav").classList.add("pwa");
 }
 
