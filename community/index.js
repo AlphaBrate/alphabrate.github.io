@@ -94,6 +94,7 @@ if (login_session && login_user) {
         location.href = location.href + '?session=' + session + '&user=' + simple_encrypt.encryption(user, session);
     }
 }
+
 fetch(server_url + '/server/time', {
     method: 'GET',
     headers: {

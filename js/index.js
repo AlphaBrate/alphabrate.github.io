@@ -103,6 +103,15 @@ const resize_init = () => {
     } catch { }
 }
 
+function spaceBreak() {
+    try {
+        var spaces = document.querySelectorAll('.space-break')
+        for (var i = 0; i < spaces.length; i++) {
+            spaces[i].style.marginBottom = spaces[i].getAttribute('data-height') + 'rem';
+        }
+    } catch { }
+}
+
 window.onload = () => {
 
     try {
@@ -115,12 +124,7 @@ window.onload = () => {
         document.querySelector('.top.section.shorter').classList.add('pwa')
     } catch { }
 
-    try {
-        var spaces = document.querySelectorAll('.space-break')
-        for (var i = 0; i < spaces.length; i++) {
-            spaces[i].style.marginBottom = spaces[i].getAttribute('data-height') + 'rem';
-        }
-    } catch { }
+    spaceBreak();
 
     document.body.style.opacity = 1
 
