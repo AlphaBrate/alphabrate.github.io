@@ -36,7 +36,7 @@
     --color-canvas-default: #ffffff;
     --color-canvas-subtle: #f4f4f4;
     --color-border-default: #d0d7de;
-    --color-border-muted: hsla(210, 18%, 87%, 1);
+    --user-preferred-hr: hsla(210, 18%, 87%, 1);
     --color-neutral-muted: rgba(175, 184, 193, 0.2);
     --color-accent-fg: #0969da;
     --color-accent-emphasis: #0969da;
@@ -90,12 +90,6 @@
     display: none !important;
 }
 
-.markdown-body a {
-    background-color: transparent;
-    color: var(--color-accent-fg);
-    text-decoration: none;
-}
-
 .markdown-body abbr[title] {
     border-bottom: none;
     text-decoration: underline dotted;
@@ -115,7 +109,7 @@
     font-weight: var(--base-text-weight-semibold, 600);
     padding-bottom: .3em;
     font-size: 2em;
-    border-bottom: 1px solid var(--color-border-muted);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .markdown-body mark {
@@ -169,7 +163,7 @@
     height: 1px;
     padding: 0;
     margin: 24px auto;
-    background-color: var(--color-border-default);
+    background-color: rgba(128, 128, 128, 0.5);
     border: 0;
     width: 80%;
 }
@@ -605,7 +599,7 @@
 
 .markdown-body table tr {
     background-color: var(--color-canvas-default);
-    border-top: 1px solid var(--color-border-muted);
+    border-top: 1px solid var(--user-preferred-hr);
 }
 
 .markdown-body table tr:nth-child(2n) {
@@ -1359,9 +1353,22 @@ shine {
     text-align: center;
 }
 
+.img-height-small {
+    max-height: 250px !important;
+    margin: 0;
+    text-align: center;
+}
+
 .img-medium {
     width: 80%;
     max-width: 600px !important;
+    margin: 0;
+    text-align: center;
+}
+
+.img-large {
+    width: 80%;
+    max-width: 800px !important;
     margin: 0;
     text-align: center;
 }

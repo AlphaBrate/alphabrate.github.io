@@ -19,6 +19,7 @@ Our service includes:
 - AlphaBrate Community
 - AlphaBrate Web
 - AlphaBrate Account
+- AlphaBrate Live Weather
 
 ### ii. Service Updates
 
@@ -72,9 +73,19 @@ The usage of our applications is entirely free of charge. The development proces
 
     2. Distributions of the application must remain free of advertisements and distracting elements.
 
+Code attached APEL are open-sourced. Images, audio, or other resources other than code¹, are not.
+
 ## 6. Disclaimer
 
 Our Service is provided "as is" and "as available" without any express or implied warranties. We do not warrant that the Service will be uninterrupted, secure, or error-free. AlphaBrate is not liable but will try best on for any damages or losses arising from the use or inability to use the Service. We are not responsible for any third-party content that you access through the Service. We are not responsible for the conduct of any user of the Service.
+
+We reserve the right to modify or discontinue the Service at any time without notice. We will not be liable to you or any third party for any modification, suspension, or discontinuation of the Service.
+
+On our websites, footnotes may appear. The definition of footnotes is shown below:
+
+`*` : They are currently true.
+
+`^` : Except for special notice.
 
 ## 7. AlphaBrate Account
 
@@ -128,16 +139,33 @@ The server has limitations on the number of users and the amount of data that ca
 
 The server will be down if there is too much uptime. This is the policy of the free service provider. During this suspension period, viewing of rating data is still possible, but updates and uploads on any data cannot be made. The cached rating data, which users can view, is appended to a file and updated periodically, not in real time. This means that the most recent ratings may not be immediately visible. We kindly ask for your patience during these times as the cached rating data will be refreshed after a certain interval. We greatly appreciate your understanding and patience. Thank you for bearing with us.
 
-## 10. Translations of This Privacy Policy
+## 10. Copyright
+
+All content on our Service, including but not limited to text, images, graphics, logos, and software, is the property of AlphaBrate or its licensors and is protected by copyright laws. You may not reproduce, distribute, or create derivative works from any content on our Service without our express permission. If you believe that your copyright has been infringed upon, please contact us with the relevant details.
+
+## 11. Translations of This Privacy Policy
 
 This Terms of Service is written in English. If there are any discrepancies between the English version and a translated version, the English version will prevail.
 
-## 11. Changes to Terms of Service
+## 12. Changes to Terms of Service
 
 We may update our Terms of Service from time to time. The new Terms of Service will take effect immediately upon posting on this page. We encourage you to review this page periodically for any changes. Your continued use of the Service after the new Terms of Service are posted will constitute your agreement to the new Terms of Service. If you do not agree to the new Terms of Service, please stop using the Service.
 
-## 12. Contact Us
+## 13. Contact Us
 
 If you have any questions about these Terms of Service, please contact us. We are committed to resolving any concerns or complaints you may have about our use of your information.
 
-This document was updated on 27 Apr 2024.
+This document was updated on 1 Jul 2024.
+
+
+#### FOOTNOTES
+
+1. Code are files with extension:
+
+> `.html`
+>
+> `.js`
+> 
+> `.css`
+> 
+> `.json` (If removing any content would render the project nonfunctional.)
