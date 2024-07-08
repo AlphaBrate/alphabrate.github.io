@@ -52,17 +52,17 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
             metadata.forEach(line => {
                 let unaccepts = ['\r', '', '\n', '%0D'];
                 // try {
-                    if (!unaccepts.includes(line)) {
-                        let split = line.split('=');
-                        let varname = split[0].trim().toLowerCase();
-                        let value = split[1].trim();
-    
-                        let accepts = ['title', 'author', 'date', 'description'];
-    
-                        if (accepts.includes(varname)) {
-                            document.getElementById(varname).innerHTML = value;
-                        }
+                if (!unaccepts.includes(line)) {
+                    let split = line.split('=');
+                    let varname = split[0].trim().toLowerCase();
+                    let value = split[1].trim();
+
+                    let accepts = ['title', 'author', 'date', 'description'];
+
+                    if (accepts.includes(varname)) {
+                        document.getElementById(varname).innerHTML = value;
                     }
+                }
                 // } catch {}
             });
 
@@ -70,6 +70,17 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
             content = content.split('=metadata=')[2];
         }
         document.getElementById("text").innerHTML = marked.parse(content);
+        let code = document.getElementById("text").querySelectorAll('code');
+        code.forEach(block => {
+            block.classList.forEach(w => {
+                if (w.startsWith("language-")) {
+                    block.classList.remove(w);
+                    block.classList.add(w.replace("language-", "lang-"));
+                    block.classList.add('prettyprint');
+                    PR.prettyPrint();
+                }
+            });
+        });
         var imgs = document.querySelectorAll(".content-main img");
         imgs.forEach(img => {
             let src = img.src;
@@ -79,7 +90,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
 
             let border = query.get("border") || "false"
             if (border != "true") {
-                img.style.border = border +  " solid var(--border-color)";
+                img.style.border = border + " solid var(--border-color)";
             }
 
             let radius = query.get("border-radius") || "0";
@@ -124,6 +135,7 @@ const centerTitle = () => {
                 title.style.opacity = titleOpacity;
                 // #center-title opacity: 65 = 0 90 = 1
                 var centerTitle = document.getElementById("center-title");
+                centerTitle.innerText = title.innerText;
                 var centerTitleOpacity = (window.scrollY - 65) / 25;
                 if (centerTitleOpacity < 0) centerTitleOpacity = 0;
                 if (centerTitleOpacity > 1) centerTitleOpacity = 1;

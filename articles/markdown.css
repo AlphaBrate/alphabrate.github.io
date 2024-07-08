@@ -759,37 +759,55 @@
 
 .markdown-body pre::-webkit-scrollbar {
     background-color: #ffffff00;
-    height: 10px;
+    height: 7px;
+    transition: .3s;
 }
 
 .markdown-body pre::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 17px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .markdown-body pre::-webkit-scrollbar-thumb {
+        background-color: #ffffff10;
+    }
 }
 
 .markdown-body .highlight pre,
 .markdown-body pre.prettyprint {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+    font-family: 'SF Mono', ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
     max-width: 80vw;
     padding: 16px !important;
     overflow-x: scroll;
     font-size: 85%;
     line-height: 1.45;
     background: linear-gradient(180deg, #F5F5F7 0%, #F4F4F4 100%);
-    ;
     border: none !important;
     border-top: #00aaff8e 10px solid !important;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.markdown-body pre * {
-    font-family: "Roboto";
+.markdown-body pre {
+    background: rgb(242, 242, 242);
+    padding: 5px 15px;
+    padding-top: 11px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: 11px;
+    height: max-content;
+}
+
+@media (prefers-color-scheme: dark) {
+    .markdown-body pre {
+        background: rgb(59, 59, 59);
+    }
 }
 
 .markdown-body pre code,
 .markdown-body pre tt {
     display: inline;
     max-width: auto;
-    padding: 15px;
     margin: 0;
     overflow: visible;
     line-height: inherit;
@@ -1068,10 +1086,10 @@
     background-color: #04dff37f;
 }
 
-* {
+:not(.prettyprint)>* {
     -webkit-user-drag: none;
-    color: var(--user-preferred-text) !important;
-    font-family: Helvetica, Arial, sans-serif;
+    color: var(--user-preferred-text);
+    font-family: 'SF Pro Display', Helvetica, Arial, sans-serif;
     user-select: none;
 }
 
@@ -1160,7 +1178,7 @@ body {
 #center-title {
     font-size: 20px;
     font-weight: 500;
-    color: rgba(0, 0, 0, .5);
+    color: var(--user-preferred-text);
     text-decoration: none;
     text-align: center;
     user-select: none;
@@ -1188,7 +1206,7 @@ body {
 
 .heading>h1 {
     font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -1199,7 +1217,7 @@ body {
 highlight,
 shine {
     color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+
     font-weight: bold;
     text-align: center;
     margin: 5px;
@@ -1298,7 +1316,7 @@ shine {
 
 .title>#title {
     font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -1307,7 +1325,7 @@ shine {
 
 .title>#description {
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+
     text-align: center;
     margin: 0;
     padding: 0;
@@ -1325,7 +1343,7 @@ shine {
     position: absolute;
     left: 0;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+
     text-align: left;
     margin: 0;
     padding: 0;
@@ -1335,11 +1353,9 @@ shine {
     right: 0;
     position: absolute;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: right;
     margin: 0;
     padding: 0;
-    color: #ff00007f;
 }
 
 .placeholder {

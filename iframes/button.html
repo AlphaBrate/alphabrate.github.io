@@ -69,7 +69,7 @@
             transform: translateY(-50%);
             height: var(--icon-size);
             width: var(--icon-size);
-            background: url(https://alphabrate.github.io/icons/arrow_right.svg);
+            background: url(/icons/arrow_right.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -100,7 +100,7 @@
             width: calc(var(--icon-size) + (var(--icon-size) * .25));
         }
 
-        .long > button {
+        .long>button {
             padding-left: 2rem !important;
             padding-right: 2rem !important;
         }
@@ -127,10 +127,20 @@
             }
         }
 
-        a, body, html {
+        a,
+        body,
+        html {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .serif, .serif * {
+            font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+        }
+
+        .monospace, .monospace * {
+            font-family: 'SF Mono', monospace;
         }
     </style>
 </head>
@@ -144,8 +154,8 @@
         const params = Object.fromEntries(urlParams.entries());
         document.getElementById('button_main').innerText = params.text || 'BUTTON';
         document.getElementById('button_href').href = params.url || '';
-        document.getElementById('button_href').classList.add(params.size || '');
-        document.getElementById('button_href').classList.add(params.length || '');
+        document.getElementById('button_href').classList.add(params.size || 'c');
+        document.getElementById('button_href').classList.add(params.length || 'c');
     </script>
 </body>
 
