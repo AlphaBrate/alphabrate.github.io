@@ -31,6 +31,31 @@ const footer_links = `
                 <a href="/apps">App Gallery</a>
             </div>
         </div>
+        <div class="cols">
+            <div class="col">
+                <font class="footer-heading">
+                    Projects & Products
+                </font>
+                <a href="/projects/popupjs" class="monospace">PopupJS</a>
+                <a href="/apps/app/music-terms.html">Music Terms</a>
+                <a href="/apps/app/alphabrate-hub.html">AlphaBrate Hub</a>
+                <a href="/apps/app/live-weather.html">Weather Wallpaper</a>
+                <a href="https://github.com/alphabrate/alb-msplayer">Music Player</a>
+                <a href="https://github.com/alphabrate/nettransfer">Net Transfer</a>
+            </div>
+        </div>
+        <div class="cols">
+            <div class="col">
+                <font class="footer-heading">
+                    ReTrn Chu
+                </font>
+                <a href="https://chutm.github.io/">Online C.V.</a>
+                <a href="https://musescore.com/user/49003203">MuseScore</a>
+                <a href="https://www.instagram.com/retrnp/">Instagram</a>
+                <a href="https://www.youtube.com/@ReTrn">YouTube</a>
+                <a href="https://www.linkedin.com/in/retrn/">LinkedIn</a>
+            </div>
+        </div>
     </div>
     <div class="space-break" data-height="2"></div>
 </div>`
@@ -59,12 +84,12 @@ const resize_init = () => {
     try {
         document.querySelector('.words.lowerright').style.opacity = 1
         document.querySelector('.words.lowerright').style.top = document.querySelector('.words.upperleft').clientHeight + 'px'
-
+    } catch { }
+    try {
         let not_desktop = window.innerWidth < 1024
 
         if (not_desktop) {
             let reversed = document.querySelectorAll('.reversed-in-mobile')
-
             reversed.forEach((element) => {
                 let first_child = element.firstElementChild
                 let last_child = element.lastElementChild
@@ -117,8 +142,9 @@ window.onload = () => {
     try {
         document.getElementById('footer-links').innerHTML = footer_links
         document.getElementById('copyright').innerHTML = copyright_info
-        resize_init()
     } catch { }
+
+    resize_init();
 
     try {
         document.querySelector('.top.section.shorter').classList.add('pwa')
@@ -166,24 +192,28 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 })
 
 var scroll_function = () => {
-    try {
-        var scroll = window.scrollY
-        var height_of_top_section = document.querySelector('.top.section').clientHeight
-        if (scroll > height_of_top_section) {
-            document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})`
-        } else {
-            var from = colors[user_prefers]
-            var to = [34, 31, 42]
-            var percent = 1 - (scroll / height_of_top_section)
-            var color = []
-            for (var i = 0; i < 3; i++) {
-                color.push(from[i] + (to[i] - from[i]) * percent)
+    if (!themeColor) {
+        try {
+            var scroll = window.scrollY
+            var height_of_top_section = document.querySelector('.top.section').clientHeight
+            if (scroll > height_of_top_section) {
+                document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})`
+            } else {
+                var from = colors[user_prefers]
+                var to = [34, 31, 42]
+                var percent = 1 - (scroll / height_of_top_section)
+                var color = []
+                for (var i = 0; i < 3; i++) {
+                    color.push(from[i] + (to[i] - from[i]) * percent)
+                }
+                document.querySelector('meta[name="theme-color"]').content = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
             }
-            document.querySelector('meta[name="theme-color"]').content = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+        } catch {
+            try { document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})` }
+            catch { }
         }
-    } catch {
-        try { document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})` }
-        catch { }
+    } else {
+        document.querySelector('meta[name="theme-color"]').content = themeColor;
     }
 }
 
