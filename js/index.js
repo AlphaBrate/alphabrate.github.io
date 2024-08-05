@@ -49,7 +49,7 @@ const footer_links = `
                 <font class="footer-heading">
                     ReTrn Chu
                 </font>
-                <a href="https://chutm.github.io/">Online C.V.</a>
+                <a href="https://rtchutm.web.app/">Online C.V.</a>
                 <a href="https://musescore.com/user/49003203">MuseScore</a>
                 <a href="https://www.instagram.com/retrnp/">Instagram</a>
                 <a href="https://www.youtube.com/@ReTrn">YouTube</a>
