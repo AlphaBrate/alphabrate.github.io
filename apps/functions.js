@@ -2,6 +2,8 @@ var rating, rat_count = 1;
 const server = "https://alphabrate-server.onrender.com"
 // const server = "http://localhost:3000"
 
+document.title = app_info.name + " | App Gallery | The AlphaBrate Team"
+
 fetch(`${server}/rating/${app}`, {
     method: "GET",
     mode: "cors",
@@ -9,7 +11,6 @@ fetch(`${server}/rating/${app}`, {
         "Content-Type": "application/json"
     },
 }).then(data => {
-    document.title = "_NAME_ | App Gallery | The AlphaBrate Team"
     data.json().then(d => {
         addValues(d)
     })
@@ -19,6 +20,8 @@ fetch(`${server}/rating/${app}`, {
         "count": app_info.rat_count
     })
 })
+
+let ratingsDetailsTriggled = false;
 
 function addValues(d) {
     document.getElementById("load").style.display = "none"
@@ -45,6 +48,46 @@ function addValues(d) {
 
     document.addEventListener("DOMContentLoaded", () => {
         replaceAppInfo()
+    })
+
+    document.querySelector('.app-down>p>c').addEventListener('click', e => {
+        if (ratingsDetailsTriggled) return
+        
+        ratingsDetailsTriggled = true
+
+        // red to blue to green
+        let colors = [
+            "#E4313D",
+            "#D13791",
+            "#6EF3FF",
+            "#6EFFE2",
+            "#90EE90",
+            "#90EE90"
+        ]
+        // add div.ratings-details>(span.ratings-1~5) as siblings of p>c
+        var ratings_details = document.createElement('div')
+        ratings_details.className = 'ratings-details'
+        for (let i = 1; i <= 5; i++) {
+            var span = document.createElement('span')
+            span.className = `ratings`
+            span.setAttribute('data-count', d.details[i]);
+            span.setAttribute('data-rating', i)
+            span.style.width = `${d.details[i] * 100 / rat_count}%`
+            span.style.background = `linear-gradient(90deg, ${colors[i - 1]} 0%, ${colors[i]} 100%)`
+            if (colors[i - 1].includes('#')) {
+                var r = parseInt(colors[i - 1].substring(1, 3), 16)
+                var g = parseInt(colors[i - 1].substring(3, 5), 16)
+                var b = parseInt(colors[i - 1].substring(5, 7), 16)
+                var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000
+                span.style.color = (yiq >= 128) ? 'black' : 'white'
+            }
+
+            span.appendChild(document.createElement('span'))
+
+            span.style.setProperty('--basic-color', colors[i - 1])
+            ratings_details.appendChild(span)
+        }
+        e.target.parentElement.appendChild(ratings_details)
     })
 
     // Add social media metas and meta tags

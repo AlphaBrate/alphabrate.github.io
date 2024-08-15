@@ -8,17 +8,9 @@ body::before {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -2;
-}
-
-body::after {
-    content: "";
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: calc(50% + 100px);
-    z-index: -1;
-    background: linear-gradient(180deg, transparent 10%, var(--user-preferred-background) 100%);
+    --mask: linear-gradient(0deg, transparent 0%, black 90%);
+    mask: var(--mask);
+    -webkit-mask: var(--mask);
 }
 
 .app {
@@ -174,4 +166,166 @@ input[type="range"]#stars {
     width: var(--size);
     height: var(--size);
     animation: spin 1s infinite steps(12, end);
+}
+
+.app-down>p>c {
+    user-select: none;
+    cursor: pointer;
+}
+
+@keyframes appearing {
+    from {
+        height: 0px;
+        margin: 0 2rem;
+    }
+
+    to {
+        height: 5px;
+        margin: 2rem;
+    }
+}
+
+.ratings-details {
+    user-select: none;
+    width: 80%;
+    animation: appearing .5s forwards;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    --basic-color: #E4313D;
+    border-radius: 100px;
+
+    .ratings {
+        display: block;
+        height: 100%;
+        transition: .3s;
+        box-shadow: 0 0 0 5px transparent;
+        position: relative;
+    }
+
+    .ratings:first-child {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    .ratings:last-child {
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .ratings:active {
+        transform: scale(.98) translateY(-2px);
+        border-radius: 100px;
+    }
+
+    .ratings::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: .3s;
+        border-radius: inherit;
+        background: var(--basic-color);
+    }
+
+    .ratings:active::before {
+        opacity: 1;
+        border-radius: 100px;
+        transition: .3s;
+    }
+
+    .ratings:has(+ .ratings:active) {
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .ratings:active+span {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    .ratings::after {
+        content: attr(data-count) " / " attr(data-rating) " ★";
+        position: absolute;
+        top: calc(-1.5rem - 7px);
+        border-radius: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s;
+        opacity: 0;
+        background: var(--basic-color);
+    }
+
+    .ratings>span {
+        position: absolute;
+        top: calc(-100% - 7.125px);
+        left: 50%;
+        --length: 10px;
+        width: var(--length);
+        height: var(--length);
+        background: var(--basic-color);
+        border-bottom-right-radius: 2px;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: -2;
+        transition: .2s;
+        opacity: 0;
+    }
+
+    .ratings>span::before {
+        content: '';
+        position: absolute;
+        --offset: -70%;
+        top: var(--offset);
+        left: var(--offset);
+        --diagonal: calc(1px * sqrt(pow(10, 2) + pow(10, 2)));
+        width: var(--diagonal);
+        height: var(--diagonal);
+        background: var(--user-preferred-background);
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+
+    .ratings:active::after {
+        opacity: 1;
+    }
+
+    .ratings:active>span {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .ratings-details {
+        .ratings:hover {
+            border-radius: 100px;
+        }
+
+        .ratings:hover::before {
+            opacity: 1;
+            border-radius: 100px;
+            transition: .3s;
+        }
+
+        .ratings:has(+ .ratings:hover) {
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+
+        .ratings:hover+span {
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+    }
 }
