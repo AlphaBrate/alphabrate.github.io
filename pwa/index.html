@@ -168,7 +168,7 @@
 
     <script src="/js/index.js"></script>
     <script>
-        if (!window.matchMedia('(display-mode: standalone)').matches) {
+        if (!(location.hostname === 'localhost' || location.hostname === '127.0.0.1') && !window.matchMedia('(display-mode: standalone)').matches) {
             location.href = '/pwa/intro.html';
         }
 
