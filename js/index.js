@@ -3,6 +3,7 @@ const footer_links = `
     <div class="rows">
         <div class="cols">
             <div class="col">
+                <span class="click-holder"></span>
                 <font class="footer-heading">
                     GitHub Accounts
                 </font>
@@ -11,6 +12,7 @@ const footer_links = `
                 <a href="https://github.com/musicterms">Music Terms - Web App</a>
             </div>
             <div class="col">
+                <span class="click-holder"></span>
                 <font class="footer-heading">
                     Official Accounts
                 </font>
@@ -21,6 +23,7 @@ const footer_links = `
         </div>
         <div class="cols">
             <div class="col">
+                <span class="click-holder"></span>
                 <font class="footer-heading" style="display: flex; gap: .3rem;"><a style="margin:0;" href="/about">About</a> AlphaBrate</font>
                 <a href="/about/support.html">Seek Support</a>
                 <a href="/about/downloads.html">Downloads</a>
@@ -33,6 +36,7 @@ const footer_links = `
         </div>
         <div class="cols">
             <div class="col">
+                <span class="click-holder"></span>
                 <font class="footer-heading">
                     Projects & Products
                 </font>
@@ -46,10 +50,11 @@ const footer_links = `
         </div>
         <div class="cols">
             <div class="col">
+                <span class="click-holder"></span>
                 <font class="footer-heading">
                     ReTrn Chu
                 </font>
-                <a href="https://rtchutm.web.app/">Online C.V.</a>
+                <a href="https://chutm.github.io/">Online C.V.</a>
                 <a href="https://musescore.com/user/49003203">MuseScore</a>
                 <a href="https://www.instagram.com/retrnp/">Instagram</a>
                 <a href="https://www.youtube.com/@ReTrn">YouTube</a>
@@ -61,7 +66,7 @@ const footer_links = `
 </div>`
 
 const copyright_info = `
-<p class="color-gray">&copy; AlphaBrate 2024 under APEL License.</p>
+<p class="color-gray">&copy; AlphaBrate 2024.</p>
 <p class="color-lighter-gray f10px">All rights to the designs and photographs <span class="nowrap">displayed on this site are reserved.</span>
 <br>By using, browsing, sharing, or redistributing our services, products,
     or projects, you agree to our <span class="nowrap"><a href="/about/policies">Privacy Terms</a> and <a href="/about/policies">Terms of Service</a>.</span></p>`
@@ -175,6 +180,33 @@ window.onload = () => {
         window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => darkMode(e.matches));
 
     }
+
+    try {
+        document.querySelectorAll('.footer>.rows>.cols>.col>.click-holder').forEach((element) => {
+            element.addEventListener('click', () => {
+                if (isOnMobile) {
+                    element.parentElement.classList.toggle('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.footer>.rows>.cols>.col>.footer-heading').forEach((element) => {
+            element.addEventListener('click', () => {
+                if (isOnMobile) {
+                    element.parentElement.classList.toggle('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.footer>.rows>.cols>.col').forEach((element) => {
+            // get height
+            const height = element.clientHeight;
+            // set --height to height
+            element.style.setProperty('--height', height - 24 + 'px');
+            // set height to 0
+            element.classList.add('collapsed');
+        });
+    } catch { }
 }
 
 window.addEventListener('resize', resize_init)
@@ -190,6 +222,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
     user_prefers = e.matches ? 'dark' : 'light'
     scroll_function()
 })
+
+let themeColor;
 
 var scroll_function = () => {
     if (!themeColor) {
@@ -270,3 +304,5 @@ const isOnPC = window.innerWidth > 1024;
 if (isOnPC) {
     document.body.classList.add('pc');
 }
+
+const isOnMobile = window.innerWidth < 630;
