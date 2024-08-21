@@ -23,6 +23,7 @@
 
         @media (prefers-color-scheme: dark) {
             :root {
+                --invert: invert(0);
                 --background-color: var(--background-color-dark);
                 --font-color: var(--font-color-dark);
             }
@@ -30,6 +31,7 @@
 
         @media (prefers-color-scheme: light) {
             :root {
+                --invert: invert(1);
                 --background-color: var(--background-color-light);
                 --font-color: var(--font-color-light);
             }
@@ -75,13 +77,7 @@
             background-position: center;
             transition: .2s;
 
-            filter: invert(1);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            button::before {
-                filter: invert(0);
-            }
+            filter: var(--invert);
         }
 
         button::after {
@@ -135,11 +131,13 @@
             align-items: center;
         }
 
-        .serif, .serif * {
+        .serif,
+        .serif * {
             font-family: 'EB Garamond', 'Times New Roman', Times, serif;
         }
 
-        .monospace, .monospace * {
+        .monospace,
+        .monospace * {
             font-family: 'SF Mono', monospace;
         }
     </style>
@@ -156,6 +154,16 @@
         document.getElementById('button_href').href = params.url || '';
         document.getElementById('button_href').classList.add(params.size || 'c');
         document.getElementById('button_href').classList.add(params.length || 'c');
+
+        if (params.theme == 'dark') {
+            document.documentElement.style.setProperty('--background-color', `var(--background-color-light)`);
+            document.documentElement.style.setProperty('--font-color', `var(--font-color-light)`);
+            document.documentElement.style.setProperty('--invert', `invert(1)`);
+        } else {
+            document.documentElement.style.setProperty('--background-color', `var(--background-color-dark)`);
+            document.documentElement.style.setProperty('--font-color', `var(--font-color-dark)`);
+            document.documentElement.style.setProperty('--invert', `invert(0)`);
+        }
     </script>
 </body>
 
