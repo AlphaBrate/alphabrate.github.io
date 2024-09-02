@@ -3,6 +3,9 @@ var ped = structures[structures.length - 3];
 var Class = structures[structures.length - 2];
 var articleId = location.search.split("article=")[1] || "index";
 
+pujs.setup.icons_path = '/icons/';
+pujs.setup.init();
+
 const ped_full = {
     "user-manuals": "User Manuals",
     "user-manual": "User Manual",
@@ -73,7 +76,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
         let code = document.getElementById("text").querySelectorAll('code');
         code.forEach(block => {
             block.classList.forEach(w => {
-                if (w.startsWith("language-")) {
+                if (w.startsWith("language-") && w != "language-no-highlight") {
                     block.classList.remove(w);
                     block.classList.add(w.replace("language-", "lang-"));
                     block.classList.add('prettyprint');
@@ -81,6 +84,26 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
                 }
             });
         });
+
+        let pre = document.getElementById("text").querySelectorAll('pre');
+        pre.forEach(el => {
+
+            if (el.querySelector("code") == null || 
+                el.querySelector("code").classList.contains("language-no-highlight")) return;
+
+            el.innerHTML += `<span class="copy-here"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 15H5C3.89543 15 3 14.1046 3 13V5C3 3.89543 3.89543 3 5 3H13C14.1046 3 15 3.89543 15 5V9M11 21H19C20.1046 21 21 20.1046 21 19V11C21 9.89543 20.1046 9 19 9H11C9.89543 9 9 9.89543 9 11V19C9 20.1046 9.89543 21 11 21Z" stroke="#1F1F1F" stroke-width="1.5" /></svg></span>`;
+
+            el.querySelector(".copy-here").addEventListener("click", () => {
+                el = el.querySelector(".copy-here");
+                let code = el.parentElement.querySelector("code").innerText;
+
+                navigator.clipboard.writeText(code).then(() => {
+                    pujs.alert("Copied to clipboard", "success");
+                });
+
+            });
+        });
+
         var imgs = document.querySelectorAll(".content-main img");
         imgs.forEach(img => {
             let src = img.src;
@@ -140,6 +163,11 @@ const centerTitle = () => {
                 if (centerTitleOpacity < 0) centerTitleOpacity = 0;
                 if (centerTitleOpacity > 1) centerTitleOpacity = 1;
                 centerTitle.style.opacity = centerTitleOpacity;
+            }
+            if (window.scrollY > 5) {
+                document.querySelector(".nav").classList.add("scroll");
+            } else {
+                document.querySelector(".nav").classList.remove("scroll");
             }
         });
         canMakeCenterTitle = true;
