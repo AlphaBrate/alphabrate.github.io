@@ -400,12 +400,13 @@
     font-size: 12px;
     word-wrap: normal;
     position: relative;
+    overflow: hidden;
 }
 
 pre>.copy-here {
     position: absolute;
-    bottom: 0;
-    right: 10px;
+    bottom: 2px;
+    left: calc(95% - 5px);
 
     height: 30px;
     width: 30px;
@@ -428,10 +429,17 @@ pre>.copy-here {
     opacity: 0.2;
 
     transition: .2s;
+
 }
 
-pre:hover>.copy-here {
-    opacity: .7;
+pre>.copy-here:hover {
+    opacity: .5;
+    transform: scale(0.82);
+}
+
+pre>.copy-here:active {
+    opacity: 1;
+    transform: scale(0.75);
 }
 
 p>a.center.no-margin {
@@ -804,6 +812,9 @@ p>a.center.no-margin {
     white-space: pre;
     background: transparent;
     border: 0;
+    display: block;
+    overflow-x: scroll;
+    width: 100%;
 }
 
 .markdown-body .highlight {
@@ -816,18 +827,22 @@ p>a.center.no-margin {
 }
 
 .markdown-body pre::-webkit-scrollbar {
+    display: none;
+}
+
+.markdown-body pre code::-webkit-scrollbar {
     background-color: #ffffff00;
-    height: 7px;
+    height: 5px;
     transition: .3s;
 }
 
-.markdown-body pre::-webkit-scrollbar-thumb {
+.markdown-body pre code::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 17px;
 }
 
 @media (prefers-color-scheme: dark) {
-    .markdown-body pre::-webkit-scrollbar-thumb {
+    .markdown-body pre code::-webkit-scrollbar-thumb {
         background-color: #ffffff10;
     }
 
@@ -868,7 +883,6 @@ p>a.center.no-margin {
     }
 }
 
-.markdown-body pre code,
 .markdown-body pre tt {
     display: inline;
     max-width: auto;
