@@ -1355,3 +1355,116 @@ img.dark {
         display: block;
     }
 }
+
+:root {
+    --design-frosted-noise-mobile-3000: url('/img/designs/noise/frosted.noise.light.3000.webp');
+    --design-frosted-noise-pc: url('/img/designs/noise/white_noise.webp');
+
+    --design-frosted-noise-mobile-original: url('/img/designs/noise/image-from-rawpixel-id-12504330-png.png');
+
+    --design-frosted-noise: var(--design-frosted-noise-pc);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --design-frosted-noise: var(--design-frosted-noise-mobile-3000);
+    }
+
+    .frosted::before {
+        opacity: .8 !important;
+    }
+}
+
+.frosted::before {
+    content: '';
+    position: absolute;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--design-frosted-noise);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+    animation: frosted-movement 70s infinite linear;
+}
+
+@keyframes frosted-movement {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.frosted-rotation::before {
+    animation: frosted-rotation 70s infinite linear;
+}
+
+@keyframes frosted-rotation {
+    0% {
+        transform: rotate(0deg) scale(10);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(10);
+    }
+}
+
+.no-frosted-movement::before {
+    animation: none;
+}
+
+.frosted-o10::before {
+    opacity: 1 !important;
+}
+
+.frosted-o9::before {
+    opacity: .9 !important;
+}
+
+.frosted-o8::before {
+    opacity: .8 !important;
+}
+
+.frosted-o7::before {
+    opacity: .7 !important;
+}
+
+.frosted-o6::before {
+    opacity: .6 !important;
+}
+
+.frosted-o5::before {
+    opacity: .5 !important;
+}
+
+.frosted-o4::before {
+    opacity: .4 !important;
+}
+
+.frosted-o3::before {
+    opacity: .3 !important;
+}
+
+.frosted-o2::before {
+    opacity: .2 !important;
+}
+
+.frosted-o1::before {
+    opacity: .1 !important;
+}
+
+.frosted-mask::before {
+    /* fadeoff to top with mask */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.frosted.more-frosted::before {
+    background-image: var(--design-frosted-noise-mobile-original);
+}

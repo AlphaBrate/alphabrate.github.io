@@ -42,6 +42,9 @@
     --color-accent-emphasis: #0969da;
     --color-attention-subtle: #fff8c5;
     --color-danger-fg: #cf222e;
+    --user-preferred-highlighted-text-light: rgba(255, 255, 0, 0.6);
+    --user-preferred-highlighted-text-dark: rgba(255, 255, 0, 0.25);
+    --user-preferred-highlighted-text: var(--user-preferred-highlighted-text-light);
 }
 
 .markdown-body {
@@ -841,13 +844,19 @@ p>a.center.no-margin {
     border-radius: 17px;
 }
 
+
 @media (prefers-color-scheme: dark) {
-    .markdown-body pre code::-webkit-scrollbar-thumb {
+    .markdown-body pre {
+        background: rgb(46, 46, 46);
+        border: 2px solid rgb(52, 52, 52);
+    }
+
+    .markdown-body pre::-webkit-scrollbar-thumb {
         background-color: #ffffff10;
     }
 
-    pre>.copy-here>svg {
-        filter: invert(1);
+    .markdown-body {
+        --user-preferred-highlighted-text: var(--user-preferred-highlighted-text-dark);
     }
 }
 
@@ -1306,13 +1315,14 @@ body {
 .highlight,
 highlight,
 shine {
-    color: #000000;
-
+    color: var(--user-preferred-text) !important;
     font-weight: bold;
     text-align: center;
     margin: 5px;
     padding: 5px 0;
-    background: rgba(255, 255, 0, 0.4);
+    background: var(--user-preferred-highlighted-text);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 shine {

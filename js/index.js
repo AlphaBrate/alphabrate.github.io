@@ -306,3 +306,12 @@ if (isOnPC) {
 }
 
 const isOnMobile = window.innerWidth < 630;
+
+let frosted = document.querySelectorAll('.frosted');
+
+frosted.forEach((element) => {
+    // if position is static or unset set it to relative
+    if (element.style.position == '' || element.style.position == 'static') {
+        element.style.position = 'relative';
+    }
+});
