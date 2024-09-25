@@ -73,6 +73,30 @@ const copyright_info = `
 
 const resize_init = () => {
     try {
+        // get .section.top>.intro-words actual height
+        // count all elements in .section.top>.intro-words
+        let intro_words = document.querySelector('.section.top>.intro-words')
+        let intro_words_height = intro_words.clientHeight
+
+        // all elements in .section.top>.intro-words
+        intro_words.childNodes.forEach((element) => {
+            // if element is not a text node
+            if (element.nodeType != 3) {
+                // get element's height
+                let height = element.clientHeight
+                // subtract element's height from intro_words_height
+                intro_words_height += height
+            }
+        })
+
+        // add intro-words acutal top
+        intro_words_height += intro_words.offsetTop
+
+        // set --height to .section.top
+        intro_words.parentElement.style.setProperty('--height', intro_words_height + 'px')
+    }
+    catch { }
+    try {
         var as_above = document.querySelectorAll('.as')
 
         for (var i = 0; i < as_above.length; i++) {
@@ -83,8 +107,15 @@ const resize_init = () => {
                 let width = prev_element.clientWidth
                 as_above[i].style.width = width + 'px'
             }
+
+            if (as_above[i].getAttribute('data-same') == 'height') {
+                let height = prev_element.clientHeight
+                as_above[i].style.height = height + 'px'
+            }
         }
-    } catch { }
+    } catch (e) {
+        console.log(e);
+    }
 
     try {
         document.querySelector('.words.lowerright').style.opacity = 1
@@ -226,28 +257,38 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 let themeColor;
 
 var scroll_function = () => {
-    if (!themeColor) {
-        try {
-            var scroll = window.scrollY
-            var height_of_top_section = document.querySelector('.top.section').clientHeight
-            if (scroll > height_of_top_section) {
-                document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})`
-            } else {
-                var from = colors[user_prefers]
-                var to = [34, 31, 42]
-                var percent = 1 - (scroll / height_of_top_section)
-                var color = []
-                for (var i = 0; i < 3; i++) {
-                    color.push(from[i] + (to[i] - from[i]) * percent)
+    if (!document.querySelector('.nav-bar')) {
+        if (!themeColor) {
+            try {
+                var scroll = window.scrollY
+                var height_of_top_section = document.querySelector('.top.section').clientHeight
+                if (scroll > height_of_top_section) {
+                    document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})`
+                } else {
+                    var from = colors[user_prefers]
+                    var to = [34, 31, 42]
+                    var percent = 1 - (scroll / height_of_top_section)
+                    var color = []
+                    for (var i = 0; i < 3; i++) {
+                        color.push(from[i] + (to[i] - from[i]) * percent)
+                    }
+                    document.querySelector('meta[name="theme-color"]').content = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
                 }
-                document.querySelector('meta[name="theme-color"]').content = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+            } catch {
+                try { document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})` }
+                catch { }
             }
-        } catch {
-            try { document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})` }
-            catch { }
+        } else {
+            document.querySelector('meta[name="theme-color"]').content = themeColor;
         }
     } else {
-        document.querySelector('meta[name="theme-color"]').content = themeColor;
+        document.querySelector('meta[name="theme-color"]').content = `rgb(${colors[user_prefers].join(', ')})`
+
+        if (window.scrollY > 0) {
+            document.querySelector('.nav-bar').classList.add('scrolled')
+        } else {
+            document.querySelector('.nav-bar').classList.remove('scrolled')
+        }
     }
 }
 

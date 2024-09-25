@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"">
     <meta name=" description" content="AlphaBrate, an innovative web development team.">
-    <title>PopupJS | Projects | The AlphaBrate Team</title>
+    <title>PopupJS | Projects | AlphaBrate</title>
     <link rel="stylesheet" href="/style.css">
     <meta name="description"
         content="Your Open-Source Development Team | No Ads, Always Free! We build innovative solutions. Passionate minds at AlphaBrate.">
     <meta name="keywords" content="AlphaBrate, Open-Source, Web App, Music Terms, AlphaBrate Music Terms">
-    <meta property="og:title" content="The AlphaBrate Team">
+    <meta property="og:title" content="AlphaBrate">
     <meta property="og:description"
         content="Your Open-Source Development Team | No Ads, Always Free! We build innovative solutions. Passionate minds at AlphaBrate.">
     <meta property="og:image" content="/img/alphabrate.png">
     <meta property="og:url" content="https://alphabrate.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The AlphaBrate Team">
+    <meta property="og:site_name" content="AlphaBrate">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@AlphaBrate_Team">
     <meta name="twitter:creator" content="@AlphaBrate_Team">
-    <meta name="twitter:title" content="The AlphaBrate Team">
+    <meta name="twitter:title" content="AlphaBrate">
     <meta name="twitter:description"
         content="Your Open-Source Development Team | No Ads, Always Free! We build innovative solutions. Passionate minds at AlphaBrate.">
     <meta name="twitter:image" content="/img/alphabrate.png">
@@ -56,31 +56,30 @@
     </script>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://alb-cdn.web.app/popupjs/pu.min.css">
-    <style>
-        @media (max-width: 470px) {
-            .nav-cover {
-                display: block !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div class="nav-cover"
-        style="height: 20%; position: fixed; width: 100%; top: 0; left: 0; z-index: 3; background: linear-gradient(180deg, var(--user-preferred-background) 0%, transparent 100%); display: none;">
+    <div class="nav-bar">
+        <a href="/">
+            <div class="logo">
+                <img src="/icons/alphabrate.svg" alt="Logo AlphaBrate">
+            </div>
+        </a>
+        <h1 class="visually-hidden">AlphaBrate: PopupJS</h1>
     </div>
     <div class="full frosted more-frosted frosted-o7"
         style="background: url('/img/designs/blocks.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; padding-top: 7rem; display: flex; justify-content: center; align-items: center;">
         <div class="description">
             <h2 class="monospace bold color-white">PopupJS</h2>
             <span class="tag monospace">JavaScript Plugin</span>
-            <p class="no-margin">By <a href="/" class="color-white">the AlphaBrate Team</a></p>
+            <p class="no-margin">By <a href="/" class="color-white">AlphaBrate</a></p>
             <p class="color-white monospace"
                 style="text-align: justify; text-align-last: center; width: 70%; max-width: 370px;">is a lightweight
                 JavaScript library that provides a simple way to create alerts for your web application.</p>
 
             <div class="space-break" data-height="2"></div>
-            <iframe src="/iframes/button.html?text=Documents&url=/articles/user-manuals/popupjs/&size=monospace" frameborder="0"></iframe>
+            <iframe src="/iframes/button.html?text=Documents&url=/articles/user-manuals/popupjs/&size=monospace"
+                frameborder="0"></iframe>
         </div>
     </div>
     <div class="space-break" data-height="4"></div>
@@ -102,7 +101,9 @@
             <p>
                 Standard design consistent with human visual habits.
             </p>
-            <a><button class="monospace" onclick="pujs.popup(title = 'Horizontal Buttons', message = 'A message should be a short, complete sentence.', buttons = [{ 'text': 'Action', callback: () => { }, color: 'var(--red)' },{ 'text': 'Action', callback: () => { } }], 'horiz')">Try Popup Alert</button></a>
+            <a><button class="monospace"
+                    onclick="pujs.popup(title = 'Horizontal Buttons', message = 'A message should be a short, complete sentence.', buttons = [{ 'text': 'Action', callback: () => { }, color: 'var(--pu-red)' },{ 'text': 'Action', callback: () => { } }], 'horiz')">Try
+                    Popup Alert</button></a>
         </div>
         <div class="image">
             <img src="/img/showcase/popupjs.design.webp" alt="Music Terms">
@@ -117,8 +118,15 @@
             <p>
                 Smooth animations for a better user experience.
             </p>
-            <a href="https://alphabrate.github.io/popupjs/code/showcase/"><button class="monospace">Checkout Sample Page</button></a>
+            <a><button class="monospace"
+                    onclick="pujs.pullOut(`<h1>This is a pulled-out alert.</h1><p>${randomPhrase()}</p>`)">Pull
+                    Something Out...</button></a>
         </div>
+    </div>
+    <div class="center">
+        <a href="https://alphabrate.github.io/popupjs/code/showcase/">
+            <button class="monospace">Checkout Sample Page</button>
+        </a>
     </div>
     <div class="space-break" data-height="4"></div>
     <div class="space-break hr" data-height="4"></div>
@@ -137,13 +145,25 @@
         pujs.setup.icons_path = '/icons'
         pujs.setup.init();
 
-        document.querySelectorAll('*').forEach((el) => {
-            let topper = el.classList.contains('full') && el.classList.contains('frosted');
-            // add 10 layers of z-index to the element
-            if (!topper) {
-                el.style.zIndex = 10;
-            }
-        });
+        function randomPhrase() {
+            const phrases = [
+                'So you want to know more about PopupJS?',
+                'PopupJS is a lightweight JavaScript library.',
+                'PopupJS is a simple way to create alerts for your web application.',
+                'PopupJS is available on all browsers, all devices.',
+                'PopupJS is well-designed.',
+                'PopupJS has smooth animations for a better user experience.',
+                'PopupJS is a JavaScript plugin.',
+                'PopupJS is a project by AlphaBrate.',
+                'Never use alert() again, use PopupJS.',
+                'No more boring alerts, use PopupJS.',
+                'Need a better alert? Use PopupJS.',
+                'Want to make your alerts better? Use PopupJS.',
+                'PopupJS is a simple way to create alerts.',
+                'Want to learn more about PopupJS? Click Documents.'
+            ];
+            return phrases[Math.floor(Math.random() * phrases.length)];
+        }
     </script>
     <script src="/js/index.js"></script>
 </body>
