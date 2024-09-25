@@ -72,6 +72,23 @@ pujs.setup.icons_path = 'https://alphabrate.github.io/popupjs/code/showcase/icon
 pujs.setup.init();
 ```
 
+### Cookie Banner (Lasting Banner)
+
+In this example:
+
+```javascript
+pujs.lastingBanner(`<p>We're not using cookies. This is a demo cookie banner.</p>`, type = 'alphabrate', 'bottom',
+    buttons = [
+        { 'text': 'Consent', callback: () => { } }
+        , {
+            'text': 'Learn More', callback: () => {
+                pujs.alert("Nothing for you to learn more.", 'success');
+            }, preset_style: 'black-and-white'
+        }
+    ]
+);
+```
+
 ### Save Button (Alert)
 
 In this example:
@@ -195,7 +212,8 @@ This example demonstrates how to use PopupJS to create alerts, popups, and pull-
 
 > This example is first built using the PopupJS in Version 1.1.0.
 >
-> Updated on: 2/9/2024 to Version 1.1.1
+> Latest on: 2/9/2024 with PopupJS 1.2.0 <br>
+> First Published on: 2/9/2024
 
 
 <br>
@@ -212,5 +230,6 @@ This example demonstrates how to use PopupJS to create alerts, popups, and pull-
 ## In this Manual
 
 - [Quick Start](?article=index)
+- [Functions](?article=functions) 
 - [More Examples](?article=more-examples) ◀
 - [About This Project](?article=project)

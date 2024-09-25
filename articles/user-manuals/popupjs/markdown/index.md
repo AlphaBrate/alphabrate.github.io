@@ -41,52 +41,6 @@ You can use our cdn-hosted files:
 
 You can then use the `pujs` object to create alerts, popups, and pull-outs in your application.
 
-### Alerts
-
-* `pujs.alert(message, type, timeout, selectable, options = {})`: Display an alert message with an icon and optional callback.
-+ `message` [String]: The alert message to display.
-+ `type` [String]: The type of alert (error, success, etc.).
-+ `timeout` [Integer]: The time in milliseconds to display the alert.
-+ `selectable` [Bool]: Whether the alert text is selectable.
-
-```javascript
-pujs.alert(Message, Type, Duration, User-Selectable);
-```
-
-### Popups
-
-* `pujs.popup(title, message, buttons, buttonType, input, options = {})`: Create a modal popup with a title, message, and buttons.
-+ `title` [String]: The title of the popup.
-+ `message` [String]: The message to display in the popup.
-+ `buttons` [Array]: An array of button objects with text and callback properties.
-  
-```js
-[
-    { text: 'Action 1', callback: function() { }, color: '[OPTIONAL]' },
-    { text: 'Action 2', callback: function() { } }
-]
-```
-
-+ `buttonType` [String]: The type of buttons to display (vert or horiz).
-+ `input` [JSON]: An optional input field to include in the popup.
-
-```js
-{
-    type: 'text',
-    placeholder: 'Enter your name',
-    value: 'John Doe'
-}
-```
-
-> The value of input fields will be returned in the callback function.
-
-### Pull-Outs
-
-* `pujs.pullOut(html, scroll, id, options = {})`: Create a pull-out notification with customizable HTML content.
-+ `html` [String]: The HTML content to display in the pull-out.
-+ `scroll` [Bool]: Whether the content of the pull-out should be scrollable.
-+ `id` [String]: An optional ID to assign to the pull-out element.
-
 ## Customization
 
 PopupJS provides several options for customizing the appearance and behavior of alerts, popups, and pull-outs. You can modify the CSS styles and icons to fit your application's design.
@@ -206,7 +160,7 @@ PopupJS is compatible with modern web browsers, including Chrome, Firefox, Safar
 
 <h2 class="center">Continue Reading</h2>
 
-<a href="?article=more-examples" class="center no-margin"><button>More Examples</button></a>
+<a href="?article=functions" class="center no-margin"><button>Functions</button></a>
 
 <br>
 
@@ -215,5 +169,6 @@ PopupJS is compatible with modern web browsers, including Chrome, Firefox, Safar
 ## In this Manual
 
 - [Quick Start](?article=index) ◀
+- [Functions](?article=functions) 
 - [More Examples](?article=more-examples)
 - [About This Project](?article=project)
