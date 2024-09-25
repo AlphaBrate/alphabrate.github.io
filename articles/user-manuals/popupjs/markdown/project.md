@@ -47,5 +47,6 @@ PopupJS adheres to the Semantic Versioning 2.0.0 guidelines. The major version i
 ## In this Manual
 
 - [Quick Start](?article=index)
+- [Functions](?article=functions) 
 - [More Examples](?article=more-examples)
 - [About This Project](?article=project) ◀

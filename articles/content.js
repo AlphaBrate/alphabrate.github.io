@@ -88,7 +88,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
         let pre = document.getElementById("text").querySelectorAll('pre');
         pre.forEach(el => {
 
-            if (el.querySelector("code") == null || 
+            if (el.querySelector("code") == null ||
                 el.querySelector("code").classList.contains("language-no-highlight")) return;
 
             el.innerHTML += `<span class="copy-here"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 15H5C3.89543 15 3 14.1046 3 13V5C3 3.89543 3.89543 3 5 3H13C14.1046 3 15 3.89543 15 5V9M11 21H19C20.1046 21 21 20.1046 21 19V11C21 9.89543 20.1046 9 19 9H11C9.89543 9 9 9.89543 9 11V19C9 20.1046 9.89543 21 11 21Z" stroke="#1F1F1F" stroke-width="1.5" /></svg></span>`;
@@ -193,3 +193,31 @@ if (isInPWA && !isOnPC) {
 }
 
 document.head.innerHTML += `<meta name="theme-color" content="${getComputedStyle(document.body).getPropertyValue("--user-preferred-background")}">`;
+
+let scrolled = true;
+let previousScroll = 0;
+
+document.addEventListener("wheel", () => {
+    scrolled = true;
+});
+
+document.addEventListener("touchmove", () => {
+    scrolled = true;
+});
+
+
+document.querySelector(".nav").addEventListener("click", () => {
+    // back to top
+
+    if (scrolled) {
+        previousScroll = window.scrollY;
+        window.scrollTo(0, 0);
+        scrolled = false;
+        return;
+    }
+
+    if (!scrolled) {
+        scrolled = true;
+        window.scrollTo(0, previousScroll);
+    }
+});

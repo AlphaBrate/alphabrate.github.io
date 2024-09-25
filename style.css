@@ -6,6 +6,7 @@
         --user-preferred-separator: #ffffff35;
         --user-preferred-gray-highlight: #8c8c8c;
         --user-preferred-gray-underlay: #696969;
+        --user-preferred-diff-background: #303030;
     }
 }
 
@@ -17,6 +18,7 @@
         --user-preferred-separator: #00000035;
         --user-preferred-gray-highlight: #313131;
         --user-preferred-gray-underlay: rgb(159, 159, 159);
+        --user-preferred-diff-background: #f2f2f3;
     }
 }
 
@@ -62,6 +64,7 @@
     --href-color: rgba(0, 162, 255, 0.5);
     --highlight-color-light: #ffffff86;
     --highlight-color-dark: #ffffffed;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -167,6 +170,11 @@ img {
     text-align: center;
 }
 
+.text-center {
+    width: 100%;
+    text-align: center;
+}
+
 a>button,
 .btn {
     margin-top: 1rem;
@@ -250,7 +258,7 @@ h2.bold {
     color: #fff;
     padding: 2rem 0;
     text-align: center;
-    height: calc(100vh - 4rem);
+    height: calc(var(--height) + 6.5rem);
     position: relative;
 }
 
@@ -278,7 +286,7 @@ h2.bold {
 
 .intro-words {
     position: absolute;
-    top: max(25%, 15vw);
+    top: max(20%, 10vw);
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 80%;
@@ -307,6 +315,10 @@ h2.bold {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .text-center {
+        left: -2.5%;
     }
 
     .lowerright {
@@ -442,6 +454,10 @@ h2.bold {
     flex-direction: column;
 }
 
+.flex.row {
+    flex-direction: row;
+}
+
 .no-shadow {
     box-shadow: none !important;
     text-shadow: none !important;
@@ -523,7 +539,7 @@ p.color-filled {
 }
 
 .donation-section {
-    background-image: url('/img/designs/strings/light.full-hd-pc.2x.png');
+    background-image: url('/img/designs/strings/light.full-hd-pc.2x.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -538,12 +554,12 @@ p.color-filled {
 @media (prefers-color-scheme: dark) {
 
     .donation-section {
-        background-image: url('/img/designs/strings/dark.full-hd-pc.2x.png');
+        background-image: url('/img/designs/strings/dark.full-hd-pc.2x.webp');
     }
 
     @media (max-width: 600px) {
         .donation-section {
-            background-image: url('/img/designs/strings/dark.mobile.2x.png');
+            background-image: url('/img/designs/strings/dark.mobile.2x.webp');
         }
     }
 }
@@ -551,12 +567,12 @@ p.color-filled {
 @media (prefers-color-scheme: light) {
 
     .donation-section {
-        background-image: url('/img/designs/strings/light.full-hd-pc.2x.png');
+        background-image: url('/img/designs/strings/light.full-hd-pc.2x.webp');
     }
 
     @media (max-width: 600px) {
         .donation-section {
-            background-image: url('/img/designs/strings/light.mobile.2x.png');
+            background-image: url('/img/designs/strings/light.mobile.2x.webp');
         }
     }
 }
@@ -604,6 +620,10 @@ p.color-filled {
             font-weight: 600;
             margin-bottom: .8em;
             font-size: 16px;
+            width: 100%;
+
+            text-align: left;
+
             color: var(--user-preferred-gray-highlight) !important;
 
             a {
@@ -894,11 +914,13 @@ noscript {
     flex-direction: column;
     position: relative;
     border: 2px solid #5f5f5f2b;
+    margin: 1rem;
+    margin-left: 0;
+    margin-right: 0;
     border-radius: 20px;
     overflow: hidden;
-    margin: 1rem;
     width: 80%;
-    max-width: 500px;
+    max-width: 450px;
     user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -1223,6 +1245,10 @@ noscript {
     }
 }
 
+.full-vw {
+    width: 100vw;
+}
+
 .full {
     position: relative;
     width: 100%;
@@ -1309,6 +1335,10 @@ font>a {
     color: white;
 }
 
+.gap {
+    gap: 1rem;
+}
+
 img.logo {
     max-height: 30px;
     max-width: 30px;
@@ -1322,6 +1352,10 @@ img.logo {
 .color-transl-gray,
 .color-transl-gray * {
     color: rgba(0, 0, 0, 0.1);
+}
+
+.color-text {
+    color: var(--user-preferred-text);
 }
 
 .serif {
@@ -1467,4 +1501,129 @@ img.dark {
 
 .frosted.more-frosted::before {
     background-image: var(--design-frosted-noise-mobile-original);
+}
+
+span.space {
+    margin: .1em;
+}
+
+.equal-start {
+    align-items: start;
+}
+
+.equal-center {
+    align-items: center;
+}
+
+.equal-end {
+    align-items: end;
+}
+
+.nav-insert {
+    height: 60px;
+}
+
+.nav-bar {
+    color: var(--user-preferred-text);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+    height: 60px;
+    display: flex;
+    border-bottom: 1px solid transparent;
+
+    &,
+    * {
+        outline: none;
+        transition: .4s;
+    }
+
+    .hide-when-scroll {
+        font-size: .75rem;
+        max-height: 60px;
+        transition: .1s;
+
+        h1 {
+            font-weight: 500;
+        }
+    }
+}
+
+.show-on-dark-mode {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .show-on-dark-mode {
+        display: block;
+    }
+
+    .show-on-light-mode {
+        display: none;
+    }
+}
+
+.nav-bar>.flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-bar .logo img {
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.nav-bar.scrolled {
+    border-bottom: 1px solid var(--border-color);
+    transition: border-bottom .5s;
+    background: linear-gradient(180deg, var(--user-preferred-background) 0%, transparent 100%);
+    backdrop-filter: blur(17px) saturate(110%);
+    -webkit-backdrop-filter: blur(17px) saturate(110%);
+
+    height: 45px;
+
+    .logo img {
+        height: 40px;
+        margin-left: 30px;
+        margin-top: 2.5px;
+    }
+
+    .hide-when-scroll {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-bar.scrolled {
+        background: transparent;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+.sectional {
+    padding: 3rem 0;
+    min-width: 80%;
+    border-radius: 21px;
+    margin: 2rem;
+    background: var(--user-preferred-diff-background);
 }
