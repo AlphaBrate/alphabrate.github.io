@@ -1582,12 +1582,6 @@ span.space {
 }
 
 .nav-bar.scrolled {
-    border-bottom: 1px solid var(--border-color);
-    transition: border-bottom .5s;
-    background: linear-gradient(180deg, var(--user-preferred-background) 0%, transparent 100%);
-    backdrop-filter: blur(17px) saturate(110%);
-    -webkit-backdrop-filter: blur(17px) saturate(110%);
-
     height: 45px;
 
     .logo img {
@@ -1604,6 +1598,10 @@ span.space {
 
 @media (min-width: 768px) {
     .nav-bar.scrolled {
+        border-bottom: 1px solid var(--border-color);
+        transition: border-bottom .5s;
+        backdrop-filter: blur(17px) saturate(110%);
+        -webkit-backdrop-filter: blur(17px) saturate(110%);
         background: transparent;
     }
 }
