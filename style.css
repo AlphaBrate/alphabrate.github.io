@@ -1582,14 +1582,12 @@ span.space {
 }
 
 .nav-bar.scrolled {
-    height: 45px;
-
-    .logo img {
-        height: 40px;
-        margin-left: 30px;
-        margin-top: 2.5px;
-    }
-
+    height: 55px;
+    border-bottom: 1px solid var(--border-color);
+    transition: border-bottom .5s;
+    backdrop-filter: blur(17px) saturate(110%);
+    -webkit-backdrop-filter: blur(17px) saturate(110%);/* Rectangle 42 */
+    
     .hide-when-scroll {
         opacity: 0;
         pointer-events: none;
@@ -1598,11 +1596,16 @@ span.space {
 
 @media (min-width: 768px) {
     .nav-bar.scrolled {
-        border-bottom: 1px solid var(--border-color);
-        transition: border-bottom .5s;
-        backdrop-filter: blur(17px) saturate(110%);
-        -webkit-backdrop-filter: blur(17px) saturate(110%);
+
         background: transparent;
+
+        height: 45px;
+
+        .logo img {
+            height: 40px;
+            margin-left: 30px;
+            margin-top: 2.5px;
+        }
     }
 }
 
