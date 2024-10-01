@@ -43,12 +43,28 @@ pujs.alert(Message, Type, Duration, User-Selectable);
 
 > The value of input fields will be returned in the callback function.
 
++ `options` [JSON]: Additional options for the popup.
+
+```js
+{
+    lockscreen: true // Prevent interaction with the rest of the page. Can be set to false when your app already has a locked screen.
+}
+```
+
 ## Pull-Outs
 
 * `pujs.pullOut(html, scroll, id, options = {})`: Create a pull-out notification with customizable HTML content.
 + `html` [String]: The HTML content to display in the pull-out.
 + `scroll` [Bool]: Whether the content of the pull-out should be scrollable.
 + `id` [String]: An optional ID to assign to the pull-out element.
++ `options` [JSON]: Additional options for the pull-out.
+
+```js
+{
+    id: 'pullOut',
+    lockscreen: true // Prevent interaction with the rest of the page. Can be set to false when your app already has a locked screen.
+}
+```
 
 ## Banners
 

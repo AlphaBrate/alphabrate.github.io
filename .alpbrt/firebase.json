@@ -1,6 +1,29 @@
 {
   "hosting": {
     "site": "aphbrt",
-    "public": "/public"
+    "public": "/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://alphabrate.github.io/",
+        "type": 301
+      },
+      {
+        "source": "/:app*",
+        "destination": "https://alphabrate.github.io/:app",
+        "type": 301
+      },
+      {
+        "source": "/:app*/:page*",
+        "destination": "https://alphabrate.github.io/:app/:page",
+        "type": 301
+      }
+    ]
+
   }
 }
