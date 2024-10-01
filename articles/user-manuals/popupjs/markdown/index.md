@@ -12,9 +12,10 @@ PopupJs is a lightweight JavaScript library that provides a simple way to create
 
 ## Features
 
-* Alerts: Display customizable alert messages with icons and callbacks.
-* Popups: Create modal popups with titles, messages, and buttons.
-* Pull-Outs: Create pull-out notifications that can be swiped away.
+* **Alerts**: Display customizable alert messages with icons and callbacks.
+* **Popups**: Create modal popups with titles, messages, and buttons.
+* **Pull-Outs**: Create pull-out notifications that can be swiped away.
+* **Banners**: Create banners that can be dismissed by the user.
 
 ## Usage
 
@@ -43,7 +44,7 @@ You can then use the `pujs` object to create alerts, popups, and pull-outs in yo
 
 ## Customization
 
-PopupJS provides several options for customizing the appearance and behavior of alerts, popups, and pull-outs. You can modify the CSS styles and icons to fit your application's design.
+PopupJS provides several options for customizing the appearance and behavior of alerts, popups, pull-outs, and banners. You can modify the CSS styles and icons to fit your application's design.
 
 ### To-do
 
@@ -57,9 +58,14 @@ todo: {
     },
     pullOut: {
         start: () => { },
+        ending: () => { /* Before the ending animation plays */ },
         end: () => { }
     },
     popup: {
+        start: () => { },
+        end: () => { }
+    },
+    lastingBanner: {
         start: () => { },
         end: () => { }
     }
@@ -68,77 +74,7 @@ todo: {
 
 ## Best Practices
 
-### Page Styling
-
-While styling your page, it is recommended not to add `padding` or `margin` to the `body` or `html` elements. Make sure your page is at least `100vh` and `100vw`.
-
-PopupJS has a built-in function that 'locks' the page when a popup is displayed. You can also test your page with the following code:
-
-```js
-pujs.lockscreen(); // Lock the screen, no lock() needed
-pujs.lockscreen.unlock();
-```
-
-### CSS Naming
-
-Avoid directly modifying the element styles on your page without any other class or id. This may cause conflicts with PopupJS.
-For example, avoid using `button {}` but use `button.myButton {}` instead. Here is the list of elements that you should avoid modifying directly without a class or id:
-
-```
-button
-input
-div
-span
-```
-
-### Customization
-
-You can customize the appearance of alerts, popups, and pull-outs by modifying the CSS styles in the `popup.css` file or attaching a new style file. You can also change the icons for using in the alerts by replacing the SVG files in the `icons` folder.
-
-### Initialization
-
-While PopupJS is designed to be easy to use, it is recommended to initialize the library after the page has loaded to ensure that all elements are available. You will have to set the `icons_path` before initializing the library or using any of the functions or there will be an error.
-
-```js
-pujs.setup.icons_path = 'path/to/icons';
-pujs.setup.init();
-```
-
-### Callbacks
-
-> Callbacks for functions that do not support callbacks by default.
-
-FOR Versions before 1.1.1:
-
-It is recommended to simply set a timeout for the section that requires those popups' elements.
-
-They may be commonly used in pull-outs for adding event listeners to the elements inside the pull-out.
-
-DO NOT:
-
-```js
-pujs.pullOut('<div id="myPullOutText">Hello World</div>');
-document.getElementById('myPullOutText').addEventListener('click', () => { });
-```
-
-Instead, use:
-
-```js
-setTimeout(() => {
-    document.getElementById('myPullOutText').addEventListener('click', () => { });
-}, {>=1});
-```
-
-FOR Versions after 1.1.1:
-
-You can use the `.then(el)` method to add event listeners to the elements inside the pull-out.
-
-```js
-pujs.pullOut('<div id="myPullOutText">Hello World</div>')
-.then(el => {
-    el.querySelector('#myPullOutText').addEventListener('click', () => { });
-});
-```
+[Click here](?article=best-practices) to learn more about best practices for using PopupJS in your web application.
 
 ## Browser Support
 
