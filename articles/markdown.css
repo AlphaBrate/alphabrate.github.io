@@ -438,7 +438,7 @@ pre>.copy-here {
     pre>.copy-here {
         filter: invert(1);
         -webkit-filter: invert(1);
-        opacity: .4;
+        opacity: .3;
     }
 }
 
