@@ -434,7 +434,7 @@ pre>.copy-here {
     transition: .2s;
 }
 
-@media (prefer-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     pre>.copy-here {
         filter: invert(1);
         -webkit-filter: invert(1);
