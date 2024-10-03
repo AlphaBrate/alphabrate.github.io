@@ -416,7 +416,7 @@ pre>.copy-here {
 
     transform: scale(0.8);
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color-light);
     border-radius: 7px;
     user-select: none;
     -webkit-user-select: none;
@@ -432,7 +432,14 @@ pre>.copy-here {
     opacity: 0.2;
 
     transition: .2s;
+}
 
+@media (prefer-color-scheme: dark) {
+    pre>.copy-here {
+        filter: invert(1);
+        -webkit-filter: invert(1);
+        opacity: .4;
+    }
 }
 
 pre>.copy-here:hover {
