@@ -2,9 +2,6 @@ var prev_session = localStorage.getItem('session')
 const session = prev_session ? prev_session : Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 localStorage.setItem('session', session)
 
-
-document.head.innerHTML += `<style>body::before{background-image: url('${app_info.artwork}');}`
-
 var search = new URLSearchParams(window.location.search)
 let can_rate = search.get('rate')
 
@@ -28,8 +25,6 @@ function addRating(r) {
         location.reload()
     })
 }
-
-document.getElementById('start_redirect').href = `/apps/redirect.html?app=${app_info.app_id}&url=${app_info.app_url}`
 
 if (localStorage.getItem(app_info.app_id) === 'true') {
     document.querySelectorAll('.hid_rating').forEach(e => {
@@ -58,15 +53,6 @@ function sendResult() {
     var stars = document.getElementById('stars').value
     addRating(stars)
 }
-
-var images = JSON.parse(app_info.screenshots)
-var image_loop = document.querySelector('.image-loop')
-images.forEach(i => {
-    var img = document.createElement('img')
-    img.src = i
-    img.alt = `A Screenshot of ${app_info.name}.`
-    image_loop.appendChild(img)
-})
 
 var search = new URLSearchParams(window.location.search)
 var app_sourced = search.get('sourced')

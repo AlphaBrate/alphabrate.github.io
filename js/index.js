@@ -48,19 +48,6 @@ const footer_links = `
                 <a href="https://github.com/alphabrate/nettransfer">Net Transfer</a>
             </div>
         </div>
-        <div class="cols">
-            <div class="col">
-                <span class="click-holder"></span>
-                <font class="footer-heading">
-                    ReTrn Chu
-                </font>
-                <a href="https://chutm.github.io/">Online C.V.</a>
-                <a href="https://musescore.com/user/49003203">MuseScore</a>
-                <a href="https://www.instagram.com/retrnp/">Instagram</a>
-                <a href="https://www.youtube.com/@ReTrn">YouTube</a>
-                <a href="https://www.linkedin.com/in/retrn/">LinkedIn</a>
-            </div>
-        </div>
     </div>
     <div class="space-break" data-height="2"></div>
 </div>`
@@ -174,6 +161,10 @@ function spaceBreak() {
 }
 
 window.onload = () => {
+
+    try {
+        document.querySelector('.nav-bar>a').href = '../'
+    } catch { }
 
     try {
         document.getElementById('footer-links').innerHTML = footer_links

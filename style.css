@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --user-preferred-background: #282828;
+        --user-preferred-tranparent-background: #2828285c;
         --user-preferred-text: #ffffff;
         --user-preferred-hr: #ffffff15;
         --user-preferred-separator: #ffffff35;
@@ -13,6 +14,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --user-preferred-background: #ffffff;
+        --user-preferred-tranparent-background: #ffffff5c;
         --user-preferred-text: #000000;
         --user-preferred-hr: #00000015;
         --user-preferred-separator: #00000035;
@@ -1394,8 +1396,6 @@ img.dark {
     --design-frosted-noise-mobile-3000: url('/img/designs/noise/frosted.noise.light.3000.webp');
     --design-frosted-noise-pc: url('/img/designs/noise/white_noise.webp');
 
-    --design-frosted-noise-mobile-original: url('/img/designs/noise/image-from-rawpixel-id-12504330-png.png');
-
     --design-frosted-noise: var(--design-frosted-noise-pc);
 }
 
@@ -1417,6 +1417,7 @@ img.dark {
     left: 0;
     width: 100%;
     height: 100%;
+    mix-blend-mode: color-dodge;
     background-image: var(--design-frosted-noise);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1497,10 +1498,6 @@ img.dark {
 .frosted-mask::before {
     /* fadeoff to top with mask */
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-.frosted.more-frosted::before {
-    background-image: var(--design-frosted-noise-mobile-original);
 }
 
 span.space {
@@ -1586,8 +1583,9 @@ span.space {
     border-bottom: 1px solid var(--border-color);
     transition: border-bottom .5s;
     backdrop-filter: blur(17px) saturate(110%);
-    -webkit-backdrop-filter: blur(17px) saturate(110%);/* Rectangle 42 */
-    
+    -webkit-backdrop-filter: blur(17px) saturate(110%);
+    /* Rectangle 42 */
+
     .hide-when-scroll {
         opacity: 0;
         pointer-events: none;
@@ -1596,8 +1594,6 @@ span.space {
 
 @media (min-width: 768px) {
     .nav-bar.scrolled {
-
-        background: transparent;
 
         height: 45px;
 
@@ -1608,6 +1604,24 @@ span.space {
         }
     }
 }
+
+@media (max-width: 768px) {
+    .nav-bar.scrolled {
+        background: linear-gradient(0deg, var(--user-preferred-tranparent-background) 0%, var(--user-preferred-background) 100%);
+    }
+
+    .full.first::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, transparent 0%, var(--user-preferred-background) 100%);
+        z-index: 1;
+    }
+}
+
 
 .visually-hidden {
     position: absolute;
@@ -1627,4 +1641,8 @@ span.space {
     border-radius: 21px;
     margin: 2rem;
     background: var(--user-preferred-diff-background);
+}
+
+img.rounded {
+    border-radius: 11px;
 }
