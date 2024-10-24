@@ -171,6 +171,16 @@ input[type="range"]#stars {
 .app-down>p>c {
     user-select: none;
     cursor: pointer;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-down .animated-loader {
+    --size: 1rem;
+    opacity: .5 !important;
+    margin: 0 .5rem;
 }
 
 @keyframes appearing {

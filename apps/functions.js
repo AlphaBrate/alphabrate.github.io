@@ -12,47 +12,36 @@ fetch(`${server}/rating/${app}`, {
     },
 }).then(data => {
     data.json().then(d => {
-        addValues(d)
-    })
-}).catch(e => {
-    addValues({
-        "rating": app_info.rating,
-        "count": app_info.rat_count
+        addRatings(d)
     })
 })
 
 let ratingsDetailsTriggled = false;
 
-function addValues(d) {
-    document.getElementById("load").style.display = "none"
-
+function addRatings(d) {
     rating = d.rating
     rat_count = d.count
 
-    app_info.rating = rating
-    app_info.rat_count = rat_count
+    document.querySelector('.app-down>p>c').innerHTML = `${rating} (${rat_count}) <span class="stars">★</span>`
 
-    function replaceAppInfo() {
-        const all_el = document.querySelectorAll("*")
-        all_el.forEach(e => {
-            var keys = Object.keys(app_info)
-            keys.forEach(k => {
-                if (e.innerHTML.includes("_" + k.toUpperCase() + "_")) {
-                    e.innerHTML = e.innerHTML.replaceAll("_" + k.toUpperCase() + "_", app_info[k])
-                }
-            })
-        })
-    }
-
-    replaceAppInfo()
-
-    document.addEventListener("DOMContentLoaded", () => {
-        replaceAppInfo()
-    })
 
     document.querySelector('.app-down>p>c').addEventListener('click', e => {
-        if (ratingsDetailsTriggled) return
-        
+        if (ratingsDetailsTriggled) {
+            e.target.parentElement.querySelector('.ratings-details').animate([
+                { opacity: 1, maxHeight: '5px', margin: '32px' },
+                { opacity: 0, maxHeight: '0px', margin: '0px' }
+            ], {
+                duration: 200,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            })
+            setTimeout(() => {
+                e.target.parentElement.querySelector('.ratings-details').remove()
+            }, 200)
+            ratingsDetailsTriggled = false
+            return
+        }
+
         ratingsDetailsTriggled = true
 
         // red to blue to green
@@ -89,6 +78,39 @@ function addValues(d) {
         }
         e.target.parentElement.appendChild(ratings_details)
     })
+}
+
+function addValues() {
+    document.getElementById('start_redirect').href = `/apps/redirect.html?app=${app_info.app_id}&url=${app_info.app_url}`
+
+    document.getElementById("load").style.display = "none"
+    function replaceAppInfo() {
+        const all_el = document.querySelectorAll("*")
+        all_el.forEach(e => {
+            var keys = Object.keys(app_info)
+            keys.forEach(k => {
+                if (e.innerHTML.includes("_" + k.toUpperCase() + "_")) {
+                    e.innerHTML = e.innerHTML.replaceAll("_" + k.toUpperCase() + "_", app_info[k])
+                }
+            })
+        })
+    }
+
+    replaceAppInfo()
+
+    document.querySelector('.app-down>p>c').innerHTML += `<div class="animated-loader"></div>`
+
+    document.head.innerHTML += `<style>body::before{background-image: url('${app_info.artwork}');}`
+
+    var images = JSON.parse(app_info.screenshots)
+    var image_loop = document.querySelector('.image-loop')
+    images.forEach(i => {
+        var img = document.createElement('img')
+        img.src = i
+        img.alt = `A Screenshot of ${app_info.name}.`
+        image_loop.appendChild(img)
+    })
+
 
     // Add social media metas and meta tags
     var metas = `
@@ -118,3 +140,5 @@ function addValues(d) {
                 `
     document.head.innerHTML += metas
 }
+
+addValues()
