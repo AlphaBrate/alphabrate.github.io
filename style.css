@@ -1646,3 +1646,8 @@ span.space {
 img.rounded {
     border-radius: 11px;
 }
+
+span.h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
