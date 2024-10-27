@@ -37,6 +37,12 @@ If you downloaded the library, and not willing to use the popup.css filename, ma
 noPuJSCSSCheck = true;
 ```
 
+You may customize the height of a pull-out by adding 'height' in to the configuration object.
+
+```js
+pujs.pullOut('Hello World', false, { height: '50%' });
+```
+
 ## Initialization
 
 While PopupJS is designed to be easy to use, it is recommended to initialize the library after the page has loaded to ensure that all elements are available. You will have to set the `icons_path` before initializing the library or using any of the functions or there will be an error.

@@ -16,6 +16,7 @@ PopupJs is a lightweight JavaScript library that provides a simple way to create
 * **Popups**: Create modal popups with titles, messages, and buttons.
 * **Pull-Outs**: Create pull-out notifications that can be swiped away.
 * **Banners**: Create banners that can be dismissed by the user.
+* **Action Sheets**: Create action sheets with multiple buttons and callbacks.
 
 ## Usage
 
@@ -33,10 +34,8 @@ To use PopupJS in your web application, include the following CSS and JavaScript
 You can use our cdn-hosted files:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphabrate/popupjs/pu.min.css">
 <link rel="stylesheet" href="https://alb-cdn.web.app/popupjs/pu.min.css">
 
-<script src="https://cdn.jsdelivr.net/gh/alphabrate/popupjs/pu.min.js"></script>
 <script src="https://alb-cdn.web.app/popupjs/pu.min.js"></script>
 ```
 
@@ -68,6 +67,10 @@ todo: {
     lastingBanner: {
         start: () => { },
         end: () => { }
+    },
+    actionSheet: {
+        start: () => { },
+        end: () => { }
     }
 },
 ```
@@ -89,6 +92,7 @@ PopupJS is compatible with modern web browsers, including Chrome, Firefox, Safar
 ### Design Resources (Template)
 
 * [Apple Design Resources](https://developer.apple.com/design/resources/)
+* [Google Material Design](https://material.io/design)
 
 
 <br>
