@@ -53,18 +53,23 @@ pujs.alert(Message, Type, Duration, User-Selectable);
 
 ## Pull-Outs
 
-* `pujs.pullOut(html, scroll, id, options = {})`: Create a pull-out notification with customizable HTML content.
+* `pujs.pullOut(html, scroll, options = {})`: Create a pull-out notification with customizable HTML content.
 + `html` [String]: The HTML content to display in the pull-out.
 + `scroll` [Bool]: Whether the content of the pull-out should be scrollable.
-+ `id` [String]: An optional ID to assign to the pull-out element.
 + `options` [JSON]: Additional options for the pull-out.
 
 ```js
 {
     id: 'pullOut',
-    lockscreen: true // Prevent interaction with the rest of the page. Can be set to false when your app already has a locked screen.
+    lockscreen: true, // Prevent interaction with the rest of the page. Can be set to false when your app already has a locked screen.
+    height: 'calc(90% - 3rem)', // The height of the pull-out. 
+    closeButton: true, // Show a close button in the pull-out.
+    dragHandle: true, // Show a drag handle in the pull-out. (No actual use)
 }
 ```
+
+> Can be dismissed by swiping or clicking the close button or empty space.
+> Close the pull-out by calling `pujs.pullOut.close(id?)`.
 
 ## Banners
 
@@ -89,6 +94,35 @@ pujs.alert(Message, Type, Duration, User-Selectable);
     duration: 5000,
 }
 ```
+
+## Action Sheets
+
+* `pujs.actionSheet(title, message, buttons, options = {})`: Create an action sheet with multiple buttons and callbacks.
++ `title` [String]: The title of the action sheet.
++ `message` [String]: The message to display in the action sheet.
++ `buttons` [Array]: An array of button objects with text and callback properties.
+  
+```js
+[
+    { text: 'Action 1', callback: function() { } },
+    { text: 'Action 2', callback: function() { }, type = 'destructive' } // Allowed: 'destructive', 'action', 'disabled'
+]
+```
+
++ `options` [JSON]: Additional options for the action sheet.
+
+```js
+{
+    id: 'actionSheet',
+    cancel: 'Cancel' // The text for the cancel button.
+}
+```
+
+> The action sheet will be dismissed when a button is clicked.
+> The `destructive` type will be styled differently to indicate a potentially harmful action.
+> The `disabled` type will be styled as a disabled button.
+> The `cancel` button will be displayed at the bottom of the action sheet.
+> Close the action sheet by calling `pujs.actionSheet.close(id?)`.
 
 <br>
 <hr>
