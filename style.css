@@ -1629,8 +1629,7 @@ span.space {
     -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
     clip-path: inset(0px 0px 99.9% 99.9%);
     overflow: hidden;
-    height: 1px;
-    width: 1px;
+    pointer-events: none;
     padding: 0;
     border: 0;
 }
