@@ -1605,23 +1605,6 @@ span.space {
     }
 }
 
-@media (max-width: 768px) {
-    .nav-bar.scrolled {
-        background: linear-gradient(0deg, var(--user-preferred-tranparent-background) 0%, var(--user-preferred-background) 100%);
-    }
-
-    .full.first::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(0deg, transparent 0%, var(--user-preferred-background) 100%);
-        z-index: 1;
-    }
-}
-
 
 .visually-hidden {
     position: absolute;
