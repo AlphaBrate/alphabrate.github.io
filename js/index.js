@@ -347,3 +347,15 @@ frosted.forEach((element) => {
         element.style.position = 'relative';
     }
 });
+
+spaceBreak();
+
+if (document.querySelector('img[data-src]')) {
+    document.querySelectorAll('img[data-src]').forEach((element) => {
+        element.src = element.getAttribute('data-src');
+
+        element.addEventListener('load', () => {
+            element.removeAttribute('data-src');
+        });
+    });
+}
