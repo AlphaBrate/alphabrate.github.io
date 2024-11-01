@@ -31,7 +31,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
     try {
         var j = articles[ped][Class][articleId]; document.getElementById("center-title").innerHTML =
             document.getElementById("title").innerHTML = j.title;
-        document.title = j.title + " | " + ped_full[ped] + " | The AlphaBrate Team"
+        document.title = j.title + " | " + ped_full[ped] + " | AlphaBrate"
         document.getElementById("author").innerHTML = j.author;
         document.getElementById("date").innerHTML = j.date;
         document.getElementById("description").innerHTML = j.description;
@@ -45,7 +45,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
             // NOT FOUND
             document.getElementById("center-title").innerHTML =
                 document.getElementById("title").innerHTML = "Not Found";
-            document.title = "Not Found | The AlphaBrate Team"
+            document.title = "Not Found | AlphaBrate Articles"
             document.getElementById("description").innerHTML = `The page you're looking for can't be found.`;
             return;
         }
@@ -64,6 +64,10 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
 
                     if (accepts.includes(varname)) {
                         document.getElementById(varname).innerHTML = value;
+                    }
+
+                    if (varname == "title") {
+                        document.title = value + " | AlphaBrate";
                     }
                 }
                 // } catch {}
@@ -145,7 +149,7 @@ fetch("/articles/articles.json").then(res => res.json()).then(articles => {
 }).catch(() => {
     document.getElementById("center-title").innerHTML =
         document.getElementById("title").innerHTML = "Not Found";
-    document.title = "Not Found | The AlphaBrate Team"
+    document.title = "Not Found | AlphaBrate Articles"
     document.getElementById("description").innerHTML = `The page you're looking for can't be found.`;
 });
 
