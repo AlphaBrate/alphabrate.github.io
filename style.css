@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --user-preferred-background: #ffffff;
+        --user-preferred-background: #f1f3f4;
         --user-preferred-tranparent-background: #ffffff5c;
         --user-preferred-text: #000000;
         --user-preferred-hr: #00000015;
@@ -848,7 +848,6 @@ p.far {
 
 font.p80 {
     max-width: 700px;
-    width: 70%;
     color: var(--user-preferred-text);
     padding: 1rem;
     margin: 1rem;
@@ -1390,8 +1389,8 @@ img.dark {
 }
 
 .blur-bg {
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     width: 100%;
     height: 100%;
     position: absolute !important;
