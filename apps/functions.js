@@ -2,7 +2,7 @@ var rating, rat_count = 1;
 const server = "https://alphabrate-server.onrender.com"
 // const server = "http://localhost:3000"
 
-document.title = app_info.name + " | App Gallery | The AlphaBrate Team"
+document.title = app_info.name + " | App Gallery | AlphaBrate"
 
 fetch(`${server}/rating/${app}`, {
     method: "GET",
@@ -21,6 +21,8 @@ let ratingsDetailsTriggled = false;
 function addRatings(d) {
     rating = d.rating
     rat_count = d.count
+
+    document.querySelector('#raw_rating').href = `${server}/rating/${app}/raw`
 
     document.querySelector('.app-down>p>c').innerHTML = `${rating} (${rat_count}) <span class="stars">★</span>`
 

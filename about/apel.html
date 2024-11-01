@@ -80,42 +80,42 @@
             <h2 class="larger">APEL</h2>
             <span class="tag">License of Products</span>
             <font class="p80">AlphaBrate Pure Experience License (APEL)
-                <div class="space-break" data-height="1"></div>
-                Copyright © 2024 AlphaBrate
-                <div class="space-break" data-height="1"></div>
+                <div class="space-break" data-height=".7"></div>
+                Copyright © <span class="year">2024</span> AlphaBrate
+                <div class="space-break" data-height=".7"></div>
+                <span style="width: .5rem; display: inline-block;"></span>
                 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
                 associated documentation files (the “Software”), to deal in the Software without restriction, including
                 the rights to use, copy, modify, merge, publish, distribute, and to permit persons to whom the Software
                 is furnished to do so, subject to the following conditions:
-                <div class="space-break" data-height="1"></div>
+                <div class="space-break" data-height=".7"></div>
+                <span style="width: .5rem; display: inline-block;"></span>
                 The above copyright notice and this permission notice shall be included in all copies or substantial
                 portions of the Software.
-                <div class="space-break" data-height="1"></div>
+                <div class="space-break" data-height=".7"></div>
+                <span style="width: .5rem; display: inline-block;"></span>
                 The Software shall not be used for commercial purposes, and shall not contain advertisements or
                 distracting elements.
-                <div class="space-break" data-height="1"></div>
-                THE SOFTWARE IS PROVIDED “AS IS,” WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-                LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN
-                NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY,
-                WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
-                SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                <div class="space-break" data-height=".7"></div>
+                <span style="width: .5rem; display: inline-block;"></span>
+                The software is provided “as is,” without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
             </font>
         </div>
         <div class="description">
             <font class="larger left">
 
-                <div class="space-break" data-height=".7"></div>✔️ Obtain a copy of the software and its documentation
+                <div class="space-break" data-height=".7"></div><span style="user-select: none;">✔️</span> Obtain a copy of the software and its documentation
                 files.
 
-                <div class="space-break" data-height=".7"></div>✔️ Use, copy, modify, merge, publish, and distribute the
+                <div class="space-break" data-height=".7"></div><span style="user-select: none;">✔️</span> Use, copy, modify, merge, publish, and distribute the
                 software.
 
-                <div class="space-break" data-height=".7"></div>✔️ Permit others to use the software under the same
+                <div class="space-break" data-height=".7"></div><span style="user-select: none;">✔️</span> Permit others to use the software under the same
                 conditions.
 
-                <div class="space-break" data-height=".7"></div>❌ Use the software for commercial purposes.
+                <div class="space-break" data-height=".7"></div><span style="user-select: none;">❌</span> Use the software for commercial purposes.
 
-                <div class="space-break" data-height=".7"></div>❌ Include advertisements or distracting elements within
+                <div class="space-break" data-height=".7"></div><span style="user-select: none;">❌</span> Include advertisements or distracting elements within
                 the
                 software.
             </font>
@@ -149,6 +149,15 @@
     </noscript>
 
     <script src="/js/index.js"></script>
+    <script>
+        // If 2024-current year is greater than 2024, then set the year to 2024
+        const year = new Date().getFullYear();
+        if (year == 2024) {
+            document.querySelector('.year').innerText = '2024';
+        } else {
+            document.querySelector('.year').innerText = '2024-' + year;
+        }
+    </script>
 </body>
 
 </html>

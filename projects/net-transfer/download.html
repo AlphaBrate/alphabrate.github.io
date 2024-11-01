@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download: Net Transfer | AlphaBrate</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="space-break" data-height="6"></div>
+    <center>
+        <h1>Download Net Transfer</h1>
+        <div class="space-break" data-height="4"></div>
+        <a href="">
+            <button>
+                Download for <b>Windows</b>
+            </button>
+        </a>
+        <p>transfer.exe</p>
+        <p class="color-gray">Net Transfer Server is available only on Windows with Wi-Fi connection</p>
+
+        <div class="space-break" data-height="2"></div>
+        <div class="space-break hr" data-height="1"></div>
+        <a href="https://alb-ntc.web.app/">
+            <button>
+                Net-Transfer Client (Web)
+            </button>
+        </a>
+        <p class="color-gray">Net Transfer Client is available on all devices with a web browser.
+            <br>You may add to your home screen for a better experience.
+        </p>
+        </p>
+    </center>
+    <div class="space-break" data-height="4"></div>
+    <div class="space-break hr" data-height="4"></div>
+    <div class="center single" id="footer-links">
+        <!-- Links Added by JS -->
+    </div>
+
+    <div class="center single">
+        <div class="footer" id="copyright">
+        </div>
+    </div>
+
+    <noscript>
+        <p>
+            <span class="sentence">We're sorry, but our website <span class="nowrap">requires JavaScript.</span></span>
+            <br>
+            <span class="sentence">Please enable it <span class="nowrap">in order to experience</span> the <span
+                    class="nowrap">elegance
+                    and simplicity.</span></span>
+        </p>
+        <style>
+            html {
+                overflow: hidden !important;
+            }
+        </style>
+    </noscript>
+
+    <script src="/js/index.js"></script>
+    <script>
+        const releases = "https://api.github.com/repos/AlphaBrate/Net-Transfer/releases/latest";
+        fetch(releases)
+            .then(response => response.json())
+            .then(data => {
+                const server = data.assets[0].browser_download_url;
+                document.querySelector("a").href = server;
+            });
+    </script>
+</body>
+
+</html>
