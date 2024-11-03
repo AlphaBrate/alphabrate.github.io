@@ -48,6 +48,10 @@
 
     width: 80%;
     max-width: 800px;
+
+    --base-text-weight-bold: 800;
+    --base-text-weight-semibold: 600;
+    --base-text-weight-normal: 400;
 }
 
 .markdown-body {
@@ -854,22 +858,6 @@ p>a.center.no-margin {
     border-radius: 17px;
 }
 
-
-@media (prefers-color-scheme: dark) {
-    .markdown-body pre {
-        background: rgb(46, 46, 46);
-        border: 2px solid rgb(52, 52, 52);
-    }
-
-    .markdown-body pre::-webkit-scrollbar-thumb {
-        background-color: #ffffff10;
-    }
-
-    .markdown-body {
-        --user-preferred-highlighted-text: var(--user-preferred-highlighted-text-dark);
-    }
-}
-
 .markdown-body .highlight pre,
 .markdown-body pre.prettyprint {
     font-family: 'SF Mono', ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
@@ -887,21 +875,37 @@ p>a.center.no-margin {
 .markdown-body pre {
     background: rgb(242, 242, 242);
     border: 2px solid rgb(235, 235, 235);
-    padding: 5px 15px;
+    padding: 10px 15px;
     padding-top: 11px;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-radius: 7px;
+    border-radius: 11px;
     height: max-content;
 }
+
 
 @media (prefers-color-scheme: dark) {
     .markdown-body pre {
         background: rgb(46, 46, 46);
         border: 2px solid rgb(52, 52, 52);
     }
+
+    .markdown-body pre::-webkit-scrollbar-thumb {
+        background-color: #ffffff10;
+    }
+
+    .markdown-body {
+        --user-preferred-highlighted-text: var(--user-preferred-highlighted-text-dark);
+    }
+
+
+    .markdown-body pre {
+        background: rgb(46, 46, 46);
+        border: 2px solid rgb(52, 52, 52);
+    }
 }
 
+.markdown-body pre code,
 .markdown-body pre tt {
     display: inline;
     max-width: auto;
@@ -966,6 +970,21 @@ p>a.center.no-margin {
 
 .markdown-body .footnotes li {
     position: relative;
+}
+
+.markdown-body ol {
+    transform: translateX(-.7em);
+}
+
+.markdown-body ol>li {
+    padding-left: .7rem;
+    transform: translateY(-.25em);
+}
+
+.markdown-body ol>li::marker {
+    color: var(--color-fg-subtle);
+    font-weight: var(--base-text-weight-bold, 800);
+    font-size: .9rem;
 }
 
 .markdown-body .footnotes li:target::before {
@@ -1204,8 +1223,8 @@ body {
 
 .nav {
     background: linear-gradient(180deg, var(--user-preferred-background) 0%, transparent 100%);
-    backdrop-filter: blur(17px);
-    -webkit-backdrop-filter: blur(17px);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     position: fixed;
     top: 0;
     width: 100vw;
@@ -1293,7 +1312,7 @@ body {
     user-select: none;
     position: fixed;
     left: 50%;
-    top: 47%;
+    top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     white-space: nowrap;
@@ -1407,13 +1426,9 @@ shine {
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0;
-}
-
-.content-main>.title,
-.content-main>.description {
-    max-width: 800px;
     padding: 35px;
+    width: 80%;
+    max-width: 800px;
 }
 
 .content-main * {
@@ -1443,17 +1458,17 @@ shine {
     text-align: center;
     margin: 0;
     padding: 0;
-    color: #00000050;
+    opacity: .5;
 }
 
-.infomation {
+.information {
     position: relative;
     height: 30px;
     width: 80%;
     margin: 20px;
 }
 
-.infomation>#author {
+.information>#author {
     position: absolute;
     left: 0;
     font-size: 20px;
@@ -1463,7 +1478,7 @@ shine {
     padding: 0;
 }
 
-.infomation>#date {
+.information>#date {
     right: 0;
     position: absolute;
     font-size: 20px;
@@ -1543,4 +1558,14 @@ a>button:hover,
 .btn:hover {
     background: rgb(66, 66, 66);
     transform: translateY(-1px);
+}
+
+h {
+    border-radius: 3px;
+    padding: 0 4px !important;
+}
+
+block {
+    display: inline-block;
+    width: 2rem;
 }
