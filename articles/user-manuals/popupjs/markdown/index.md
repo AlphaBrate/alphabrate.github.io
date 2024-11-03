@@ -24,10 +24,10 @@ To use PopupJS in your web application, include the following CSS and JavaScript
 
 ```html
 <head>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="./popup.css">
 </head>
 <body>
-    <script src="popup.js"></script>
+    <script src="./popup.js"></script>
 </body>
 ```
 
