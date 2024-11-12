@@ -46,7 +46,7 @@
     --user-preferred-highlighted-text-dark: rgba(255, 255, 0, 0.25);
     --user-preferred-highlighted-text: var(--user-preferred-highlighted-text-light);
 
-    width: 80%;
+    width: 100%;
     max-width: 800px;
 
     --base-text-weight-bold: 800;
