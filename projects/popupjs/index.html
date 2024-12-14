@@ -118,8 +118,13 @@
             <p>
                 Smooth animations for a better user experience.
             </p>
-            <a><button class="monospace"
-                    onclick="pujs.pullOut(`<h1>This is a pulled-out alert.</h1><p>${randomPhrase()}</p>`)">Pull
+            <a><button class="monospace" onclick="pujs.pullOut(`<h1>This is a pulled-out alert.</h1><p>${randomPhrase()}</p>`,
+                    false,
+                    {
+                    lockscreen: false,
+                    closeButton: true,
+                    height: '75%'
+                    });">Pull
                     Something Out...</button></a>
         </div>
     </div>
