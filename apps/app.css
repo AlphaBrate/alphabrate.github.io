@@ -87,6 +87,10 @@ input[type="range"]#stars {
     padding-bottom: 2rem;
 }
 
+.star.colored {
+    color: #99c654;
+}
+
 .image-loop {
     display: flex;
     overflow-x: scroll;
