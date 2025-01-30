@@ -40,7 +40,7 @@ No password requirement. But it is recommended:
 
 <center>
 <h2>Upon completing your registration, please log in to your account.</h2>
-</center>
+</center> 
 
 <hr>
 
