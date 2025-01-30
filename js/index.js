@@ -29,7 +29,7 @@ const footer_links = `
                 <a href="/about/downloads.html">Downloads</a>
                 <a href="/projects">Projects</a>
                 <a href="/donate-to-us-thank-you-very-much/">Donate</a>
-                <a href="/articles">Articles</a>
+                <a href="/articles/user-manuals">User Manuals</a>
                 <a href="/about/policies/">Policies & Terms</a>
                 <a href="/apps">App Gallery</a>
             </div>
@@ -53,7 +53,7 @@ const footer_links = `
 </div>`
 
 const copyright_info = `
-<p class="color-gray">&copy; AlphaBrate 2024.</p>
+<p class="color-gray">Copyright &copy; ${new Date().getFullYear()} AlphaBrate.</p>
 <p class="color-lighter-gray f10px">All rights to the designs and photographs <span class="nowrap">displayed on this site are reserved.</span>
 <br>By using, browsing, sharing, or redistributing our services, products,
     or projects, you agree to our <span class="nowrap"><a href="/about/policies">Privacy Terms</a> and <a href="/about/policies">Terms of Service</a>.</span></p>`

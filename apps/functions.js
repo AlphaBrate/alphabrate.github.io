@@ -4,6 +4,37 @@ const server = "https://alphabrate-server.onrender.com"
 
 document.title = app_info.name + " | App Gallery | AlphaBrate"
 
+// Get user's device, whether Windows MacOS Linux Android iOS or unknown not case sensitive
+let device = navigator.platform.split(' ')[0].toLowerCase()
+if (device == 'iphone' || device == 'ipad') {
+    device = 'iOS'
+} else if (device == 'win32') {
+    device = 'Windows'
+} else if (device == 'linux') {
+    device = 'Linux'
+} else if (device == 'mac') {
+    device = 'MacOS'
+} else if (device == 'android') {
+    device = 'Android'
+} else if (device == 'unknown') {
+    device = 'this device'
+}
+
+// Compare with the array of app_info.works_on, if include windows, macos, linux, android, ios, web, or all, not case sensitive
+
+let works_on = false;
+app_info.works_on.forEach(e => {
+    if (e.toLowerCase() == device.toLowerCase() || e.toLowerCase() == 'all' || e.toLowerCase() == 'web') {
+        works_on = true
+    }
+})
+
+let works_text = works_on ? 'Works on this device' : `× Not available on ${device}`
+
+document.querySelector('.device').innerHTML = works_text
+
+
+
 fetch(`${server}/rating/${app}`, {
     method: "GET",
     mode: "cors",
@@ -144,3 +175,84 @@ function addValues() {
 }
 
 addValues()
+
+
+// App
+
+var prev_session = localStorage.getItem('session')
+const session = prev_session ? prev_session : Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+localStorage.setItem('session', session)
+
+var search = new URLSearchParams(window.location.search)
+let can_rate = search.get('rate')
+
+if (can_rate === 'true') {
+    localStorage.setItem(app_info.app_id, 'true')
+}
+
+let rated = false
+
+function addRating(r) {
+    if (localStorage.getItem(app_info.app_id) != 'true' || localStorage.getItem(`${app_info.app_id}+D`) === 'true') {
+        return
+    }
+    fetch(`${server}/rating/${app}/${r}/${session}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'no-cors'
+    }).then(data => {
+        localStorage.setItem(`${app_info.app_id}+D`, 'true')
+        localStorage.setItem(`${app_info.app_id}+R`, r)
+        location.reload()
+    })
+}
+
+if (localStorage.getItem(app_info.app_id) === 'true') {
+    document.querySelectorAll('.hid_rating').forEach(e => {
+        e.classList.remove('hid_rating')
+    })
+}
+
+if (localStorage.getItem(`${app_info.app_id}+D`) === 'true') {
+    document.getElementById('rating_intro').innerHTML = 'You have <span class="nowrap">rated this app.</span>'
+    active(localStorage.getItem(`${app_info.app_id}+R`))
+    document.getElementById('submit_rating').style.display = 'none'
+    document.getElementById('stars').disabled = true
+}
+
+function active(n) {
+    rated = true
+    for (let i = 0; i < 5; i++) {
+        if (i < n) {
+            document.querySelectorAll('.star')[i].classList.add('colored')
+        } else {
+            document.querySelectorAll('.star')[i].classList.remove('colored')
+        }
+    }
+}
+
+function sendResult() {
+    var stars = document.getElementById('stars').value
+    if (!rated) {
+        rated = true
+        stars = 5
+        document.querySelectorAll('.star').forEach(e => {
+            e.classList.add('colored')
+        })
+    }
+    addRating(stars)
+}
+
+var search = new URLSearchParams(window.location.search)
+var app_sourced = search.get('sourced')
+
+if (app_sourced == app_info.app_id) {
+    localStorage.setItem(app_info.app_id, 'true');
+    var url_without_query = window.location.href.split('?')[0]
+    window.history.replaceState({}, document.title, url_without_query)
+    location.reload()
+}
+
+document.getElementById('raw_rating').href = `${server}/rating/${app}/raw`

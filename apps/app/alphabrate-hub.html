@@ -60,7 +60,8 @@
             "rat_count": 17, // Rating Information Counted on 07 Apr 2024
             "app_id": "alb-hub",
             "app_url": "https://alphabrate.github.io/pwa",
-            "artwork": "https://alphabrate.github.io/apps/images/alphabrate-hub/head.svg"
+            "artwork": "https://alphabrate.github.io/apps/images/alphabrate-hub/head.svg",
+            "works_on": ["web", "all"],
         }
         const app = "alb-hub"
     </script>
@@ -85,7 +86,7 @@
                 <p>_DESC_</p>
                 <span class="tag">FREE</span>
                 <span class="tag">No Ads</span>
-                <span class="tag nowrap">Works on this device</span>
+                <span class="tag nowrap device">Works on this device</span>
             </div>
             <div class="rate card flex col pad hid_rating">
                 <h2 id="rating_intro">Rate this app</h2>
@@ -117,8 +118,11 @@
                 <c>_RATING_ (_RAT_COUNT_) <span class="stars">★</span></c>
             </p>
             <p><b>Price:</b> US$0</p>
-            <a href="" id="start_redirect">
-                <button>Start App</button>
+            <a href="" id="start_redirect" style="pointer-events: none;">
+                <button disabled>
+                    <!-- Start App -->
+                     Unavailable
+                </button>
             </a>
         </div>
         <p class="smaller color-lighter-gray">
@@ -176,7 +180,6 @@
     </noscript>
     <script src="/js/index.js"></script>
     <script src="/apps/functions.js"></script>
-    <script src="/apps/app.js"></script>
 </body>
 
 </html>

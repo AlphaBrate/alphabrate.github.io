@@ -46,12 +46,16 @@
     --user-preferred-highlighted-text-dark: rgba(255, 255, 0, 0.25);
     --user-preferred-highlighted-text: var(--user-preferred-highlighted-text-light);
 
-    width: 100%;
-    max-width: 800px;
-
     --base-text-weight-bold: 800;
     --base-text-weight-semibold: 600;
     --base-text-weight-normal: 400;
+}
+
+.markdown-body,
+.title,
+.information {
+    width: 80%;
+    max-width: 800px;
 }
 
 .markdown-body {
@@ -1426,8 +1430,7 @@ shine {
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 35px;
-    width: 80%;
+    width: 100%;
     max-width: 800px;
 }
 
