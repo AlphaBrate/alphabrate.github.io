@@ -235,7 +235,7 @@ window.addEventListener('resize', resize_init)
 
 const colors = {
     light: [255, 255, 255],
-    dark: [40, 40, 40]
+    dark: [34, 34, 34]
 }
 
 var user_prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
@@ -297,40 +297,6 @@ try {
     }
 } catch { }
 
-function Confirm(t, b, e = {}) {
-    let scrTop = window.scrollY
-    console.log(scrTop);
-    let body = document.querySelector('body')
-    body.style.position = 'fixed'
-    body.style.top = `-${scrTop}px`
-    body.style.width = '100%'
-    document.getElementById('alert-title').innerHTML = t
-    document.getElementById('alert-text').innerHTML = b
-
-    document.getElementById('alert-fullscreen').style.opacity = 1
-    document.getElementById('alert-fullscreen').style.pointerEvents = 'all'
-
-    if (e.confirm == undefined) e.confirm = () => { confirmEnd() }
-    if (e.cancel == undefined) e.cancel = () => { confirmEnd() }
-
-    try {
-        document.getElementById('alert-confirm').onclick = e.confirm;
-        document.getElementById('alert-cancel').onclick = e.cancel;
-    } catch { }
-}
-
-function confirmEnd() {
-    let body = document.querySelector('body')
-    let bodyTop = body.style.top
-    let scrTop = -parseInt(bodyTop)
-    body.style.position = ''
-    body.style.top = ''
-    window.scrollTo(0, scrTop)
-
-    document.getElementById('alert-fullscreen').style.opacity = 0
-    document.getElementById('alert-fullscreen').style.pointerEvents = 'none'
-}
-
 const isOnPC = window.innerWidth > 1024;
 
 if (isOnPC) {
@@ -358,4 +324,23 @@ if (document.querySelector('img[data-src]')) {
             element.removeAttribute('data-src');
         });
     });
+}
+
+// Get search params
+const searchParams = new URLSearchParams(window.location.search);
+
+// Get theme color
+if (searchParams.has('theme')) {
+    localStorage.setItem('themeColor', searchParams.get('theme'));
+}
+
+let theme = localStorage.getItem('themeColor');
+
+if (theme) {
+
+    if (theme == 'auto' || theme == 'default') {
+        localStorage.removeItem('themeColor');
+    } else {
+        document.head.innerHTML += `<style>:root { color-scheme: ${theme}; }</style>`;
+    }
 }
