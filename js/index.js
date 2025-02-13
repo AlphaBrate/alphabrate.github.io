@@ -24,14 +24,14 @@ const footer_links = `
         <div class="cols">
             <div class="col">
                 <span class="click-holder"></span>
-                <font class="footer-heading" style="display: flex; gap: .3rem;"><a style="margin:0;" href="/about">About</a> AlphaBrate</font>
-                <a href="/about/support.html">Seek Support</a>
-                <a href="/about/downloads.html">Downloads</a>
-                <a href="/projects">Projects</a>
-                <a href="/donate-to-us-thank-you-very-much/">Donate</a>
-                <a href="/articles/user-manuals">User Manuals</a>
-                <a href="/about/policies/">Policies & Terms</a>
-                <a href="/apps">App Gallery</a>
+                <font class="footer-heading" style="display: flex; gap: .3rem;"><a style="margin:0;" href="https://alphabrate.github.io/about">About</a> AlphaBrate</font>
+                <a href="https://alphabrate.github.io/about/support.html">Seek Support</a>
+                <a href="https://alphabrate.github.io/about/downloads.html">Downloads</a>
+                <a href="https://alphabrate.github.io/projects">Projects</a>
+                <a href="https://alphabrate.github.io/donate-to-us-thank-you-very-much/">Donate</a>
+                <a href="https://alphabrate.github.io/articles/user-manuals">User Manuals</a>
+                <a href="https://alphabrate.github.io/about/policies/">Policies & Terms</a>
+                <a href="https://alphabrate.github.io/apps">App Gallery</a>
             </div>
         </div>
         <div class="cols">
@@ -40,10 +40,10 @@ const footer_links = `
                 <font class="footer-heading">
                     Projects & Products
                 </font>
-                <a href="/projects/popupjs" class="monospace">PopupJS</a>
-                <a href="/apps/app/music-terms.html">Music Terms</a>
-                <a href="/apps/app/alphabrate-hub.html">AlphaBrate Hub</a>
-                <a href="/apps/app/live-weather.html">Weather Wallpaper</a>
+                <a href="https://alphabrate.github.io/projects/popupjs" class="monospace">PopupJS</a>
+                <a href="https://alphabrate.github.io/apps/app/music-terms.html">Music Terms</a>
+                <a href="https://alphabrate.github.io/apps/app/alphabrate-hub.html">AlphaBrate Hub</a>
+                <a href="https://alphabrate.github.io/apps/app/live-weather.html">Weather Wallpaper</a>
                 <a href="https://github.com/alphabrate/alb-msplayer">Music Player</a>
                 <a href="https://github.com/alphabrate/nettransfer">Net Transfer</a>
             </div>
@@ -56,7 +56,7 @@ const copyright_info = `
 <p class="color-gray">Copyright &copy; ${new Date().getFullYear()} AlphaBrate.</p>
 <p class="color-lighter-gray f10px">All rights to the designs and photographs <span class="nowrap">displayed on this site are reserved.</span>
 <br>By using, browsing, sharing, or redistributing our services, products,
-    or projects, you agree to our <span class="nowrap"><a href="/about/policies">Privacy Terms</a> and <a href="/about/policies">Terms of Service</a>.</span></p>`
+    or projects, you agree to our <span class="nowrap"><a href="https://alphabrate.github.io/about/policies">Privacy Terms</a> and <a href="https://alphabrate.github.io/about/policies">Terms of Service</a>.</span></p>`
 
 const resize_init = () => {
     try {
@@ -191,9 +191,9 @@ window.onload = () => {
 
         const darkMode = (dark) => {
             if (dark) {
-                document.querySelector('.logo>img').src = "/icons/light.alphabrate.svg"
+                document.querySelector('.logo>img').src = "https://alphabrate.github.io/icons/light.alphabrate.svg"
             } else {
-                document.querySelector('.logo>img').src = "/icons/alphabrate.svg"
+                document.querySelector('.logo>img').src = "https://alphabrate.github.io/icons/alphabrate.svg"
             }
         }
 

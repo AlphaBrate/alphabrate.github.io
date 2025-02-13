@@ -5,7 +5,7 @@
     --background-color: light-dark(oklch(93% 0.02 270), oklch(0% 0 0));
     --background-color-rgb: light-dark(oklch(93% 0.02 270), oklch(0% 0 0));
     --background-color-protrude: light-dark(oklch(100% 0 0), oklch(15% 0.02 270));
-    --background-color-protrude-hover: light-dark(oklch(98% 0.02 270), oklch(20% 0.02 270));
+    --background-color-protrude-hover: light-dark(oklch(98% 0.02 270), oklch(30% 0 0));
     --background-color-popover: light-dark(oklch(97% 0.02 270 / 80%), oklch(25% 0.02 270 / 80%));
     --background-color-popover-hover: light-dark(oklch(90% 0.02 270 / 68%), oklch(35% 0.02 270 / 85%));
     --background-accent-color: light-dark(oklch(15% 0.02 270 / 18%), oklch(100% 0 0 / 18%));
@@ -21,7 +21,6 @@
     --shadow-color: light-dark(oklch(0% 0 0 / 31%), oklch(100% 0 0 / 31%));
     --shadow-color-fewer: light-dark(oklch(0% 0 0 / 8%), oklch(100% 0 0 / 8%));
     --color-green: oklch(70% 0.2 150);
-    --nav-color: light-dark(var(--background-color-protrude-light), var(--background-color-dark));
     --href-color: oklch(60% 0.2 240 / 50%);
     --highlight-color: light-dark(oklch(100% 0 0 / 53%), oklch(100% 0 0 / 93%));
 
@@ -33,7 +32,7 @@
     --user-preferred-separator: light-dark(oklch(0% 0 0 / 21%), oklch(100% 0 0 / 21%));
     --user-preferred-gray-highlight: light-dark(oklch(25% 0.02 270), oklch(60% 0 260));
     --user-preferred-gray-underlay: light-dark(oklch(50% 0.02 270), oklch(50% 0 0));
-    --user-preferred-diff-background: light-dark(oklch(93% 0.02 270), oklch(35% 0.02 270));
+    --user-preferred-diff-background: light-dark(oklch(93% 0.02 270), oklch(30% 0 0));
 
     --color-black: oklch(0% 0 0);
     --color-white: oklch(100% 0 0);
