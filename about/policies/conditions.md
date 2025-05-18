@@ -14,12 +14,13 @@ Our service includes:
 
 - Music Terminology Library
 - Power Search
-- True View Api
+- True View API
 - AlphaBrate Hub
 - AlphaBrate Community
 - AlphaBrate Web
 - AlphaBrate Account
 - AlphaBrate Live Weather
+- AlphaBrate Art
 
 ### ii. Service Updates
 
@@ -39,45 +40,49 @@ Users are responsible for all activities under their usage of our Service. Misus
 
 ### i. Ownership
 
-Our website, services, and all related content, including but not limited to software, images, text, graphics, logos, patents, trademarks, service marks, copyrights, photographs, audio, videos, and all intellectual property rights are, unless otherwise specified, our exclusive property or the property of our licensors. Some content may be sourced from third-party providers, and AlphaBrate is not responsible for the accuracy or legality of such content. All third-party providers are listed in the "Credits" section of the application. 
+Our website, services, and all related content, including but not limited to software, images, text, graphics, logos, patents, trademarks, service marks, copyrights, photographs, audio, videos, and all intellectual property rights are, unless otherwise specified, our exclusive property or the property of our licensors. Some content may be sourced from third-party providers, and AlphaBrate is not responsible for the accuracy or legality of such content. All third-party providers and open-source projects are listed in the "Credits" section of the application.
 
-### ii. Restrictions
+### ii. Open-Source Projects and Services
+
+We utilize the following open-source projects and services in our Service:
+
+- **MarkedJS**: A markdown parser and compiler used for rendering markdown content, sourced from https://github.com/markedjs/marked under the MIT License.
+- **Google Code Prettify**: Used for syntax highlighting of code snippets, sourced from https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js under the Apache License 2.0.
+- **Locomotive Scroll**: Used for smooth scrolling effects, sourced from https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js under the MIT License.
+- **Firebase**: Used for authentication, database, and hosting services, provided by Google under their applicable terms of service.
+
+These projects and services are integrated to enhance the functionality and user experience of our Service. Users are expected to comply with the respective licenses and terms of these third-party providers when using our Service.
+
+### iii. Restrictions
 
 The use of data mining, robots, or similar data gathering and extraction tools on our Service is strictly prohibited. Users are also forbidden from removing any copyright, trademark, or other proprietary notices from our Service without our explicit permission. Unless we grant written permission, none of the aforementioned activities are permitted. For any activities not covered by these Terms or for special circumstances, please reach out to us for authorization. This is our commitment to maintaining the integrity and security of our Service.
 
-### iii. Execution Methods
+### iv. Execution Methods
 
 Users are not allowed to do any mentioned activities in the "Restrictions" section. For any violation of these terms, we reserve the right to terminate your usage of the Service. For serious violations, we reserve the right to take legal action.
 
 ## 5. Licenses
 
-The AlphaBrate Pure Experience License (APEL)
+### The AlphaBrate Pure Experience License (APEL)
 
-AlphaBrate is committed to delivering a clear web experience, free from advertisements and distractions. All teams and projects under AlphaBrate are mandated to adhere to the APEL License, which ensures that our applications remain no advertisements and distracting elements.
+AlphaBrate is committed to delivering a clear web experience, free from advertisements and distractions. All teams and projects under AlphaBrate are mandated to adhere to the APEL License, which ensures that our applications remain free of advertisements and distracting elements.
 
-The usage of our applications is entirely free of charge. The development process is collaborative, involving thorough discussions and mutual agreements. Permissions are granted to anyone who finish reading the APEL License as a sign of agreement to your rights and responsibilities:
+The usage of our applications is entirely free of charge. The development process is collaborative, involving thorough discussions and mutual agreements. Permissions are granted to anyone who finishes reading the APEL License as a sign of agreement to your rights and responsibilities:
 
 - You have the right to use the application for any purpose, including commercial purposes.
-
 - You have the right to study how the application works and modify it.
-
 - You have the right to distribute copies of the application.
-
 - You have the right to improve the application and release your improvements to the public.
-
 - You have to accept the APEL License and its terms and conditions.
-
 - You have to include, display, and adopt the APEL License in your application, which means:
+  1. If you distribute the application, you must include the APEL License in the distribution.
+  2. Distributions of the application must remain free of advertisements and distracting elements.
 
-    1. If you distribute the application, you must include the APEL License in the distribution.
-
-    2. Distributions of the application must remain free of advertisements and distracting elements.
-
-Code attached APEL are open-sourced. Images, audio, or other resources other than code¹, are not.
+Code attached to APEL is open-sourced. Images, audio, or other resources other than code¹ are not.
 
 ## 6. Disclaimer
 
-Our Service is provided "as is" and "as available" without any express or implied warranties. We do not warrant that the Service will be uninterrupted, secure, or error-free. AlphaBrate is not liable but will try best on for any damages or losses arising from the use or inability to use the Service. We are not responsible for any third-party content that you access through the Service. We are not responsible for the conduct of any user of the Service.
+Our Service is provided "as is" and "as available" without any express or implied warranties. We do not warrant that the Service will be uninterrupted, secure, or error-free. AlphaBrate is not liable but will try its best for any damages or losses arising from the use or inability to use the Service. We are not responsible for any third-party content that you access through the Service. We are not responsible for the conduct of any user of the Service.
 
 We reserve the right to modify or discontinue the Service at any time without notice. We will not be liable to you or any third party for any modification, suspension, or discontinuation of the Service.
 
@@ -109,29 +114,29 @@ For information on how we handle your account data, please refer to our Privacy 
 
 Your data security is our top priority. We implement stringent measures to protect your data from unauthorized access or disclosure. However, it is also important for you to safeguard your account details and ensure that your password is strong and unique. We cannot guarantee the security of your data and are not responsible for unauthorized access to it. We don't promise that your data will always remain secure. We are not responsible for any loss or damage that may result from unauthorized access to your data. However, we will take reasonable steps to protect your data.
 
-Here's a concise improvement of the AlphaBrate Community section:
-
 ## 8. AlphaBrate Community
 
 ### i. Community Participation
+
 Engage freely in our community space, valuing open, respectful dialogue. Content breaching our guidelines may be removed, and repeat offenders face potential bans.
 
 ### ii. Content Rights
+
 Your contributions grant us a non-exclusive, royalty-free license to utilize, adapt, and display your content globally. You affirm your content's accuracy and legality, agreeing to indemnify us against all related claims.
 
 ### iii. Content Conduct
+
 Avoid posting any content that's unlawful, harmful, or offensive. We prohibit material that could lead to legal issues or is unsuitable for all ages. Inappropriate content will be removed, and violators may face bans or legal action.
 
 ### iv. Moderation
-We actively moderate the community to maintain a suitable environment. Infringing content will be addressed, and persistent violators may be banned or subject to legal measures.
 
-This revision streamlines the guidelines, ensuring clarity and brevity while maintaining the original intent and policies.
+We actively moderate the community to maintain a suitable environment. Infringing content will be addressed, and persistent violators may be banned or subject to legal measures.
 
 ## 9. Service Reliability
 
-Our service strives to provide reliability, but it’s important to note that we cannot guarantee that the service will be available at all times. Downtime may occur due to maintenance, updates, or other unforeseen circumstances. We make every effort to notify users of any planned downtime and to minimize the impact on your usage of the service. However, we are not responsible for any loss or damage that may result from the unavailability of the service.
+Our service strives to provide reliability, but we cannot guarantee that the service will be available at all times. Downtime may occur due to maintenance, updates, or other unforeseen circumstances. We make every effort to notify users of any planned downtime and to minimize the impact on your usage of the service. However, we are not responsible for any loss or damage that may result from the unavailability of the service.
 
-Our server-related services, such as adding ratings, logging in or signing up, may occasionally be unreliable. This is due to our dependence on free service providers such as render.com, which inherently have certain constraints. If you access our server’s URL and discover that the service has been suspended, it’s likely a result of high demand. Please be assured that the service will be reinstated in line with Render’s policy within a month.
+Our server-related services, such as adding ratings, logging in, or signing up, may occasionally be unreliable. This is due to our dependence on free service providers such as render.com, which inherently have certain constraints. If you access our server’s URL and discover that the service has been suspended, it’s likely a result of high demand. Please be assured that the service will be reinstated in line with Render’s policy within a month.
 
 The server will be automatically suspended if there is no activity for a very short period. This is the policy of the free service provider. You can visit the server’s URL to reactivate the service with a little delay. The server may also be temporarily suspended for maintenance. This is a normal procedure to ensure the server’s optimal performance. The service will be reinstated after the maintenance is completed.
 
@@ -143,7 +148,7 @@ The server will be down if there is too much uptime. This is the policy of the f
 
 All content on our Service, including but not limited to text, images, graphics, logos, and software, is the property of AlphaBrate or its licensors and is protected by copyright laws. You may not reproduce, distribute, or create derivative works from any content on our Service without our express permission. If you believe that your copyright has been infringed upon, please contact us with the relevant details.
 
-## 11. Translations of This Privacy Policy
+## 11. Translations of This Terms of Service
 
 This Terms of Service is written in English. If there are any discrepancies between the English version and a translated version, the English version will prevail.
 
@@ -155,8 +160,7 @@ We may update our Terms of Service from time to time. The new Terms of Service w
 
 If you have any questions about these Terms of Service, please contact us. We are committed to resolving any concerns or complaints you may have about our use of your information.
 
-This document was updated on 1 Jul 2024.
-
+This document was updated on 18 May 2025.
 
 #### FOOTNOTES
 
@@ -165,7 +169,9 @@ This document was updated on 1 Jul 2024.
 > `.html`
 >
 > `.js`
-> 
+>
 > `.css`
-> 
+>
 > `.json` (If removing any content would render the project nonfunctional.)
+
+This document was updated on 18 May 2025.
