@@ -185,15 +185,16 @@ h2.bold {
 }
 
 .section.top {
-    background-image: url('/img/designs/light.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #fff;
+    color: var(--user-preferred-text);
     padding: 2rem 0;
+    padding-bottom: 0;
     text-align: center;
     height: calc(var(--height) + 6.5rem);
     position: relative;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .section.top.no-bg {
@@ -665,7 +666,7 @@ p.color-filled {
 
 font.clear {
     font-size: 1.8rem;
-    color: rgb(82, 82, 82);
+    color: var(--color-gray);
     max-width: 90%;
     font-weight: 400;
     margin: auto auto;
@@ -1504,7 +1505,7 @@ video {
         border: 1px solid var(--border-color);
         border-radius: 17px;
         overflow: hidden;
-        box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.1);
         height: 100%;
 
         img {
@@ -1626,8 +1627,6 @@ button.arrow-btn::before {
     background-repeat: no-repeat;
     background-position: center;
     transition: .3s;
-
-    filter: var(--invert);
 }
 
 button.arrow-btn::after {
