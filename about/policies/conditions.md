@@ -21,6 +21,8 @@ Our service includes:
 - AlphaBrate Account
 - AlphaBrate Live Weather
 - AlphaBrate Art
+- AlphaBrate Music
+- AlphaBrate Musician Tools
 
 ### ii. Service Updates
 
@@ -65,20 +67,22 @@ Users are not allowed to do any mentioned activities in the "Restrictions" secti
 
 ### The AlphaBrate Pure Experience License (APEL)
 
-AlphaBrate is committed to delivering a clear web experience, free from advertisements and distractions. All teams and projects under AlphaBrate are mandated to adhere to the APEL License, which ensures that our applications remain free of advertisements and distracting elements.
+# AlphaBrate Pure Experience License (APEL) Introduction
 
-The usage of our applications is entirely free of charge. The development process is collaborative, involving thorough discussions and mutual agreements. Permissions are granted to anyone who finishes reading the APEL License as a sign of agreement to your rights and responsibilities:
+AlphaBrate is dedicated to providing a clean and focused web experience, free from advertisements and distractions. All teams and projects under AlphaBrate must adhere to the APEL License, which ensures that our software code remains free of advertisements and distracting elements.
 
-- You have the right to use the application for any purpose, including commercial purposes.
-- You have the right to study how the application works and modify it.
-- You have the right to distribute copies of the application.
-- You have the right to improve the application and release your improvements to the public.
-- You have to accept the APEL License and its terms and conditions.
-- You have to include, display, and adopt the APEL License in your application, which means:
-  1. If you distribute the application, you must include the APEL License in the distribution.
-  2. Distributions of the application must remain free of advertisements and distracting elements.
+The use of our software code, as defined by the specific file types listed at <https://aphbrt.web.app/apel/code-file-list/>, is entirely free of charge. The development process is collaborative, involving open discussions and mutual agreements. By reading and agreeing to the APEL License, users accept the following rights and responsibilities:
 
-Code attached to APEL is open-sourced. Images, audio, or other resources other than code¹ are not.
+- You have the right to use, copy, modify, merge, publish, distribute, and sublicense the software code for non-commercial purposes, as outlined in the APEL License.
+- You have the right to study how the software code works and adapt it to your needs.
+- You have the right to distribute copies of the software code, provided the APEL License is included and its terms are followed.
+- You have the right to improve the software code and share your improvements with the public, in accordance with the license.
+- You must accept the APEL License and its terms and conditions.
+- You must include, display, and adopt the APEL License in any distribution of the software code, ensuring:
+  1. The APEL License is included in all distributions.
+  2. Distributions remain free of advertisements, promotional content, or any elements deemed distracting or irrelevant to the core functionality.
+
+Only the software code listed under the APEL License is open-sourced. Non-code resources, such as images, audio, or other assets, are not covered by this license and remain proprietary.
 
 ## 6. Disclaimer
 
@@ -88,7 +92,7 @@ We reserve the right to modify or discontinue the Service at any time without no
 
 On our websites, footnotes may appear. The definition of footnotes is shown below:
 
-`*` : They are currently true.
+`*` : They are true when displayed.
 
 `^` : Except for special notice.
 
@@ -146,7 +150,7 @@ The server will be down if there is too much uptime. This is the policy of the f
 
 ## 10. Copyright
 
-All content on our Service, including but not limited to text, images, graphics, logos, and software, is the property of AlphaBrate or its licensors and is protected by copyright laws. You may not reproduce, distribute, or create derivative works from any content on our Service without our express permission. If you believe that your copyright has been infringed upon, please contact us with the relevant details.
+All content on our Service, including but not limited to text, images, graphics, logos, and software, is the property of AlphaBrate or its licensors and is protected by copyright laws. You may not reproduce, distribute, or create derivative works from any content on our Service without our express permission or an open-source license. If you believe that your copyright has been infringed upon, please contact us with the relevant details.
 
 ## 11. Translations of This Terms of Service
 
@@ -160,18 +164,4 @@ We may update our Terms of Service from time to time. The new Terms of Service w
 
 If you have any questions about these Terms of Service, please contact us. We are committed to resolving any concerns or complaints you may have about our use of your information.
 
-This document was updated on 18 May 2025.
-
-#### FOOTNOTES
-
-1. Code are files with extension:
-
-> `.html`
->
-> `.js`
->
-> `.css`
->
-> `.json` (If removing any content would render the project nonfunctional.)
-
-This document was updated on 18 May 2025.
+This document was updated on 31 Aug 2025.

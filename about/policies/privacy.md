@@ -39,7 +39,7 @@ The collected information is used to improve our services and provide a better u
 
 ## 3. Information Sharing
 
-We do not share your information with third parties, except as required by law, User Behavior Analytics (UBA) or as necessary to provide our services. This includes service providers who assist us in our operations, such as website hosting, data analysis, and verifier provider. These service providers are contractually obligated to protect your information and use it only for the purposes for which it was disclosed.
+We do not share your information with third parties, except as required by law or as necessary to provide our services. This includes service providers who assist us in our operations, such as website hosting, data analysis, and verifier provider. These service providers are contractually obligated to protect your information and use it only for the purposes for which it was disclosed.
 
 ## 4. Data Security
 
@@ -67,4 +67,4 @@ This Privacy Policy is written in English. If there are any discrepancies betwee
 
 If you have any questions about this Privacy Policy, please contact us. We are committed to resolving any concerns or complaints you may have about our use of your information.
 
-This document was updated on 23 Apr 2024.
+This document was updated on 31 Aug 2025.
