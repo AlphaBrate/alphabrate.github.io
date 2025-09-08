@@ -22,7 +22,7 @@ if (device == 'iphone' || device == 'ipad') {
 
 // Compare with the array of app_info.works_on, if include windows, macos, linux, android, ios, web, or all, not case sensitive
 
-let works_on = false;
+let works_on = true;
 app_info.works_on.forEach(e => {
     if (e.toLowerCase() == device.toLowerCase() || e.toLowerCase() == 'all' || e.toLowerCase() == 'web') {
         works_on = true

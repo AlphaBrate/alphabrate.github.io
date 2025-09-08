@@ -104,9 +104,9 @@ html:not(.nosmooth) {
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-		"Helvetica Neue", sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
 	min-height: 100%;
 	max-width: 100vw;
 	overflow-x: hidden;
@@ -881,29 +881,28 @@ a[href="/"] {
 	&::after {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 300%;
-		background-image: conic-gradient(
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 400%;
+		background: conic-gradient(
 			from 169.54deg at 43.19% 52.78%,
-			rgba(178, 108, 207, 0.1) 0deg,
-			rgba(255, 255, 255, 0.04) 84.81deg,
-			rgba(255, 255, 255, 0.05) 166.51deg,
-			rgba(236, 209, 66, 0.12) 230.19deg,
-			rgba(255, 0, 0, 0.06) 294.23deg,
-			rgba(178, 108, 207, 0.1) 360deg
+			#210d23 0deg,
+			#131311 84.81deg,
+			#171811 166.51deg,
+			#2e2804 230.19deg,
+			#240006 294.23deg,
+			#210d23 360deg
 		);
-		background-image: conic-gradient(
+		background: conic-gradient(
 			from 169.54deg at 43.19% 52.78%,
-			color(display-p3 0.659 0.435 0.788 / 0.1) 0deg,
-			color(display-p3 1 1 1 / 0.04) 84.81deg,
-			color(display-p3 1 1 1 / 0.05) 166.51deg,
-			color(display-p3 0.91 0.824 0.369 / 0.12) 230.19deg,
-			color(display-p3 1 0.141 0.141 / 0.06) 294.23deg,
-			color(display-p3 0.659 0.435 0.788 / 0.1) 360deg
+			color(display-p3 0.118 0.055 0.133) 0deg,
+			color(display-p3 0.075 0.075 0.067) 84.81deg,
+			color(display-p3 0.09 0.094 0.071) 166.51deg,
+			color(display-p3 0.176 0.157 0.039) 230.19deg,
+			color(display-p3 0.125 0.004 0.024) 294.23deg,
+			color(display-p3 0.118 0.055 0.133) 360deg
 		);
-
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -914,15 +913,15 @@ a[href="/"] {
 
 @keyframes dynamic-bg-intro-rotation {
 	0% {
-		transform: rotate(-70deg) scale(1.7);
+		transform: rotate(-70deg) scale(2) translateY(0);
 	}
 	100% {
-		transform: rotate(20deg) scale(1.5);
+		transform: rotate(20deg) scale(2.2) translateY(3%);
 	}
 }
 
 .musician-tools-dynamic-bg {
-    position: relative !important;
+	position: relative !important;
 	display: block !important;
 
 	height: 200px !important;
@@ -939,23 +938,23 @@ a[href="/"] {
 		height: 200%;
 		animation: dynamic-bg-intro-rotation 3s ease-in-out forwards;
 
-		background-image: conic-gradient(
+		background: conic-gradient(
 			from 169.54deg at 43.19% 52.78%,
-			rgba(178, 108, 207, 0.1) 0deg,
-			rgba(255, 255, 255, 0.04) 84.81deg,
-			rgba(255, 255, 255, 0.05) 166.51deg,
-			rgba(236, 209, 66, 0.12) 230.19deg,
-			rgba(255, 0, 0, 0.06) 294.23deg,
-			rgba(178, 108, 207, 0.1) 360deg
+			#210d23 0deg,
+			#131311 84.81deg,
+			#171811 166.51deg,
+			#2e2804 230.19deg,
+			#240006 294.23deg,
+			#210d23 360deg
 		);
-		background-image: conic-gradient(
+		background: conic-gradient(
 			from 169.54deg at 43.19% 52.78%,
-			color(display-p3 0.659 0.435 0.788 / 0.1) 0deg,
-			color(display-p3 1 1 1 / 0.04) 84.81deg,
-			color(display-p3 1 1 1 / 0.05) 166.51deg,
-			color(display-p3 0.91 0.824 0.369 / 0.12) 230.19deg,
-			color(display-p3 1 0.141 0.141 / 0.06) 294.23deg,
-			color(display-p3 0.659 0.435 0.788 / 0.1) 360deg
+			color(display-p3 0.118 0.055 0.133) 0deg,
+			color(display-p3 0.075 0.075 0.067) 84.81deg,
+			color(display-p3 0.09 0.094 0.071) 166.51deg,
+			color(display-p3 0.176 0.157 0.039) 230.19deg,
+			color(display-p3 0.125 0.004 0.024) 294.23deg,
+			color(display-p3 0.118 0.055 0.133) 360deg
 		);
 
 		background-repeat: no-repeat;
@@ -963,15 +962,19 @@ a[href="/"] {
 		background-size: cover;
 	}
 
-    &::after {
-        content: "🎹";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 5rem;
-        pointer-events: none;
-    }
+	&.higher::after {
+		transform: translate(-50%, -60%);
+	}
+
+	&::after {
+		content: "🎹";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 5rem;
+		pointer-events: none;
+	}
 }
 
 .content-card {

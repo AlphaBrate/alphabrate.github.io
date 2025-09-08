@@ -107,7 +107,12 @@ Our metronome’s intuitive design makes it as easy to use as a physical metrono
 - **Visual Feedback**: Includes background color flashes on beats (if enabled) and dynamic blur effects during tempo adjustments to indicate drag speed.
 - **Drag-and-Drop Interaction**: Offers intuitive drag controls for tempo, precise tempo, and swing, with safeguards to prevent exceeding limits and smooth transitions.
 
-> ^ ß 0.1.0 - Initial release with core features and basic UI. ^
+### Key Mechanism for Smooth Swing Transition
+When a user drags the swing arm and releases it, the metronome transitions smoothly from the manual drag state to the automated swinging state.
+
+The smooth transition is achieved by detecting the end of the user's drag, determining the swing arm's current position, moving it to the starting point of the metronome's periodic animation using a CSS transition, and then initiating the metronome's swing animation and audio playback with precise timing to maintain synchronization. This approach prevents abrupt visual changes, ensuring a cohesive flow from manual dragging to automated swinging.
+
+> ^ ß 0.1.1 - Initial release with core features and basic UI. ^
 
 <br>
 <hr>

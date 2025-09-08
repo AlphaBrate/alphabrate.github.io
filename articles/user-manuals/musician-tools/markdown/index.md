@@ -5,7 +5,7 @@ description = User Manual for Musician Tools
 
 ## Overview
 
-AlphaBrate Musician Tools is now under development (ß 0.1.0). Only the Metronome feature is currently available.
+AlphaBrate Musician Tools is now under development (ß 0.1.1). Only the Metronome feature is currently available.
 
 ## Metronome
 
