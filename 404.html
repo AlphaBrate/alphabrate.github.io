@@ -13,9 +13,22 @@
     <link rel="canonical" href="https://alphabrate.github.io/">
     <link rel="stylesheet" href="/style.css">
     <script>
-      if (location.pathname.match(/^\/type\//i)) {
-        location.replace(location.href.replace(/^\/type\//i, '/Type/'));
-      }
+        (function () {
+            const path = window.location.pathname;
+
+            // If the path starts with "/type/" (case-sensitive check for lowercase "type")
+            if (/^\/type\//i.test(path) && path.charAt(1) === 't') {
+                // Replace "/type/" with "/Type/" (only the first occurrence)
+                const newPath = path.replace(/^\/type\//i, '/Type/');
+
+                // Build the new URL (preserves query string and hash)
+                const newUrl = new URL(window.location);
+                newUrl.pathname = newPath;
+
+                // Permanent redirect (301) – browsers will cache it
+                window.location.replace(newUrl.toString());
+            }
+        })();
     </script>
 </head>
 
