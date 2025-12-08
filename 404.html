@@ -12,6 +12,11 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://alphabrate.github.io/">
     <link rel="stylesheet" href="/style.css">
+    <script>
+      if (location.pathname.match(/^\/type\//i)) {
+        location.replace(location.href.replace(/^\/type\//i, '/Type/'));
+      }
+    </script>
 </head>
 
 <body>
@@ -69,5 +74,6 @@
         document.getElementById('url').innerText = document.getElementById('url').innerText.replace('{URL}', window.location.pathname);
     </script>
 </body>
+
 
 </html>
