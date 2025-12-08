@@ -19,7 +19,7 @@
             // If the path starts with "/type/" (case-sensitive check for lowercase "type")
             if (location.href.split("/")[3] === "type") {
                 // Permanent redirect (301) – browsers will cache it
-                window.location.replace(locaiton.href.replace("type", "Type"));
+                window.location.replace(window.location.href.replace("type", "Type"));
             }
         })();
     </script>
