@@ -61,14 +61,180 @@
         <h1 class="visually-hidden">AlphaBrate</h1>
     </div>
     <img src="/img/alphabrate-hidden-image.webp" alt="AlphaBrate" class="visually-hidden">
-    <div class="full first content-header">
+    <div class="full content-header" style="background-color: rgb(251 251 251);">
+        <div class="description" style="margin-top: 2rem;">
+            <p>With our new style, we proudly present</p>
+            <h2 class="no-margin w-80 color-black"><b class="bold">AlphaBrate</b> <span class="nowrap">for DSE</span>
+            </h2>
+
+            <style>
+                .alb-new-style {
+                    position: relative;
+                    display: flex;
+                    background-color: #f2f2f7;
+
+                    padding: 4px;
+                    margin-top: 2rem;
+
+                    border-radius: 999px;
+                    width: 300px;
+                    max-width: 95vw;
+                    user-select: none;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    box-sizing: border-box;
+                }
+
+
+                .alb-new-style input[type="radio"] {
+                    display: none;
+                }
+
+
+                .alb-new-item {
+                    position: relative;
+                    flex: 1;
+                    padding: 7px 0;
+                    text-align: center;
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #86868b;
+
+                    cursor: pointer;
+                    z-index: 2;
+                    transition: color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+
+                .alb-new-indicator {
+                    position: absolute !important;
+                    top: 4px;
+                    bottom: 4px;
+                    left: 4px;
+
+                    width: calc((100% - 8px) / 5);
+                    background-color: #ffffff;
+
+                    border-radius: 999px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    z-index: 1 !important;
+                    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                    pointer-events: none;
+                }
+
+                #alb-new-tab1:checked~label[for="alb-new-tab1"],
+                #alb-new-tab2:checked~label[for="alb-new-tab2"],
+                #alb-new-tab3:checked~label[for="alb-new-tab3"],
+                #alb-new-tab4:checked~label[for="alb-new-tab4"],
+                #alb-new-tab5:checked~label[for="alb-new-tab5"] {
+                    color: #0071e3;
+                }
+
+                #alb-new-tab1:checked~.alb-new-indicator {
+                    transform: translateX(0);
+                }
+
+                #alb-new-tab2:checked~.alb-new-indicator {
+                    transform: translateX(100%);
+                }
+
+                #alb-new-tab3:checked~.alb-new-indicator {
+                    transform: translateX(200%) scale(.8);
+                    animation: shaking 0.5s infinite linear;
+                    animation-delay: 0.5s;
+                }
+
+                @keyframes shaking {
+                    0% {
+                        transform: translateX(200%) scale(.8) rotate(0deg);
+                    }
+
+                    25% {
+                        transform: translateX(200%) scale(1.1) rotate(5deg);
+                    }
+
+                    50% {
+                        transform: translateX(200%) scale(.9) rotate(-5deg);
+                    }
+
+                    75% {
+                        transform: translateX(200%) scale(1) rotate(3deg);
+                    }
+
+                    100% {
+                        transform: translateX(200%) scale(.8) rotate(0deg);
+                    }
+                }
+
+                #alb-new-tab4:checked~.alb-new-indicator {
+                    transform: translateX(300%);
+                }
+
+                #alb-new-tab5:checked~.alb-new-indicator {
+                    transform: translateX(400%);
+                }
+
+                .alb-new-style:active .alb-new-indicator {
+                    transform: scaleX(1.02);
+                }
+            </style>
+
+            <div class="alb-new-style">
+                <input type="radio" name="alb-new-nav" id="alb-new-tab1" checked>
+                <input type="radio" name="alb-new-nav" id="alb-new-tab2">
+                <input type="radio" name="alb-new-nav" id="alb-new-tab3">
+                <input type="radio" name="alb-new-nav" id="alb-new-tab4">
+                <input type="radio" name="alb-new-nav" id="alb-new-tab5">
+
+                <label for="alb-new-tab1" class="alb-new-item">Learn</label>
+                <label for="alb-new-tab2" class="alb-new-item">Try</label>
+                <label for="alb-new-tab3" class="alb-new-item">Fail</label>
+                <label for="alb-new-tab4" class="alb-new-item">Practise</label>
+                <label for="alb-new-tab5" class="alb-new-item">Excel</label>
+
+                <div class="alb-new-indicator"></div>
+            </div>
+
+            <div class="relative mw-90">
+                <span class="quote-symbol color-black">“</span>
+                <p style="margin-top: 3rem;">For the things we have to learn before we can do them, <span
+                        class="nowrap">we learn by doing them.</span></p>
+            </div>
+
+            <a href="/dse/" style="text-decoration: none;">
+                <button style="
+        display: flex; 
+        align-items: center; 
+        gap: 12px; 
+        padding: 16px 40px; 
+        border-radius: 9999px; 
+        border: 1px solid #e2e8f0; /* Replace with your coreBorder hex code */
+        background-color: transparent; 
+        font-weight: bold; 
+        cursor: pointer; 
+        transition: all 0.3s ease;
+        font-family: sans-serif;" onmouseover="this.style.backgroundColor='white'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+
+                    Now Available: Core Chinese
+
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"
+                        onmouseover="this.style.transform='translateX(4px)'"
+                        onmouseout="this.style.transform='translateX(0)'">
+                        <path d="M5 12h14m-7-7 7 7-7 7" />
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="full content-header musician-tools-header">
         <div class="blur-bg"></div>
         <div class="description" style="margin: 2rem; margin-bottom: 1;">
             <h2 class="serif bold color-white">Metronome @ Musician Tools</h2>
             <span class="tag serif">Beta Product (ß 0.1.1)</span>
             <p class="serif">
             </p>
-            <a href="https://alphabrate.github.io/musician-tools" class="unstyled immersive-action"><button
+            <a href="https://alphabrate.github.io/musician-tools" class="unstyled color-white immersive-action"><button
                     class="serif"><b>Early Version</b></button></a>
             <p class="color-gray">A simple, reliable, and beautiful metronome web app for musicians.</p>
         </div>

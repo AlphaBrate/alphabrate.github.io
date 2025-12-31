@@ -255,8 +255,15 @@ h2.larger {
 	font-size: 3rem !important;
 }
 
-h2.bold {
+.bold {
 	font-weight: 700 !important;
+}
+
+.quote-symbol {
+	font-size: 5rem;
+	opacity: 0.1;
+	position: absolute !important;
+	left: 0;
 }
 
 .hr {
@@ -268,6 +275,18 @@ h2.bold {
 
 .w-80 {
 	width: 80%;
+}
+
+.w-90 {
+	width: 90%;
+}
+
+.mw-80 {
+	max-width: 80%;
+}
+
+.mw-90 {
+	max-width: 90%
 }
 
 .dots::after {
@@ -449,6 +468,7 @@ h2.bold {
 .color-white,
 .color-white * {
 	color: var(--color-white) !important;
+	--color: var(--color-white) !important;
 }
 
 .color-gray,
@@ -872,7 +892,7 @@ a[href="/"] {
 	}
 }
 
-.content-header {
+.musician-tools-header {
 	background-color: #0a0a0a;
 
 	padding-top: 5rem;
@@ -909,6 +929,12 @@ a[href="/"] {
 
 		animation: background-intro-rotation 2s ease-in-out forwards;
 	}
+}
+
+
+.content-header {
+	padding-top: 5rem;
+	padding-bottom: 2rem;
 }
 
 @keyframes dynamic-bg-intro-rotation {
@@ -1569,6 +1595,10 @@ img.logo {
 
 .serif {
 	font-family: "EB Garamond", "Times New Roman", Times, serif;
+}
+
+.times {
+	font-family: "Times New Roman", Times, serif;
 }
 
 .monospace {

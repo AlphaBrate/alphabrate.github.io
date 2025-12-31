@@ -53,11 +53,8 @@ const footer_links = `
 </div>`
 
 const copyright_info = `
-<p class="color-gray">Copyright &copy; ${new Date().getFullYear()} AlphaBrate.</p>
-<p class="color-lighter-gray f10px">All rights to the designs and photographs <span class="nowrap">displayed on this site are reserved.</span>
-<br>By using, browsing, sharing, or redistributing our services, products,
-    or projects, you agree to our <span class="nowrap"><a href="https://alphabrate.github.io/about/policies">Privacy Terms</a> and <a href="https://alphabrate.github.io/about/policies">Terms of Service</a>.</span></p>`
-
+<p class="color-lighter-gray">&copy; ${new Date().getFullYear()} AlphaBrate.</p>
+`
 const resize_init = () => {
     try {
         // get .section.top>.intro-words actual height
