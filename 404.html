@@ -1,56 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"">
-    <meta name=" description" content="AlphaBrate, an innovative web development team.">
-    <title>404 | AlphaBrate</title>
-    <link rel="stylesheet" href="/style.css">
-    <meta name="theme-color" content="#221F2A">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://alphabrate.github.io/">
-    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found | AlphaBrate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/footer.css">
     <script>
-        (function () {
-            const path = window.location.pathname;
-
-            // If the path starts with "/type/" (case-sensitive check for lowercase "type")
-            if (location.href.split("/")[3] === "type") {
-                // Permanent redirect (301) – browsers will cache it
-                window.location.replace(window.location.href.replace("type", "Type"));
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#0071e3',
+                        coreBg: '#fbfbfb',
+                        coreText: '#1d1d1f',
+                        coreMuted: '#86868b',
+                        coreBorder: '#e5e5e7',
+                    }
+                }
             }
-        })();
+        }
     </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-coreBg text-coreText antialiased px-6 md:px-12 lg:px-32 flex flex-col min-h-screen; font-family: -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif; }
+            h1 { @apply text-4xl md:text-5xl font-bold mb-8 pt-32 text-coreText; }
+            h2 { @apply text-xl font-bold mt-16 mb-6 pb-2 border-b border-coreBorder text-coreText; }
+            p { @apply mb-8 leading-relaxed text-base text-coreMuted font-medium max-w-2xl; }
+            strong { @apply text-coreText font-semibold; }
+            .btn-primary { @apply inline-flex items-center justify-center bg-brandBlue text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90 active:scale-95; }
+            code { @apply font-mono bg-coreBorder/30 px-1.5 py-0.5 rounded text-coreText break-all; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="nav-bar">
+
+    <nav
+        class="fixed top-0 left-0 w-full z-50 px-8 py-2 backdrop-blur-md flex justify-between items-center border-b border-coreBorder/30 bg-white/50">
         <a href="/">
-            <div class="logo">
+            <div class="w-10 h-10">
                 <img src="/icons/alphabrate.svg" alt="Logo AlphaBrate">
             </div>
         </a>
-        <h1 class="visually-hidden">AlphaBrate</h1>
-    </div>
-    <div class="top section no-bg">
-        <div class="intro-words"><span class="words upperleft">404 - Not Found</span>
-            <span class="words lowerright">The page you're looking for <span class="larger linear-color">can't be
-                    found.</span></span>
-        </div>
-    </div>
-    <div class="space-break" data-height="4"></div>
-    <div class="center single">
-        <div class="description">
-            <h2>Error: 404</h2>
-            <p class="color-darker-gray" id="url">We can't find {URL} on this server.</p>
-            <p class="color-lighter-gray">The server responded with a status of 404</p>
-        </div>
-    </div>
+    </nav>
 
-    <div class="space-break" data-height="4"></div>
-    <div class="space-break hr" data-height="4"></div>
+    <main class="flex-grow flex flex-col justify-center">
+        <header>
+            <h1>The page you’re looking for can’t be found.</h1>
+            <p>The requested resource at <code id="error-path">...</code> may have been moved, deleted, or never existed
+                within the AlphaBrate local-first
+                ecosystem.</p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="../" class="btn-primary">Return to Home Page</a>
+            </div>
+        </header>
+
+        <section class="mt-16">
+            <h2>Diagnostic Information</h2>
+            <ul class="space-y-4 max-w-4xl">
+                <li class="flex items-start gap-3 text-sm text-coreMuted font-medium leading-relaxed">
+                    <span class="text-brandBlue mt-0.5">▪</span>
+                    <span><strong>Index Failure:</strong> The routing engine was unable to resolve the path
+                        <strong><span class="path-display text-coreText"></span></strong>.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-coreMuted font-medium leading-relaxed">
+                    <span class="text-brandBlue mt-0.5">▪</span>
+                    <span><strong>Local Isolation:</strong> If this was a deep link to a specific diagnostic result,
+                        remember
+                        that data is stored locally in your browser and cannot be shared via URL.</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
     <div class="center single" id="footer-links">
         <!-- Links Added by JS -->
     </div>
@@ -60,26 +85,17 @@
         </div>
     </div>
 
-    <noscript>
-        <p>
-            <span class="sentence">We're sorry, but our website <span class="nowrap">requires JavaScript.</span></span>
-            <br>
-            <span class="sentence">Please enable it <span class="nowrap">in order to experience</span> the <span
-                    class="nowrap">elegance
-                    and simplicity.</span></span>
-        </p>
-        <style>
-            html {
-                overflow: hidden !important;
-            }
-        </style>
-    </noscript>
+    <script>
+        // Update Year
+        document.querySelector(".year").textContent = new Date().getFullYear();
+
+        // Handle Error Path Display
+        const currentPath = window.location.pathname;
+        document.getElementById("error-path").textContent = currentPath;
+        document.querySelector(".path-display").textContent = currentPath;
+    </script>
 
     <script src="/js/index.js"></script>
-    <script>
-        document.getElementById('url').innerText = document.getElementById('url').innerText.replace('{URL}', window.location.pathname);
-    </script>
 </body>
-
 
 </html>

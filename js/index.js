@@ -57,30 +57,6 @@ const copyright_info = `
 `
 const resize_init = () => {
     try {
-        // get .section.top>.intro-words actual height
-        // count all elements in .section.top>.intro-words
-        let intro_words = document.querySelector('.section.top>.intro-words')
-        let intro_words_height = intro_words.clientHeight
-
-        // all elements in .section.top>.intro-words
-        intro_words.childNodes.forEach((element) => {
-            // if element is not a text node
-            if (element.nodeType != 3) {
-                // get element's height
-                let height = element.clientHeight
-                // subtract element's height from intro_words_height
-                intro_words_height += height
-            }
-        })
-
-        // add intro-words acutal top
-        intro_words_height += intro_words.offsetTop
-
-        // set --height to .section.top
-        intro_words.parentElement.style.setProperty('--height', intro_words_height + 'px')
-    }
-    catch { }
-    try {
         var as_above = document.querySelectorAll('.as')
 
         for (var i = 0; i < as_above.length; i++) {

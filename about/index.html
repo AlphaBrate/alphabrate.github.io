@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>About | AlphaBrate</title>
-    <link rel=" stylesheet" href="/style.css">
+
     <meta name="description"
         content="About AlphaBrate: Committed to delivering ad-free, open-source web experiences with user-friendly services. Learn about our mission, vision, and values.">
     <meta name="keywords" content="AlphaBrate, Open-Source, Web App, Music Terms, AlphaBrate Music Terms">
@@ -28,6 +28,8 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://alphabrate.github.io/about">
+    <link rel="stylesheet" href="/css/footer.css">
+
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -47,91 +49,122 @@
             ]
         }
     </script>
-    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#0071e3',
+                        coreBg: '#fbfbfb',
+                        coreText: '#1d1d1f',
+                        coreMuted: '#86868b',
+                        coreBorder: '#e5e5e7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-coreBg text-coreText antialiased px-6 md:px-12 lg:px-32; font-family: -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif; }
+            h1 { @apply text-5xl md:text-7xl font-bold mb-8 pt-44 text-coreText leading-[0.9]; }
+            h2 { @apply text-2xl font-bold mb-6 pb-2 border-b border-coreBorder text-coreText; }
+            p { @apply mb-6 leading-relaxed text-lg text-coreMuted font-medium max-w-4xl; }
+            .text-gradient { @apply bg-clip-text text-transparent bg-gradient-to-b from-coreText to-coreMuted; }
+        }
+        @keyframes liquid-blur-in { 0% { filter: blur(20px); opacity: 0; transform: translateY(30px) scale(0.98); } 100% { filter: blur(0); opacity: 1; transform: translateY(0) scale(1); } }
+        .animate-blur { animation: liquid-blur-in 1.2s cubic-bezier(0.23, 1, 0.32, 1) both; }
+        .glass-card { @apply bg-white/70 backdrop-blur-2xl rounded-[32px] border border-coreBorder p-8 shadow-[0_8px_32px_rgba(0,0,0,0.03)]; }
+        .nav-bar { @apply fixed top-0 left-0 w-full z-50 px-8 py-6 backdrop-blur-md flex justify-between items-center border-b border-coreBorder/30 bg-white/50; }
+    </style>
 </head>
 
 <body>
     <div class="nav-bar">
         <a href="/">
             <div class="logo">
-                <img src="/icons/alphabrate.svg" alt="Logo AlphaBrate">
+                <img src="/icons/alphabrate.svg" alt="Logo AlphaBrate" class="w-8 h-8">
             </div>
         </a>
-        <h1 class="visually-hidden">AlphaBrate: About</h1>
     </div>
-    <div class="top section">
-        <div class="intro-words">
-            <span class="words upperleft">Learn More About</span>
-            <span class="words lowerright">the <span class="larger linear-color">AlphaBrate</span> Team.</span>
-            </span>
-        </div>
-    </div>
-    <div class="space-break" data-height="6"></div>
-    <div class="two-row flex">
-        <div class="description">
-            <font class="clear color-darker-gray serif">Our mission is to relentlessly strive to deliver <span
-                    class="nowrap-on-desktop">the
-                    most exceptional <span class="nowrap">experience to you.</span></span></font>
-        </div>
-    </div>
-    <div class="two-col flex">
-        <div class="description pc-50pc">
-            <h2 class="serif">History</h2>
-            <p class="larger clear serif"
-                style="text-align: justify; text-align-last: center; max-width: 79%;">The
-                AlphaBrate Team
-                was originally established in 2018 under the name XchuangC. Initially, our goal was to form a
-                company.
-                After a series of discussions that spanned several years, AlphaBrate was officially founded in
-                2022.
+
+    <main class="pb-32">
+        <header class="animate-blur">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-brandBlue/10 rounded-full mb-6">
+                <span class="text-[10px] font-bold text-brandBlue">About Us</span>
+            </div>
+            <h1>About <span class="text-gradient">AlphaBrate.</span></h1>
+            <p class="text-2xl text-coreText font-semibold max-w-2xl">
+                Our mission is to relentlessly strive to deliver <span class="whitespace-nowrap">the most exceptional
+                    experience to you.</span>
             </p>
-        </div>
-        <div class="description pc-50pc">
-            <h2 class="serif">Idea</h2>
-            <p class="larger clear serif"
-                style="text-align: justify; text-align-last: center; max-width: 79%;">
-                Since the inception
-                of our team, we have remained steadfast in our original vision and idea: to provide user-friendly,
-                free,
-                and open-source services. We firmly believe that everyone should have access to the best possible
-                resources.
-            </p>
-        </div>
-    </div>
-    <div class="space-break dots" data-height="2"></div>
-    <div class="center single">
-        <div class="description">
+        </header>
+
+        <section class="grid md:grid-cols-2 gap-8 mt-12 animate-blur" style="animation-delay: 200ms;">
+            <div class="glass-card">
+                <h2>History</h2>
+                <p class="text-base text-justify">
+                    The AlphaBrate Team was originally established in 2018 under the name XchuangC. Initially, our goal
+                    was to form a company. After a series of discussions that spanned several years, AlphaBrate was
+                    officially founded in 2022.
+                </p>
+            </div>
+            <div class="glass-card">
+                <h2>Idea</h2>
+                <p class="text-base text-justify">
+                    Since the inception of our team, we have remained steadfast in our original vision and idea: to
+                    provide user-friendly, free, and open-source services. We firmly believe that everyone should have
+                    access to the best possible resources.
+                </p>
+            </div>
+        </section>
+
+        <section class="mt-24">
             <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:AlphaBrate@gmail.com">AlphaBrate@gmail.com</a></p>
-            <a href="/about/support.html"><button>Or Seek Support Here</button></a>
-        </div>
-    </div>
-    <div class="space-break hr" data-height="2"></div>
-    <div class="center single">
-        <div class="description">
+            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                <p class="!mb-0">Email: <a href="mailto:AlphaBrate@gmail.com"
+                        class="text-brandBlue font-bold hover:underline">AlphaBrate@gmail.com</a></p>
+                <a href="/about/support.html">
+                    <button
+                        class="bg-brandBlue text-white px-8 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all active:scale-95">
+                        Or Seek Support Here
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <section class="mt-24">
             <h2>You may want to see</h2>
-            <div class="space-break" data-height="1"></div>
-            <p class="far larger">
-                <a href="/about/support.html">Seek Support 💁🏻</a>
-                <a href="/about/downloads.html">Downloads 🪂</a>
-            </p>
-            <p class="far larger">
-                <a href="/projects/">Our Projects 🐕‍🦺</a>
-                <a href="/about/policies">Our Policies 📖</a>
-            </p>
-            <p class="far larger">
-                <a href="/apel/">APEL ⚖️</a>
-                <a href="/about/designs.html">Our Designs 🖊️</a>
-            </p>
-            <p class="far larger">
-                <a href="/articles/">Articles 📃</a>
-                <a href="/apps/">App Gallery 🧑🏻‍💻</a>
-            </p>
-        </div>
-    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col gap-4">
+                    <a href="/about/support.html" class="text-brandBlue font-semibold hover:underline">Seek Support
+                        💁🏻</a>
+                    <a href="/about/downloads.html" class="text-brandBlue font-semibold hover:underline">Downloads
+                        🪂</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a href="/projects/" class="text-brandBlue font-semibold hover:underline">Our Projects 🐕‍🦺</a>
+                    <a href="/about/policies" class="text-brandBlue font-semibold hover:underline">Our Policies 📖</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a href="/apel/" class="text-brandBlue font-semibold hover:underline">APEL ⚖️</a>
+                    <a href="/about/designs.html" class="text-brandBlue font-semibold hover:underline">Our Designs
+                        🖊️</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a href="/articles/" class="text-brandBlue font-semibold hover:underline">Articles 📃</a>
+                    <a href="/apps/" class="text-brandBlue font-semibold hover:underline">App Gallery 🧑🏻‍💻</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <div class="space-break" data-height="4"></div>
-    <div class="space-break hr" data-height="4"></div>
-    <div class="center single" id="footer-links">
+    <div class="space-break dots" data-height="2"></div>
+
+    <div class="center flex-row single" id="footer-links">
         <!-- Links Added by JS -->
     </div>
 
@@ -141,18 +174,10 @@
     </div>
 
     <noscript>
-        <p>
-            <span class="sentence">We're sorry, but our website <span class="nowrap">requires JavaScript.</span></span>
-            <br>
-            <span class="sentence">Please enable it <span class="nowrap">in order to experience</span> the <span
-                    class="nowrap">elegance
-                    and simplicity.</span></span>
-        </p>
-        <style>
-            html {
-                overflow: hidden !important;
-            }
-        </style>
+        <div class="fixed inset-0 bg-white z-[100] p-12 flex items-center justify-center text-center">
+            <p class="text-xl font-bold">We're sorry, but our website requires JavaScript.<br>
+                Please enable it in order to experience the elegance and simplicity.</p>
+        </div>
     </noscript>
 
     <script src="/js/index.js"></script>
